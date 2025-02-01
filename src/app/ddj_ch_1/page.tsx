@@ -1,5 +1,5 @@
 import React from 'react';
-import { BookOpen, ArrowBigLeft, ArrowBigRight, TableOfContents } from 'lucide-react';
+import { BookOpen, ArrowBigLeft, ArrowBigRight, TableOfContents, SquarePlay } from 'lucide-react';
 import Layout from '@/components/Layout';
 import TaoistButton from '@/components/TaoistButton';
 import Link from 'next/link';
@@ -45,9 +45,13 @@ export default function DDJCh1 () {
             </div>
 
             <div className="bg-white mt-8 p-6 rounded-lg shadow-md border-l-4 border-red-800">
-                <p className="text-neutral-600">
-                Lecture coming soon.
-                </p>
+              <div className="flex items-center mb-4">
+                <SquarePlay className="text-red-800 mr-3" />
+                <h2 className="text-xl text-neutral-800">Video Lecture</h2>
+              </div>
+              <p className="text-neutral-600">
+              Lesson video coming soon.
+              </p>
             </div>
 
             <div className="mt-8 bg-white p-6 rounded-lg shadow-md border-l-4 border-teal-700">
