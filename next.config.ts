@@ -1,8 +1,10 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  basePath: '/dao',
   output: 'export',  // This tells Next.js to export static files
+  images: {
+    unoptimized: true,  // Required for static export
+  },
 };
 
 export default nextConfig;
