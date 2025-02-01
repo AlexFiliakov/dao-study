@@ -1,7 +1,8 @@
 import React from 'react';
-import { BookOpen, UsersRound } from 'lucide-react';
+import { BookOpen, UsersRound, TableOfContents } from 'lucide-react';
 import Layout from '@/components/Layout';
 import Image from 'next/image';
+import TaoistButton from '@/components/TaoistButton';
 
 export const metadata = {
   title: '道 Dao Study Group',
@@ -78,6 +79,14 @@ export default function HomePage () {
             </p>
           </div>
 
+          <div className="mt-8 flex justify-center space-x-4 items-center">
+            <a href="/ddj_index" rel="noopener noreferrer">
+              <TaoistButton variant="primary">
+                <TableOfContents className="w-5 h-5" />
+                Go to Chapter Index
+              </TaoistButton>
+            </a>
+          </div>
         </div>
       </main>
     </Layout>
