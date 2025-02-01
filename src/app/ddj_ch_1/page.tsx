@@ -1,4 +1,5 @@
 import React from 'react';
+import { BookOpen } from 'lucide-react';
 import Layout from '@/components/Layout';
 
 export const metadata = {
@@ -46,6 +47,18 @@ export default function DDJCh1 () {
                 Lecture coming soon.
                 </p>
             </div>
+
+            <div className="mt-8 bg-white p-6 rounded-lg shadow-md border-l-4 border-teal-700">
+            <div className="flex items-center mb-4">
+              <BookOpen className="text-teal-700 mr-3" />
+              <h2 className="text-xl text-neutral-800">Additional Notes</h2>
+            </div>
+            <p className="text-neutral-600">
+              恒 is used in the Mawangdui silk manuscript, while 常 is used in the standard text. 
+              The story behind is that there was an emperor called 刘恒. 
+              His name couldn’t be spoken of or written down, so every 恒 in a text was changed to another word.
+            </p>
+          </div>
 
           {/* Follow-up Section */}
           <div className="mt-8 bg-amber-700 text-neutral-50 p-8 rounded-lg">
