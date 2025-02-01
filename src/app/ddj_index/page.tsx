@@ -26,7 +26,7 @@ export default function DDJCh1 () {
               className="w-auto h-[300px] rounded-lg shadow-md mb-6 md:mb-0 md:ml-6" 
               />
               <div>
-              The best known version of Dao De Jing comes from the "Three Kingdoms Period," about 240AD. Unfortunately, it is heavily edited by later transcribers and varies significantly from earlier versions.<br /><br />
+              The best known version of Dao De Jing comes from the &ldquo;Three Kingdoms Period,&rdquo; about 240AD. Unfortunately, it is heavily edited by later transcribers and varies significantly from earlier versions.<br /><br />
               We mainly rely on the Mawangdui version from the Han Dynasty (180BC) discovered in 1973 (aka The Silk Manuscript).<br /><br />
               Where possible, we augment the Silk Manuscript with the Guodian Chu Mu text from Warring States Period (about 300BC) discovered in 1993.<br />
               </div>
