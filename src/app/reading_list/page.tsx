@@ -68,7 +68,7 @@ export default function ReadingList() {
         <div className="space-y-12">
           <header className="space-y-2">
             <h1 className="text-4xl font-bold">Reading List</h1>
-            <p className="text-xl" style={{ color: colors.purple }}>
+            <p className="text-xl" style={{ color: colors.amberWisdom }}>
             A short list of recommended further reading.
             </p>
           </header>
