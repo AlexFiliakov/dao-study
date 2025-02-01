@@ -13,6 +13,19 @@ export default function DDJCh1 () {
     <Layout>
       {/* Main Content */}
       <main className="max-w-3xl mx-auto px-6 py-12">
+        <div className="space-y-8">
+          {/* Image */}
+          <div className="relative w-full aspect-[1920/774] rounded-lg overflow-hidden">
+            <Image
+              src="/images/temple daytime.png"
+              alt="Yang Tian Gian Temple (仰天观)"
+              layout="fill"
+              objectFit="cover"
+              sizes="100vw"
+              priority
+            />
+          </div>
+        </div>
         <div className="w-full min-h-screen bg-neutral-50 p-8 font-serif">
             {/* Header Section */}
             <header className="bg-teal-700 text-neutral-50 p-6 rounded-lg shadow-lg">
