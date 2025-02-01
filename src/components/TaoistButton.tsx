@@ -13,7 +13,7 @@ export default function TaoistButton({
   onClick, 
   variant = 'primary',
   className = ''
-}: TaoistButtonProps): JSX.Element {
+}: TaoistButtonProps): React.JSX.Element {
   const baseStyles = 'flex items-center justify-center gap-2 px-6 py-3 rounded-lg font-medium transition-all duration-200 hover:shadow-lg';
   
   const variants = {
