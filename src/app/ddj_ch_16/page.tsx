@@ -1,12 +1,14 @@
 import React from 'react';
+import { BookOpen, ArrowBigLeft, TableOfContents } from 'lucide-react';
 import Layout from '@/components/Layout';
+import TaoistButton from '@/components/TaoistButton';
 
 export const metadata = {
   title: 'Dao De Jing: Chapter 1 | 道 Dao Study Group',
   description: 'Exploring the wisdom of the Dao De Jing (道德经).',
 };
 
-export default function DDJCh1 () {
+export default function DDJCh16 () {
   return (
     <Layout>
       {/* Main Content */}
@@ -53,6 +55,24 @@ export default function DDJCh1 () {
                 </p>
             </div>
 
+            <div className="mt-8 bg-white p-6 rounded-lg shadow-md border-l-4 border-teal-700">
+            <div className="flex items-center mb-4">
+              <BookOpen className="text-teal-700 mr-3" />
+              <h2 className="text-xl text-neutral-800">Additional Notes</h2>
+            </div>
+            <p className="text-neutral-600">
+              Chapter 16 is about Wu-Wei in action.
+            </p>
+            <br />
+            <p className="text-neutral-600">
+              What is Wu (无)? It is your talent, nature, mission.
+            </p>
+            <br />
+            <p className="text-neutral-600">
+            What is Wu-Wei (无为)? It is the inherent mind, the natural mind. The essential part that is the core of yourself.
+            </p>
+          </div>
+
           {/* Follow-up Section */}
           <div className="mt-8 bg-amber-700 text-neutral-50 p-8 rounded-lg">
             <div className="flex items-center mb-4">
@@ -63,6 +83,21 @@ export default function DDJCh1 () {
                 <li>Have you realized your source, gift, or mission?</li>
                 <li>What is inaction related to this chapter?</li>
             </ol>
+          </div>
+
+          <div className="mt-8 flex justify-center space-x-4 items-center">
+            <a href="/ddj_ch_2" rel="noopener noreferrer">
+              <TaoistButton variant="primary">
+                <ArrowBigLeft className="w-5 h-5" />
+                  Chapter 2
+              </TaoistButton>
+            </a>
+            <a href="/ddj_index" rel="noopener noreferrer">
+              <TaoistButton variant="primary">
+                <TableOfContents className="w-5 h-5" />
+                Index
+              </TaoistButton>
+            </a>
           </div>
         </div>
       </main>

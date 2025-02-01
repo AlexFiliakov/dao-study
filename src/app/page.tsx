@@ -73,7 +73,9 @@ export default function HomePage () {
             玄之又玄，众眇之门。<br />
               Mystery with mystery, the gateway to all understanding.
             </blockquote>
-            <p className="mt-4 text-neutral-50">- Dao De Jing, Chapter 1</p>
+            <p className="mt-4 text-neutral-50">
+              - <a href="/ddj_ch_1" rel="noopener noreferrer" className="hover:underline">Dao De Jing, Chapter 1</a>
+            </p>
           </div>
 
         </div>

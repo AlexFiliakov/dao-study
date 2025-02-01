@@ -51,7 +51,7 @@ export default function ReadingList() {
       ]
     },
     {
-      name: "Further Reading",
+      name: "Additional Texts",
       books: [
         {
           title: "Qingjing Jing 太上老君说常清静经",

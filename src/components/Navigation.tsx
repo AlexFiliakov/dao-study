@@ -8,13 +8,7 @@ import Image from 'next/image';
 
 export const menuItems = [
   { name: 'Home', path: '/' },
-  { 
-    name: 'Dao De Jing Study Notes', 
-    subItems: [
-      { name: 'Chapter 1', path: '/ddj_ch_1' },
-      { name: 'Chapter 16', path: '/ddj_ch_16' }
-    ]
-  },
+  { name: 'Dao De Jing Translation and Notes', path: '/ddj_index' },
   { name: 'Recommended Reading', path: '/reading_list' },
 ];
 
