@@ -63,7 +63,7 @@ export default function DDJCh1 () {
               恒 is used in the Mawangdui silk manuscript, while 常 is used in the standard text. 
               The story behind is that there was an emperor called 刘恒. 
               His name couldn’t be spoken of or written down, so every 恒 in a text was changed to another word.<br /><br />
-              Chapter 1 relates to the I Ching pictogram 屯 (tun), which means &ldquo;accumulating,&rdquo; &ldquo;beginning,&rdquo; or &ldquo;sprouting.&rdquo;
+              Chapter 1 relates to the I Ching hexagram 屯 (tun), which means &ldquo;accumulating,&rdquo; &ldquo;beginning,&rdquo; or &ldquo;sprouting.&rdquo;
             </p>
           </div>
 
