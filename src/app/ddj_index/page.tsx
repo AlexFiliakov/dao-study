@@ -1,6 +1,7 @@
 import React from 'react';
 import { BookOpen } from 'lucide-react';
 import Layout from '@/components/Layout';
+import Image from 'next/image';
 
 export const metadata = {
   title: 'Dao De Jing: Chapter 1 | 道 Dao Study Group',
@@ -20,9 +21,11 @@ export default function DDJCh1 () {
             </header>
 
             <div className="bg-white mt-8 p-6 rounded-lg shadow-md border-l-4 border-teal-700 flex flex-col md:flex-row-reverse items-center md:items-start">
-              <img 
+              <Image 
               src="/images/Mawangdui_Lao_Tzu.jpg" 
               alt="Mawangdui Lao Tzu Manuscript" 
+              width={300}
+              height={300}
               className="w-auto h-[300px] rounded-lg shadow-md mb-6 md:mb-0 md:ml-6" 
               />
               <div>

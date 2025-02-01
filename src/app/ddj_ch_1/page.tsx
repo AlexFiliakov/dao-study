@@ -2,6 +2,7 @@ import React from 'react';
 import { BookOpen, ArrowBigLeft, ArrowBigRight, TableOfContents } from 'lucide-react';
 import Layout from '@/components/Layout';
 import TaoistButton from '@/components/TaoistButton';
+import Link from 'next/link';
 
 export const metadata = {
   title: 'Dao De Jing: Chapter 1 | 道 Dao Study Group',
@@ -73,12 +74,12 @@ export default function DDJCh1 () {
           </div>
 
           <div className="mt-8 flex justify-center space-x-4 items-center">
-            <a href="/" rel="noopener noreferrer">
+            <Link href="/" passHref>
               <TaoistButton variant="primary">
-                <ArrowBigLeft className="w-5 h-5" />
-                  Home
+              <ArrowBigLeft className="w-5 h-5" />
+                Home
               </TaoistButton>
-            </a>
+            </Link>
             <a href="/ddj_index" rel="noopener noreferrer">
               <TaoistButton variant="primary">
                 <TableOfContents className="w-5 h-5" />
