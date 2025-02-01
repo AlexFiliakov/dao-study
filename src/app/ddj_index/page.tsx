@@ -19,7 +19,24 @@ export default function DDJCh1 () {
                 <p className="text-teal-100">道德经</p>
             </header>
 
+            <div className="bg-white mt-8 p-6 rounded-lg shadow-md border-l-4 border-teal-700 flex flex-col md:flex-row-reverse items-center md:items-start">
+              <img 
+              src="/images/Mawangdui_Lao_Tzu.jpg" 
+              alt="Mawangdui Lao Tzu Manuscript" 
+              className="w-auto h-[300px] rounded-lg shadow-md mb-6 md:mb-0 md:ml-6" 
+              />
+              <div>
+              The best known version of Dao De Jing comes from the "Three Kingdoms Period," about 240AD. Unfortunately, it is heavily edited by later transcribers and varies significantly from earlier versions.<br /><br />
+              We mainly rely on the Mawangdui version from the Han Dynasty (180BC) discovered in 1973 (aka The Silk Manuscript).<br /><br />
+              Where possible, we augment the Silk Manuscript with the Guodian Chu Mu text from Warring States Period (about 300BC) discovered in 1993.<br />
+              </div>
+            </div>
+
             <div className="bg-white mt-8 p-6 rounded-lg shadow-md border-l-4 border-teal-700">
+              <div className="flex items-center mb-4">
+                <BookOpen className="text-teal-700 mr-3" />
+                <h2 className="text-xl text-neutral-800">Translation with Notes</h2>
+              </div>
               <ul className="list-disc pl-5">
                 <li>
                     <a 
