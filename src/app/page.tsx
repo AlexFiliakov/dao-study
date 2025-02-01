@@ -1,7 +1,6 @@
 import React from 'react';
 import { BookOpen, UsersRound } from 'lucide-react';
 import Layout from '@/components/Layout';
-import { colors } from '@/constants/colors';  // Import colors from constants
 import Image from 'next/image';
 
 export const metadata = {

@@ -1,8 +1,5 @@
 import React from 'react';
-import { Scroll, BookOpen, Coffee } from 'lucide-react';
 import Layout from '@/components/Layout';
-import { colors } from '@/constants/colors';  // Import colors from constants
-import Image from 'next/image';
 
 export const metadata = {
   title: 'Dao De Jing: Chapter 1 | 道 Dao Study Group',

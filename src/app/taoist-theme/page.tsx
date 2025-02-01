@@ -47,8 +47,8 @@ const TaoistThemeDemo = () => {
       {/* Quote Section */}
       <div className="mt-8 bg-neutral-800 text-neutral-50 p-8 rounded-lg">
         <blockquote className="text-xl italic">
-          "The Tao that can be told is not the eternal Tao.
-          The name that can be named is not the eternal name."
+          &ldquo;The Tao that can be told is not the eternal Tao.
+          The name that can be named is not the eternal name.&rdquo;
         </blockquote>
         <p className="mt-4 text-neutral-400">- Tao Te Ching, Chapter 1</p>
       </div>
