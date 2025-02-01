@@ -53,6 +53,7 @@ export default function DDJCh1 () {
                 <BookOpen className="text-teal-700 mr-3" />
                 <h2 className="text-xl text-neutral-800">Translation with Notes</h2>
               </div>
+              Dao (道)
               <ul className="list-disc pl-5">
                 <li>
                     <a 
