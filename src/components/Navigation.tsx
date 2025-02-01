@@ -74,7 +74,7 @@ export default function Navigation() {
                     {item.name}
                   </div>
                 )}
-                {item.subItems && (
+               {/*item.subItems && (
                   <div className="pl-4 mt-2 space-y-2">
                     {item.subItems.map((subItem, subIndex) => (
                       <div 
@@ -103,7 +103,7 @@ export default function Navigation() {
                       </div>
                     ))}
                   </div>
-                )}
+                )*/}
               </div>
             ))}
           </div>
