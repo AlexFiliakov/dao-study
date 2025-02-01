@@ -17,7 +17,7 @@ export default function HomePage () {
           {/* Image */}
           <div className="relative w-full aspect-[4096/2624] rounded-lg overflow-hidden">
             <Image
-              src="/images/temple main upscaled.png"
+              src="/images/temple main small.png"
               alt="Yang Tian Gian Temple (仰天观)"
               layout="fill"
               objectFit="cover"
