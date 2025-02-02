@@ -1,6 +1,5 @@
 
 import React from 'react';
-import { BookOpen } from 'lucide-react';
 import Layout from '@/components/Layout';
 import Image from 'next/image';
 
@@ -56,15 +55,15 @@ export default function DDJThemes () {
                 死 (sǐ) – &ldquo;Death&rdquo;; contrasts with shēng in discussions of the natural cycle.
             </div>
             <div className="bg-white mt-8 p-6 rounded-lg shadow-md border-l-4 border-teal-700">
+                天 (tiān) – &ldquo;Heaven&rdquo; or &ldquo;Nature&rdquo;; often represents the cosmic order.<br /><br />
+                地 (dì) – &ldquo;Earth&rdquo;; complements tiān in describing the natural world.
+            </div>
+            <div className="bg-white mt-8 p-6 rounded-lg shadow-md border-l-4 border-teal-700">
                 自 (zì) – &ldquo;Self&rdquo; or &ldquo;spontaneity&rdquo;; related to ziran (自然), meaning &ldquo;naturalness.&ldquo;<br /><br />
                 圣 (shèng) – &ldquo;Sage&rdquo; or &ldquo;wise person&rdquo;; describes the ideal ruler or enlightened individual.<br /><br />
                 王 (wáng) – &ldquo;King&rdquo; or &ldquo;ruler&rdquo;; reflects Daoist political philosophy.<br /><br />
                 人 (rén) – &ldquo;Person&rdquo; or &ldquo;human&rdquo;; used in discussions about governance and the sage.<br /><br />
                 民 (mín) – &ldquo;People&rdquo;; often mentioned in governance-related passages.
-            </div>
-            <div className="bg-white mt-8 p-6 rounded-lg shadow-md border-l-4 border-teal-700">
-                天 (tiān) – &ldquo;Heaven&rdquo; or &ldquo;Nature&rdquo;; often represents the cosmic order.<br /><br />
-                地 (dì) – &ldquo;Earth&rdquo;; complements tiān in describing the natural world.
             </div>
             <div className="bg-white mt-8 p-6 rounded-lg shadow-md border-l-4 border-teal-700">
                 无 (wú) – &ldquo;Non-being&rdquo; or &ldquo;without&rdquo;; key to the Daoist idea of emptiness and non-attachment.<br /><br />
