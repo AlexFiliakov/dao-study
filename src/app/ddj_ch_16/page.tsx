@@ -18,7 +18,7 @@ export default function DDJCh16 () {
           <header className="bg-teal-700 text-neutral-50 p-6 rounded-lg shadow-lg">
               <h1 className="text-5xl font-large mb-2 flex justify-between">Dao De Jing<span style={{ textAlign:'right'}}></span></h1>
               <h1 className="text-3xl font-medium mb-2">The Silk Manuscript Version Chapter 16</h1>
-              <p className="text-teal-100">帛本 第16章</p>
+              <p className="text-teal-100">帛本 第十六章</p>
           </header>
 
           <div className="bg-white mt-8 p-6 rounded-lg shadow-md border-l-4 border-teal-700">

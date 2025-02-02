@@ -8,7 +8,13 @@ import Image from 'next/image';
 
 export const menuItems = [
   { name: 'Home', path: '/' },
-  { name: 'Dao De Jing Translation and Notes', path: '/ddj_index' },
+  { 
+    name: 'Dao De Jing', 
+    subItems: [
+      { name: 'Translation and Notes', path: '/ddj_index' },
+      { name: 'Recurring Themes', path: '/ddj_themes' },
+    ]
+  },
   { name: 'Recommended Reading', path: '/reading_list' },
 ];
 
@@ -74,7 +80,7 @@ export default function Navigation() {
                     {item.name}
                   </div>
                 )}
-               {/*item.subItems && (
+               {item.subItems && (
                   <div className="pl-4 mt-2 space-y-2">
                     {item.subItems.map((subItem, subIndex) => (
                       <div 
@@ -103,7 +109,7 @@ export default function Navigation() {
                       </div>
                     ))}
                   </div>
-                )*/}
+                )}
               </div>
             ))}
           </div>
