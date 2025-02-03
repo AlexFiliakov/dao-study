@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { CircleHelp } from 'lucide-react';
 import Layout from '@/components/Layout';
 import Image from 'next/image';
 
@@ -33,6 +34,24 @@ export default function DDJThemes () {
                 <h1 className="text-3xl font-medium mb-2">Recurring Themes</h1>
                 <p className="text-teal-100">道德经</p>
             </header>
+
+            <div className="bg-white mt-8 p-6 rounded-lg shadow-md border-l-4 border-red-800">
+              <div className="flex items-center mb-4">
+                <CircleHelp className="text-red-800 mr-3" />
+                <h2 className="text-xl text-neutral-800">About This List</h2>
+              </div>
+              These are the most frequently occurring words in the Dao De Jing, excluding common terms.<br /><br />
+              They are grouped into somewhat arbitrary thematic collections.<br /><br />
+              <Image
+                src="/images/char_frequency.png"
+                alt="Dao De Jing Character Frequency"
+                objectFit="cover"
+                width={300}
+                height={300}
+                className="w-auto h-auto mb-6 md:mb-0" 
+                priority
+              />
+            </div>
 
             <div className="bg-white mt-8 p-6 rounded-lg shadow-md border-l-4 border-teal-700">
                 {/* <div className="flex items-center mb-4">
