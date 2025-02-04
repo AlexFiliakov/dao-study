@@ -50,7 +50,13 @@ export default function DDJCh1 () {
                 <h2 className="text-xl text-neutral-800">Video Lecture</h2>
               </div>
               <p className="text-neutral-600">
-              Lesson video coming soon.
+              <a 
+              href="http://xhslink.com/a/nHcgd7294Ca5"
+              rel="noopener noreferrer"
+              className="text-red-800 hover:underline"
+              >
+                Click here to watch the talk.
+              </a>
               </p>
             </div>
 
