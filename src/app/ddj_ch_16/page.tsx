@@ -16,7 +16,7 @@ export default function DDJCh16 () {
         <div className="w-full min-h-screen bg-neutral-50 p-8 font-serif">
           {/* Header Section */}
           <header className="bg-teal-700 text-neutral-50 p-6 rounded-lg shadow-lg">
-              <h1 className="text-5xl font-large mb-2 flex justify-between">Dao De Jing<span style={{ textAlign:'right'}}></span></h1>
+              <h1 className="text-5xl font-large mb-2 flex justify-between">Dao De Jing<span style={{ textAlign:'right'}}>复</span></h1>
               <h1 className="text-3xl font-medium mb-2">The Silk Manuscript Version Chapter 16</h1>
               <p className="text-teal-100">帛本 第十六章</p>
           </header>
@@ -74,6 +74,10 @@ export default function DDJCh16 () {
             <br />
             <p className="text-neutral-600">
               What is Wu-Wei (无为)? It is the inherent mind, the natural mind. The essential part that is the core of yourself.
+            </p>
+            <br />
+            <p className="text-neutral-600">
+              Chapter 16 relates to the I Ching hexagram 24, ䷗, 复 (fù), which means &ldquo;returning.&rdquo;
             </p>
           </div>
 
