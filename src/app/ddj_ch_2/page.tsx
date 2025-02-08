@@ -16,14 +16,37 @@ export default function DDJCh2 () {
         <div className="w-full min-h-screen bg-neutral-50 p-8 font-serif">
             {/* Header Section */}
             <header className="bg-teal-700 text-neutral-50 p-6 rounded-lg shadow-lg">
-            <h1 className="text-5xl font-large mb-2 flex justify-between">Dao De Jing<span style={{ textAlign:'right'}}></span></h1>
+            <h1 className="text-5xl font-large mb-2 flex justify-between">Dao De Jing<span style={{ textAlign:'right'}}>乾</span></h1>
                 <h1 className="text-3xl font-medium mb-2">The Silk Manuscript Version Chapter 2</h1>
                 <p className="text-teal-100">帛书版 第二章</p>
             </header>
 
             <div className="bg-white mt-8 p-6 rounded-lg shadow-md border-l-4 border-teal-700">
               <p className="text-neutral-600">
-                Coming soon
+                天下皆知美之为美也，恶已；<br />
+                皆知善，此其不善已。<br />
+                When everyone in the world knows beauty as beauty, ugliness arises;<br />
+                When everyone knows good as good, evil arises.<br />
+                有，无之相生也；<br />
+                难，易之相成也。<br />
+                Thus, being and non-being give birth to each other;<br />
+                difficult and easy compete with each other.<br />
+                长，短之相形也；<br />
+                高，下之相呈也。<br />
+                Long and short contrast each other;<br />
+                high and low distinguish each other.<br />
+                音，声之相和也；<br />
+                先，后之相随也。<br />
+                Sound and voice harmonize each other,<br />
+                Front and back follow each other.<br />
+                是以圣人居无为之事，行不言之教。<br />
+                Therefore, the king dwells in inaction activities and practices wordless teaching.<br />
+                万物作而弗恃也；为而弗恃也，成而弗居。<br />
+                All things arise, and he doesn’t turn away from them;<br />
+                he acts but doesn’t boast on his achievements;<br />
+                he accomplishes but doesn’t claim credit.<br />
+                夫唯弗居也，是以弗去也。<br />
+                It is precisely because he does not claim credit, that his people never leave him.
               </p>
             </div>
 
@@ -43,7 +66,8 @@ export default function DDJCh2 () {
               <h2 className="text-xl text-neutral-800">Additional Notes</h2>
             </div>
             <p className="text-neutral-600">
-              Coming soon
+              Coming soon<br /><br />
+              Chapter 2 relates to the I Ching hexagram 1, ䷀, 乾 (qián), which means &ldquo;Heaven,&rdquo; or &ldquo;force.&rdquo;
             </p>
           </div>
 
