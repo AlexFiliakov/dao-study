@@ -13,6 +13,7 @@ export const menuItems = [
     subItems: [
       { name: 'Translation and Notes', path: '/ddj_index' },
       { name: 'Recurring Themes', path: '/ddj_themes' },
+      { name: 'Version Comparison', path: '/ddj_cn_compare' },
     ]
   },
   { name: 'Recommended Reading', path: '/reading_list' },
