@@ -1,6 +1,5 @@
 import TextComparison from '@/components/TextComparison';
 import React from 'react';
-import { CircleHelp } from 'lucide-react';
 import Layout from '@/components/Layout';
 import Image from 'next/image';
 

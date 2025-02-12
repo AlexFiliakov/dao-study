@@ -1,8 +1,8 @@
 import * as React from "react"
 
-export interface ScrollAreaProps extends React.HTMLAttributes<HTMLDivElement> {}
+// No need for ScrollAreaProps interface as it is equivalent to React.HTMLAttributes<HTMLDivElement>
 
-const ScrollArea = React.forwardRef<HTMLDivElement, ScrollAreaProps>(
+const ScrollArea = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(
   ({ className, children, ...props }, ref) => (
     <div
       ref={ref}
