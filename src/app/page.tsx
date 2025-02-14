@@ -57,18 +57,19 @@ export default function HomePage () {
               <h2 className="text-xl text-neutral-800">Want to join our reading group?</h2>
             </div>
             <p className="text-neutral-600">
-            You’re welcome to join our online discussion group and attend regular meetings.<br />
+            You’re welcome to join our online discussion group and attend regular meetings.<br /><br />
             <a 
               href="https://www.xiaohongshu.com/user/profile/56d679e284edcd74c7a5b3ea?xsec_token=YBG_D8LT9e1_o7_C414m3_XaL3SdpvFZSrH9yZn-anoP4=&xsec_source=app_share&xhsshare=CopyLink&appuid=678b3543000000000a03d01c&apptime=1738414009&share_id=8559959d05a242f9b0b8de56aedece49"
               rel="noopener noreferrer"
               className="text-red-800 hover:underline"
             >
-              Contact @Bella.小道 on Red Note for more information.
+              Contact @小红薯67AEE06F on Red Note for more information.
             </a>
             </p>
           </div>
 
           {/* Quote Section */}
+          {/*
           <div className="mt-8 bg-amber-700 text-neutral-50 p-8 rounded-lg">
             <blockquote className="text-xl italic">
             玄之又玄，众眇之门。<br />
@@ -78,6 +79,7 @@ export default function HomePage () {
               - <a href="/ddj_ch_1" rel="noopener noreferrer" className="hover:underline">Dao De Jing, Chapter 1</a>
             </p>
           </div>
+          */}
 
           <div className="mt-8 flex justify-center space-x-4 items-center">
             <a href="/ddj_index" rel="noopener noreferrer">
