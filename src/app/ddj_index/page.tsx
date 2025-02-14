@@ -4,7 +4,7 @@ import Layout from '@/components/Layout';
 import Image from 'next/image';
 
 export const metadata = {
-  title: 'Dao De Jing: Chapter 1 | 道 Dao Study Group',
+  title: 'Dao De Jing: Chapter Index | 道 Dao Study Group',
   description: 'Exploring the wisdom of the Dao De Jing (道德经).',
 };
 

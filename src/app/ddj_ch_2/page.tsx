@@ -4,7 +4,7 @@ import Layout from '@/components/Layout';
 import TaoistButton from '@/components/TaoistButton';
 
 export const metadata = {
-  title: 'Dao De Jing: Chapter 1 | 道 Dao Study Group',
+  title: 'Dao De Jing: Chapter 2 | 道 Dao Study Group',
   description: 'Exploring the wisdom of the Dao De Jing (道德经).',
 };
 
@@ -77,7 +77,7 @@ export default function DDJCh2 () {
                 <h2 className="text-xl">Questions:</h2>
             </div>
             <ol style={{listStyleType: "decimal"}}>
-                <li>Coming soon</li>
+                <li>What’s the difference between Laozi’s dialectical thinking and the Western mainstream thought?</li>
             </ol>
           </div>
 
