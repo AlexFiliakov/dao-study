@@ -82,8 +82,8 @@ export default function DDJThemes () {
             </div>
             <div className="bg-white mt-8 p-6 rounded-lg shadow-md border-l-4 border-teal-700">
                 自 (zì) – &ldquo;Self&rdquo; or &ldquo;spontaneity&rdquo;; related to ziran (自然), meaning &ldquo;naturalness.&ldquo;<br /><br />
-                圣 (shèng) – &ldquo;Sage&rdquo; or &ldquo;wise person&rdquo;; describes the ideal ruler or enlightened individual.<br /><br />
-                王 (wáng) – &ldquo;King&rdquo; or &ldquo;ruler&rdquo;; reflects Daoist political philosophy.<br /><br />
+                圣 (shèng) – Describes the ideal or enlightened ruler. &ldquo;Sage&rdquo; or &ldquo;wise one.&rdquo;<br /><br />
+                王 (wáng) – &ldquo;King&rdquo; or &ldquo;ruler&rdquo; in general.<br /><br />
                 人 (rén) – &ldquo;Person&rdquo; or &ldquo;human&rdquo;; used in discussions about governance and the sage.<br /><br />
                 民 (mín) – &ldquo;People&rdquo;; often mentioned in governance-related passages.
             </div>

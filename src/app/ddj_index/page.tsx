@@ -59,8 +59,7 @@ export default function DDJCh1 () {
                     <a 
                     href="/ddj_ch_1"
                     rel="noopener noreferrer"
-                    className="text-red-800 hover:underline"
-                    >
+                    className="text-red-800 hover:underline">
                     Chapter 1
                     </a>
                 </li>
@@ -68,17 +67,15 @@ export default function DDJCh1 () {
                     <a 
                     href="/ddj_ch_2"
                     rel="noopener noreferrer"
-                    className="text-red-800 hover:underline"
-                    >
-                    Chapter 2 (Coming Soon)
+                    className="text-red-800 hover:underline">
+                    Chapter 2
                     </a>
                 </li>
                 <li>
                     <a 
                     href="/ddj_ch_16"
                     rel="noopener noreferrer"
-                    className="text-red-800 hover:underline"
-                    >
+                    className="text-red-800 hover:underline">
                     Chapter 16
                     </a>
                 </li>

@@ -56,7 +56,13 @@ export default function DDJCh2 () {
                 <h2 className="text-xl text-neutral-800">Video Lecture</h2>
               </div>
               <p className="text-neutral-600">
-              Lesson video coming soon.
+              <a 
+              href="http://xhslink.com/a/XaficQbOc1Q5"
+              rel="noopener noreferrer"
+              className="text-red-800 hover:underline"
+              >
+                Click here to watch the talk.
+              </a>
               </p>
             </div>
 
@@ -66,7 +72,14 @@ export default function DDJCh2 () {
               <h2 className="text-xl text-neutral-800">Additional Notes</h2>
             </div>
             <p className="text-neutral-600">
-              Coming soon<br /><br />
+              See the related Taoist parable:&nbsp;
+              <a 
+              href="https://en.wikipedia.org/wiki/The_old_man_lost_his_horse"
+              rel="noopener noreferrer"
+              className="text-red-800 hover:underline"
+              >
+                Sai Weng Loses His Horse
+              </a>.<br /><br />
               Chapter 2 relates to the I Ching hexagram 1, ䷀, 乾 (qián), which means &ldquo;Heaven,&rdquo; or &ldquo;force.&rdquo;
             </p>
           </div>
