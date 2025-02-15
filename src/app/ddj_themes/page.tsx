@@ -62,7 +62,6 @@ export default function DDJThemes () {
             德 (dé) – &ldquo;Virtue&rdquo; or &ldquo;Power&rdquo;; represents the active expression of the Dao. Dé is the theme of Chapters 38-81 of Dao De Jing.
           </div>
           <div className="bg-white mt-8 p-6 rounded-lg shadow-md border-l-4 border-teal-700">
-            不 (bù) – &ldquo;Not&rdquo; or &ldquo;no&rdquo;; frequently used in negations.<br /><br />
             大 (dà) – &ldquo;Great&rdquo; or &ldquo;vast&rdquo;; frequently used to describe the Dao and the natural order.<br /><br />
             常 (cháng) - &ldquo;Constant,&rdquo; &ldquo;eternal,&rdquo; &ldquo;unchanging,&rdquo; or &ldquo;in accordance with natural law.&rdquo; It is a key concept in Daoism, emphasizing the unchanging flow of the Dao.<br /><br />
             下 (xià) – &ldquo;Low&rdquo; or &ldquo;below&rdquo;; often used metaphorically (e.g., rivers flowing downward).<br /><br />
