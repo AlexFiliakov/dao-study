@@ -159,11 +159,11 @@ export default function CharacterCircle() {
     );
   };
 
-  const getCharacterZIndex = (char: CharacterPosition) => {
+  const getCharacterZIndex = React.useCallback((char: CharacterPosition) => {
     if (selectedChar?.char === char.char) return 1001;
     if (linkedChars.has(char.char)) return 999;
     return 1;
-  };
+  }, [selectedChar, linkedChars]);
 
   const sortedCharacters = React.useMemo(() => {
     const filteredChars = characters.filter(char => !numericChars.has(char.char));
@@ -172,7 +172,7 @@ export default function CharacterCircle() {
       const bZIndex = getCharacterZIndex(b);
       return aZIndex - bZIndex;
     });
-  }, [characters, selectedChar, linkedChars]);
+  }, [characters, getCharacterZIndex]);
 
   return (
     <div className="relative w-full h-full flex flex-col justify-center items-center">
@@ -193,8 +193,8 @@ export default function CharacterCircle() {
         </div>
       </div>
       <div className="mb-4 flex items-center gap-6">
-        <div className="flex items-center gap-2 text-sm">
-          (Lighter shades appear less often.)
+        <div className="flex items-center gap-2 text-sm text-gray-600">
+          (Lighter shades appear less often)
         </div>
       </div>
       <svg 
@@ -204,7 +204,7 @@ export default function CharacterCircle() {
       >
         {/* Base layer: non-selected characters */}
         <g className="base-characters">
-          {sortedCharacters.map((char, index) => {
+          {sortedCharacters.map((char) => {
             const originalIndex = characters.findIndex(c => c.char === char.char);
             const isSelected = selectedChar?.char === char.char;
             const isLinked = linkedChars.has(char.char);
