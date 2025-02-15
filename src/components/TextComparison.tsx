@@ -136,22 +136,20 @@ const TextComparison: React.FC = () => {
 
   return (
     //<ScrollArea className="h-[600px]">
-      <Card className="w-full max-w-4xl mx-auto bg-white">
-        <CardContent className="p-6">
-          <div className="space-y-8">
-            {chapters.map((chapter, index) => (
-              <div key={index} className="text-lg">
-                <h2 className="text-xl font-bold mb-4">{index === 81 ? 'Reference' : chapter.chapterNum + ' (Chapter ' + (index+1) + ')'}</h2>
-                <div className="leading-loose">
-                  {chapter.segments.map((segment, segIndex) => 
-                    renderSegment(segment, segIndex)
-                  )}
-                </div>
+      chapters.map((chapter, index) => (
+        <Card key={index} className={index % 2 == 0 ? 'w-full max-w-4xl mx-auto border-teal-700' : 'w-full max-w-4xl mx-auto border-teal-500'}>
+          <CardContent>
+            <div className="text-lg">
+              <h2 className="text-xl font-bold mb-4">{index === 81 ? 'Reference' : chapter.chapterNum + ' (Chapter ' + (index+1) + ')'}</h2>
+              <div className="leading-loose">
+                {chapter.segments.map((segment, segIndex) => 
+                  renderSegment(segment, segIndex)
+                )}
               </div>
-            ))}
-          </div>
-        </CardContent>
-      </Card>
+            </div>
+          </CardContent>
+        </Card>
+      ))
     //</ScrollArea>
   );
 };
