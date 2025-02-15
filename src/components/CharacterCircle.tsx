@@ -198,7 +198,7 @@ export default function CharacterCircle() {
     <div className="relative w-full h-full flex flex-col justify-center items-center">
       <div className="mb-4 flex items-center gap-6">
         <div className="flex items-center gap-2">
-          <span className="text-sm text-green-600">Selected Character: {selectedChar == null ? '__' : selectedChar.char}</span>
+          <span className="text-sm text-green-600">Selected Character: {selectedChar == null ? '　' : selectedChar.char}</span>
         </div>
         <div className="flex items-center gap-2">
           <span className="text-sm text-orange-600">Preceding Character</span>
