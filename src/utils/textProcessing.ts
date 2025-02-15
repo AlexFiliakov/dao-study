@@ -8,15 +8,20 @@ interface ProcessOptions {
   endChapter?: number;
   minFrequency?: number;
   maxPositions?: number;
+  maxChars?: number;
 }
 
 const cache = new Map<string, CharacterPosition[]>();
+const DEFAULT_MAX_POSITIONS = 1000;
+const DEFAULT_MAX_CHARS = 1000;
 
 export async function processText(options: ProcessOptions = {}): Promise<CharacterPosition[]> {
   const {
     startChapter = 1,
     endChapter = 81,
-    minFrequency = 1, // Changed to 1 to show all characters
+    minFrequency = 1,
+    maxPositions = DEFAULT_MAX_POSITIONS,
+    maxChars = DEFAULT_MAX_CHARS
   } = options;
 
   // Check cache
@@ -29,7 +34,7 @@ export async function processText(options: ProcessOptions = {}): Promise<Charact
   const text = await response.text();
   const chapters = text.split('\n').slice(startChapter - 1, endChapter);
 
-  // Pre-allocate Map with estimated size
+  // Pre-allocate Map
   const globalCharMap = new Map<string, number[]>();
   let globalIndex = 0;
 
@@ -42,19 +47,22 @@ export async function processText(options: ProcessOptions = {}): Promise<Charact
         globalCharMap.set(char, []);
       }
       const positions = globalCharMap.get(char)!;
-      positions.push(globalIndex);
+      if (positions.length < maxPositions) {
+        positions.push(globalIndex);
+      }
       globalIndex++;
     }
   }
 
   // Filter and convert to array
   const charPositions: CharacterPosition[] = Array.from(globalCharMap.entries())
-    .filter(([_, positions]) => positions.length >= minFrequency)
+    .filter(([, positions]) => positions.length >= minFrequency)
     .map(([char, positions]) => ({
       char,
-      positions
+      positions: positions.slice(0, maxPositions)
     }))
-    .sort((a, b) => b.positions.length - a.positions.length); // Keep sorting by frequency
+    .sort((a, b) => b.positions.length - a.positions.length)
+    .slice(0, maxChars);
 
   // Store in cache
   cache.set(cacheKey, charPositions);
