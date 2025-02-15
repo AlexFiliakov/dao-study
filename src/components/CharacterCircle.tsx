@@ -63,7 +63,7 @@ export default function CharacterCircle() {
     };
     
     loadCharacters();
-  }, []);
+  }, [gridWidth, gridHeight]);
 
   const handleMouseEnter = (char: CharacterPosition) => {
     if (!clickedChar) {
