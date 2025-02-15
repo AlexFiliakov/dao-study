@@ -1,6 +1,7 @@
 import CharacterCircle from '@/components/CharacterCircle';
 import Link from 'next/link';
 import { House } from 'lucide-react';
+import TaoistButton from '@/components/TaoistButton';
 
 export default function CharacterCirclePage() {
   return (
@@ -10,10 +11,12 @@ export default function CharacterCirclePage() {
           Character Relationships in the Silk Manuscript
         </h1>
         <CharacterCircle />
-        <div className="mt-8 bg-white p-6 rounded-lg shadow-md border-l-4 border-teal-700">
-          <Link href="/" className="flex items-center">
-            <House className="text-teal-700 mr-3" />
-            <h2 className="text-xl text-teal-700 hover:underline">Return Home</h2>
+        <div className="mt-8 flex justify-center space-x-4 items-center">
+          <Link href="/">
+            <TaoistButton variant="primary">
+              <House className="w-5 h-5" />
+              Return Home
+            </TaoistButton>
           </Link>
         </div>
       </div>
