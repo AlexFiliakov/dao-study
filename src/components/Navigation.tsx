@@ -14,6 +14,7 @@ export const menuItems = [
       { name: 'Translation and Notes', path: '/ddj_index' },
       { name: 'Recurring Themes', path: '/ddj_themes' },
       { name: 'Version Comparison', path: '/ddj_cn_compare' },
+      { name: 'Character Relationships', path: '/ddj_vis' },
     ]
   },
   { name: 'Recommended Reading', path: '/reading_list' },
