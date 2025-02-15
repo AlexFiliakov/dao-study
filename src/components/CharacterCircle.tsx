@@ -17,8 +17,15 @@ export default function CharacterCircle() {
   const [linkedChars, setLinkedChars] = useState<Set<string>>(new Set());
   const [clickedChar, setClickedChar] = useState<CharacterPosition | null>(null);
 
-  const gridWidth = 45;  // 45 columns
-  const gridHeight = 18; // 18 rows
+  // Desktop Grid Config
+  const gridWidthDesktop = 45;  // 45 columns
+  const gridHeightDesktop = 18; // 18 rows
+  // Mobile Grid Config
+  const gridWidthMobile = 14;  // 14 columns
+  const gridHeightMobile = 58; // 58 rows
+  const isDesktop = window.innerWidth >= 1024;
+  const gridWidth = isDesktop ? gridWidthDesktop : gridWidthMobile;
+  const gridHeight = isDesktop ? gridHeightDesktop : gridHeightMobile;
   const cellSize = 25;   // pixels per cell
   const padding = 15;    // padding around grid
   const svgWidth = gridWidth * cellSize + padding * 2;
@@ -177,11 +184,9 @@ export default function CharacterCircle() {
   return (
     <div className="relative w-full h-full flex flex-col justify-center items-center">
       <div className="mb-4 flex items-center gap-6">
-        {selectedChar && (
-            <div className="flex items-center gap-2">
-              <span className="text-sm text-green-600">Selected Character: {selectedChar.char}</span>
-            </div>
-          )}
+        <div className="flex items-center gap-2">
+          <span className="text-sm text-green-600">Selected Character: {selectedChar == null ? '__' : selectedChar.char}</span>
+        </div>
         <div className="flex items-center gap-2">
           <span className="text-sm text-orange-600">Preceding Character</span>
         </div>
