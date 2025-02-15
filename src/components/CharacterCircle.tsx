@@ -43,7 +43,7 @@ export default function CharacterCircle() {
   const padding = 15;    // padding around grid
   const svgWidth = gridWidth * cellSize + padding * 2;
   const svgHeight = gridHeight * cellSize + padding * 2;
-  const opacity_multiplier = 0.25;
+  const full_opacity = 4;
 
   useEffect(() => {
     const loadCharacters = async () => {
@@ -248,7 +248,7 @@ export default function CharacterCircle() {
                     fill={(() => {
                       const connectionType = getCharacterConnectionType(char);
                       const linkCount = getCharacterLinkCount(char);
-                      const opacity = opacity_multiplier ** (linkCount < 8 ? 1.0 / linkCount : 0); // Scale the opacity up by the number of links
+                      const opacity = Math.min(linkCount / full_opacity, 1); // Cap at 1
                       
                       switch (connectionType) {
                         case 'both': 
