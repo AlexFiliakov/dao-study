@@ -155,8 +155,12 @@ export default function CharacterCircle() {
             if (char.char === selectedChar.char) return null;
 
             // Check for immediate predecessor or successor
-            const isPredecessor = char.positions.some(p => p === pos - 1);
-            const isSuccessor = char.positions.some(p => p === pos + 1);
+            const isPredecessor = char.positions.some(p => 
+              selectedChar.positions.some(pos => p === pos - 1)
+            );
+            const isSuccessor = char.positions.some(p => 
+              selectedChar.positions.some(pos => p === pos + 1)
+            );
 
             if (!isPredecessor && !isSuccessor) return null;
 
