@@ -13,7 +13,7 @@ export default function DDJCh16 () {
     <Layout>
       {/* Main Content */}
       <main className="max-w-3xl mx-auto px-6 py-12">
-        <div className="w-full min-h-screen bg-neutral-50 p-8 font-serif">
+        <div className="w-full min-h-screen bg-neutral-50 pt-8 font-serif">
           {/* Header Section */}
           <header className="bg-teal-700 text-neutral-50 p-6 rounded-lg shadow-lg">
               <h1 className="text-5xl font-large mb-2 flex justify-between">Dao De Jing<span style={{ textAlign:'right'}}>复</span></h1>
