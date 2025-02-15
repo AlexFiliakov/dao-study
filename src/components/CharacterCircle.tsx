@@ -23,15 +23,17 @@ export default function CharacterCircle() {
   // Mobile Grid Config
   const gridWidthMobile = 14;  // 14 columns
   const gridHeightMobile = 58; // 58 rows
-  const [isDesktop, setIsDesktop] = useState(() => window.innerWidth >= 1024);
+  const [isDesktop, setIsDesktop] = useState(() => (typeof window !== 'undefined' ? window.innerWidth >= 1024 : false));
 
   useEffect(() => {
-    const handleResize = () => {
-      setIsDesktop(window.innerWidth >= 1024);
-    };
+    if (typeof window !== 'undefined') {
+      const handleResize = () => {
+        setIsDesktop(window.innerWidth >= 1024);
+      };
 
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+      window.addEventListener('resize', handleResize);
+      return () => window.removeEventListener('resize', handleResize);
+    }
   }, []);
 
   const gridWidth = isDesktop ? gridWidthDesktop : gridWidthMobile;
