@@ -77,10 +77,10 @@ export default function HomePage () {
             Our next meeting will be on Feb 27 US Time or Feb 28 Beijing Time:
             </p>
             <ul className="list-disc pl-5 text-neutral-600">
-              <li>Feb 27 6:30pm Pacific Time</li>
-              <li>Feb 27 7:30pm Mountain Time</li>
-              <li>Feb 27 8:30pm Central Time</li>
-              <li>Feb 27 9:30pm Eastern Time</li>
+              <li>Feb 27 5:30pm Pacific Time</li>
+              <li>Feb 27 6:30pm Mountain Time</li>
+              <li>Feb 27 7:30pm Central Time</li>
+              <li>Feb 27 8:30pm Eastern Time</li>
               <li>Feb 28 9:30am Beijing Time</li>
             </ul>
             <br />
