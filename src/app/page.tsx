@@ -1,5 +1,5 @@
 import React from 'react';
-import { BookOpen, UsersRound, TableOfContents } from 'lucide-react';
+import { BookOpen, UsersRound, TableOfContents, CalendarFold } from 'lucide-react';
 import Layout from '@/components/Layout';
 import Image from 'next/image';
 import TaoistButton from '@/components/TaoistButton';
@@ -65,6 +65,34 @@ export default function HomePage () {
             >
               Contact @小红薯67AEE06F on Red Note for more information.
             </a>
+            </p>
+          </div>
+
+          <div className="mt-8 bg-white p-6 rounded-lg shadow-md border-l-4 border-amber-700">
+            <div className="flex items-center mb-4">
+              <CalendarFold className="text-amber-700 mr-3" />
+              <h2 className="text-xl text-neutral-800">We usually meet every two weeks.</h2>
+            </div>
+            <p className="text-neutral-600">
+            Our next meeting will be on Feb 27 US Time or Feb 28 Beijing Time:
+            </p>
+            <ul className="list-disc pl-5 text-neutral-600">
+              <li>Feb 27 6:30pm Pacific Time</li>
+              <li>Feb 27 7:30pm Mountain Time</li>
+              <li>Feb 27 8:30pm Central Time</li>
+              <li>Feb 27 9:30pm Eastern Time</li>
+              <li>Feb 28 9:30am Beijing Time</li>
+            </ul>
+            <br />
+            <p className="text-neutral-600">
+            <a 
+              href="https://voovmeeting.com/"
+              rel="noopener noreferrer"
+              className="text-amber-700 hover:underline"
+            >
+              Download the VooV app and sign up for an account before the meeting.
+            </a><br /><br />
+            The meeting link will be given out on Red Note the day of the meeting.
             </p>
           </div>
 
