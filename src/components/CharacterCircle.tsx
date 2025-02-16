@@ -141,6 +141,7 @@ export default function CharacterCircle() {
     return linkCount;
   };
 
+  /*
   const renderConnections = () => {
     if (!selectedChar) return null;
 
@@ -182,6 +183,7 @@ export default function CharacterCircle() {
       </>
     );
   };
+  */
 
   const getCharacterZIndex = React.useCallback((char: CharacterPosition) => {
     if (selectedChar?.char === char.char) return 1001;
@@ -285,9 +287,11 @@ export default function CharacterCircle() {
         </g>
 
         {/* Middle layer: connections */}
+        {/*
         <g className="connections">
           {renderConnections()}
         </g>
+        */}
 
         {/* Top layer: selected character */}
         {selectedChar && (
