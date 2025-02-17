@@ -17,6 +17,7 @@ export default function CharacterCircle() {
   const [linkedChars, setLinkedChars] = useState<Set<string>>(new Set());
   const [clickedChar, setClickedChar] = useState<CharacterPosition | null>(null);
   const [fullText, setFullText] = useState<string>('');
+  const [characterMeanings, setCharacterMeanings] = useState<Record<string, string>>({});
   const [translations, setTranslations] = useState<Record<string, string>>({});
 
   // Desktop Grid Config
@@ -244,6 +245,21 @@ export default function CharacterCircle() {
   };
 
   useEffect(() => {
+    const loadCharacterMeanings = async () => {
+      const response = await fetch('/docs/ddj_guodian_chu_character_meanings.json');
+      const text = await response.text();
+      try {
+        const characterMeaningsMap = JSON.parse(text);
+        setCharacterMeanings(characterMeaningsMap);
+      } catch (e) {
+        console.error('Error parsing character meanings:', e);
+        setCharacterMeanings({});
+      }
+    };
+    loadCharacterMeanings();
+  }, []);
+
+  useEffect(() => {
     const loadTranslations = async () => {
       const response = await fetch('/docs/ddj_guodian_chu_sentence_translation.json');
       const text = await response.text();
@@ -391,9 +407,13 @@ export default function CharacterCircle() {
             </span>
           </div>
           <div className="flex items-center">
-            <span className="text-sm text-gray-600">
-              English meaning: <em>Coming Soon</em>
-            </span>
+            {selectedChar && (
+              <span className="text-sm text-gray-600">
+                {characterMeanings[selectedChar.char] || (
+                  <em>Character meaning not found.</em>
+                )}<br />
+              </span>
+            )}
           </div>
           <div className="flex flex-col items-center gap-2 max-w-2xl">
             <h2 className="font-bold text-gray-600">
@@ -428,8 +448,21 @@ export default function CharacterCircle() {
               </div>
             ))}
           </div>
+          <div className="flex flex-col items-center gap-2 max-w-2xl">
+            <span className="text-gray-700 text-sm">
+              <em>Translated mainly by ChatGPT.</em>
+            </span>
+          </div>
         </div>
       </div>
+      {/*
+      <div className="mt-4 p-6 rounded-lg shadow-lg bg-white">
+        <h2 className="text-lg font-bold text-gray-600">Character Meanings JSON Dump</h2>
+        <pre className="text-sm text-gray-600 bg-gray-100 p-4 rounded-lg overflow-auto max-h-64">
+          {JSON.stringify(characterMeanings, null, 2)}
+        </pre>
+      </div>
+      */}
     </div>
   );
 }
