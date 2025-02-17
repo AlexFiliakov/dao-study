@@ -399,7 +399,7 @@ export default function CharacterCircle() {
           </g>
         )}
       </svg>
-      <div className={`bg-white mt-4 p-6 rounded-lg shadow-md ${selectedChar ? 'visible' : 'invisible'}`}>
+      <div className={`bg-white mt-4 p-6 rounded-lg shadow-md ${selectedChar ? 'visible' : 'hidden'}`}>
         <div className="flex flex-col items-center gap-4">
           <div className="flex items-center">
             <span className="text-sm text-gray-600">
