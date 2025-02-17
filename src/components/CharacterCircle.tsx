@@ -17,6 +17,7 @@ export default function CharacterCircle() {
   const [linkedChars, setLinkedChars] = useState<Set<string>>(new Set());
   const [clickedChar, setClickedChar] = useState<CharacterPosition | null>(null);
   const [fullText, setFullText] = useState<string>('');
+  const [translations, setTranslations] = useState<Record<string, string>>({});
 
   // Desktop Grid Config
   const gridWidthDesktop = 45;  // 45 columns
@@ -214,7 +215,7 @@ export default function CharacterCircle() {
     if (!fullText) return [];
   
     // Use a regex to split text into sentences (each sentence includes its trailing delimiter, if any)
-    const sentenceRegex = /[^；。？！\n]+[；。？！\n]?/g;
+    const sentenceRegex = /[^；。？！：\n]+[；。？！：\n]?/g;
     const sentences = fullText.match(sentenceRegex) || [];
     
     // For each sentence that contains our character, compute the context and count occurrences
@@ -241,6 +242,21 @@ export default function CharacterCircle() {
   
     return contexts.sort((a, b) => b.count - a.count).slice(0,10);
   };
+
+  useEffect(() => {
+    const loadTranslations = async () => {
+      const response = await fetch('/docs/ddj_guodian_chu_sentence_translation.json');
+      const text = await response.text();
+      try {
+        const translationsMap = JSON.parse(text);
+        setTranslations(translationsMap);
+      } catch (e) {
+        console.error('Error parsing translations:', e);
+        setTranslations({});
+      }
+    };
+    loadTranslations();
+  }, []);
 
   return (
     <div className="relative w-full h-full flex flex-col justify-center items-center">
@@ -369,29 +385,27 @@ export default function CharacterCircle() {
       </svg>
       <div className={`bg-white mt-4 p-6 rounded-lg shadow-md ${selectedChar ? 'visible' : 'invisible'}`}>
         <div className="flex flex-col items-center gap-4">
-          <div className="flex items-center gap-2">
+          <div className="flex items-center">
             <span className="text-sm text-gray-600">
               Character {selectedChar?.char} appears {selectedChar?.positions.length} times.
             </span>
           </div>
-          <div className="flex items-center gap-2">
+          <div className="flex items-center">
             <span className="text-sm text-gray-600">
               English meaning: <em>Coming Soon</em>
             </span>
           </div>
-          <div className="flex items-center gap-2">
-            <span className="text-sm text-gray-600">
+          <div className="flex flex-col items-center gap-2 max-w-2xl">
+            <h2 className="font-bold text-gray-600">
             {selectedChar && getCharacterContext(selectedChar).length === 10
-              ? 'Top ' + getCharacterContext(selectedChar).length + ' sentences.'
+              ? 'Top ' + getCharacterContext(selectedChar).length + ' sentences:'
               : selectedChar && getCharacterContext(selectedChar).length > 1
-              ? getCharacterContext(selectedChar).length + ' sentences.'
+              ? getCharacterContext(selectedChar).length + ' sentences:'
               : selectedChar
-              ? getCharacterContext(selectedChar).length + ' sentence.'
+              ? getCharacterContext(selectedChar).length + ' sentence:'
               : ''
             }
-            </span>
-          </div>
-          <div className="flex flex-col items-center gap-2 max-w-2xl">
+            </h2>
             {selectedChar && getCharacterContext(selectedChar).map((context, index) => (
               <div key={index} className="items-center bg-gray-100 p-1">
                 <div className="flex items-center justify-center text-base">
@@ -406,9 +420,10 @@ export default function CharacterCircle() {
                   </span>
                 </div>
                 <div className="flex items-center justify-center text-base">
-                  <span className="text-gray-700 text-sm">
-                    <em>English translation coming soon.</em>
-                  </span>
+                <span className="text-gray-700 text-sm">
+                  {translations[context.preceding + context.current + context.following] ||
+                  <em>Translation not found.</em>}<br />
+                </span>
                 </div>
               </div>
             ))}
