@@ -440,7 +440,7 @@ export default function CharacterGrid() {
 
               return (
                 <div key={index} className="bg-gray-100 p-1">
-                  <p className="text-sm whitespace-normal text-gray-700">
+                  <p className="text-sm whitespace-normal text-gray-700 text-center">
                     {cleanedPreceding}
                     <em className="text-green-600 text-sm bg-green-100 whitespace-normal not-italic">
                       {cleanedCurrent}
