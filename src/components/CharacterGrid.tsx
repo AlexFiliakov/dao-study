@@ -277,9 +277,9 @@ export default function CharacterGrid() {
   return (
     <div className="relative w-full h-full flex flex-col justify-center items-center">
       <div className="mb-4 p-6 rounded-lg shadow-lg gap-4 bg-white">
-        <div className="flex mb-4 items-center gap-4">
+        <div className="flex items-center gap-4">
           <div className="flex items-center gap-2">
-            <span className="text-sm text-green-600">Selected Character: {selectedChar == null ? '　' : selectedChar.char}</span>
+            <span className="text-sm text-green-600">{selectedChar == null ? '　' : selectedChar.char} Selected</span>
           </div>
           <div className="flex items-center gap-2">
             <span className="text-sm text-orange-600">Preceding Character</span>
@@ -291,9 +291,11 @@ export default function CharacterGrid() {
             <span className="text-sm text-purple-600">Both Preceding and Following</span>
           </div>
         </div>
-        <div className="flex justify-center items-center text-sm text-gray-600">
+        {/*
+        <div className="flex justify-center mt-4 items-center text-sm text-gray-600">
           (Lighter shades appear less often)
         </div>
+        */}
       </div>
       <svg 
         width={svgWidth} 
@@ -401,9 +403,10 @@ export default function CharacterGrid() {
       </svg>
       <div className={`bg-white mt-4 p-6 rounded-lg shadow-md ${selectedChar ? 'visible' : 'hidden'}`}>
         <div className="flex flex-col items-center gap-4">
+          <h2 className="text-7xl text-gray-600">{selectedChar?.char}</h2>
           <div className="flex items-center">
             <span className="text-sm text-gray-600">
-              Character {selectedChar?.char} appears {selectedChar?.positions.length} times.
+              Appears {selectedChar?.positions.length} times.
             </span>
           </div>
           <div className="flex items-center">
