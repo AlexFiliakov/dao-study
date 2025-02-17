@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 export const metadata = {
   title: 'Dao De Jing Text Comparison | 道 Dao Study Group',
-  description: 'Exploring the wisdom of the Dao De Jing (道德经).',
+  description: 'Comparing the Standard Text of Dao De Jing (道德经) with the Guodian Chu (郭店楚簡) and Mawangdui (马王堆帛书) revisions .',
 };
 
 export default function DDJCompare () {

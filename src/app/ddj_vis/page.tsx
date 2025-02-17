@@ -3,6 +3,11 @@ import Link from 'next/link';
 import { House } from 'lucide-react';
 import TaoistButton from '@/components/TaoistButton';
 
+export const metadata = {
+  title: 'Dao De Jing Character Visualization | 道 Dao Study Group',
+  description: 'Exploring the wisdom of the Dao De Jing (道德经) one character and sentence at a time.',
+};
+
 export default function CharacterCirclePage() {
   return (
     <main className="min-h-screen p-8 bg-gray-50">
