@@ -32,7 +32,7 @@ export async function processText(options: ProcessOptions = {}): Promise<Charact
 
   const response = await fetch('/docs/ddj_guodian_chu.txt');
   const text = await response.text();
-  const chapters = text.split('\n').slice(startChapter - 1, endChapter);
+  const chapters = text.replace(/^.*?　/gm, '').split('\n').slice(startChapter - 1, endChapter);
 
   // Pre-allocate Map
   const globalCharMap = new Map<string, number[]>();

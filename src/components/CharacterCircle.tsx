@@ -71,7 +71,7 @@ export default function CharacterCircle() {
     const fetchText = async () => {
       const response = await fetch('/docs/ddj_guodian_chu.txt');
       const text = await response.text();
-      setFullText(text);
+      setFullText(text.replace(/^.*?　/gm, ''));
     };
     fetchText();
   }, []);
