@@ -1,4 +1,4 @@
-import CharacterCircle from '@/components/CharacterCircle';
+import CharacterGrid from '@/components/CharacterGrid';
 import Link from 'next/link';
 import { House } from 'lucide-react';
 import TaoistButton from '@/components/TaoistButton';
@@ -15,7 +15,7 @@ export default function CharacterCirclePage() {
         <h1 className="text-3xl font-bold mb-8 text-center text-gray-800">
           Character Relationships in the Silk Manuscript
         </h1>
-        <CharacterCircle />
+        <CharacterGrid />
         <div className="mt-8 flex justify-center space-x-4 items-center">
           <Link href="/">
             <TaoistButton variant="primary">

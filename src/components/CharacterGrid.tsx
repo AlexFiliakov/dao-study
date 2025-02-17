@@ -10,7 +10,7 @@ interface Point {
 
 const numericChars = new Set(['一', '二', '三', '四', '五', '六', '七', '八', '九', '十']);
 
-export default function CharacterCircle() {
+export default function CharacterGrid() {
   const [characters, setCharacters] = useState<CharacterPosition[]>([]);
   const [selectedChar, setSelectedChar] = useState<CharacterPosition | null>(null);
   const [charPositions, setCharPositions] = useState<Point[]>([]);
