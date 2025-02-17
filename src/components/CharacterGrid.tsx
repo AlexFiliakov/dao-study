@@ -437,15 +437,24 @@ export default function CharacterGrid() {
               const cleanedPreceding = context.preceding.replace(/\r?\n\s*/g, '');
               const cleanedCurrent = context.current.replace(/\r?\n\s*/g, '');
               const cleanedFollowing = context.following.replace(/\r?\n\s*/g, '');
-            
+
               return (
                 <div key={index} className="bg-gray-100 p-1">
                   <p className="text-sm whitespace-normal text-gray-700">
                     {cleanedPreceding}
-                    <em className="text-green-600 text-sm bg-green-100 whitespace-normal">
+                    <em className="text-green-600 text-sm bg-green-100 whitespace-normal not-italic">
                       {cleanedCurrent}
                     </em>
-                    {cleanedFollowing}
+                    {cleanedFollowing.split(cleanedCurrent).map((part, i, arr) => (
+                      <React.Fragment key={i}>
+                        {part}
+                        {i < arr.length - 1 && (
+                          <em className="text-green-600 text-sm bg-green-100 whitespace-normal not-italic">
+                            {cleanedCurrent}
+                          </em>
+                        )}
+                      </React.Fragment>
+                    ))}
                   </p>
                   <div className="flex items-center justify-center text-base">
                     <span className="text-gray-700 text-sm">
