@@ -42,6 +42,9 @@ export default function DDJCompare () {
                 <span className="text-green-600">green</span>).
               </h2>
             </div>
+            <p className="text-gray-700">
+              The difference between the two versions of Dao De Jing is subtle but profound, especially when considering the historical evolution of Chinese character meanings and philosophical implications.
+            </p>
           </div>
           <TextComparison />
         </div>

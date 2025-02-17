@@ -14,10 +14,16 @@ interface TextSegment {
 interface Chapter {
   chapterNum: string;
   segments: TextSegment[];
+  standardSource: string;
+  guodianSource: string;
 }
 
 const TextComparison: React.FC = () => {
   const [chapters, setChapters] = useState<Chapter[]>([]);
+  const [sources, setSources] = useState<{standard: string, guodian: string}>({
+    standard: '',
+    guodian: ''
+  });
 
   useEffect(() => {
     const loadTexts = async (): Promise<void> => {
@@ -33,8 +39,17 @@ const TextComparison: React.FC = () => {
         ]);
 
         // Split texts into chapters
-        const standardChapters: string[] = standardText.split(/\n(?=[\d一二三四五六七八九十]+章|http)/);
-        const guodianChapters: string[] = guodianText.split(/\n(?=[\d一二三四五六七八九十]+章|http)/);
+        const standardChapters: string[] = standardText.split(/\n(?=[\d一二三四五六七八九十]+章|http)/).slice(0,81);
+        const guodianChapters: string[] = guodianText.split(/\n(?=[\d一二三四五六七八九十]+章|http)/).slice(0,81);
+
+        const standardSource: string = standardText.split(/\n(?=[\d一二三四五六七八九十]+章|http)/)[81];
+        const guodianSource: string = guodianText.split(/\n(?=[\d一二三四五六七八九十]+章|http)/)[81];
+
+        // Store sources separately
+        setSources({
+          standard: standardSource,
+          guodian: guodianSource
+        });
 
         // Process chapters
         const processedChapters: Chapter[] = standardChapters.map((standardChapter, index) => {
@@ -53,7 +68,9 @@ const TextComparison: React.FC = () => {
 
           return {
             chapterNum,
-            segments
+            segments,
+            standardSource,
+            guodianSource
           };
         });
 
@@ -136,20 +153,87 @@ const TextComparison: React.FC = () => {
 
   return (
     //<ScrollArea className="h-[600px]">
+      <div>
+        <Card id="toc" className="w-full max-w-4xl mx-auto border-teal-700 mt-8 text-lg">
+          <CardContent>
+            <h2 className="text-xl font-bold mb-4">Table of Contents</h2>
+            <div id="toc-content" className="flex flex-row justify-center items-start gap-8">
+              <div id="toc-dao" className="flex flex-col items-center w-[300px]">
+                <h3 className="font-semibold text-neutral-700">Dao (道)</h3>
+                <ul className="list-disc pl-5">
+                  {/* Create Table of Contents */
+                  chapters.slice(0,37).map((chapter, index) => (
+                    <li key={'toc-link-' + index}>
+                      <a href={'#ch' + (index+1)} className="text-red-800 hover:underline break-all">
+                        Chapter {index+1}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div id="toc-de" className="flex flex-col items-center w-[300px]">
+                <h3 className="font-semibold text-neutral-700">De (德)</h3>
+                <ul className="list-disc pl-5">
+                  {/* Create Table of Contents */
+                  chapters.slice(37,81).map((chapter, index) => (
+                    <li key={'toc-link-' + index}>
+                      <a href={'#ch' + (index+1+37)} className="text-red-800 hover:underline break-all">
+                        Chapter {index+1+37}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+
+      {/* Create individual chapters */
       chapters.map((chapter, index) => (
-        <Card key={index} className={index % 2 == 0 ? 'w-full max-w-4xl mx-auto border-teal-700' : 'w-full max-w-4xl mx-auto border-teal-500'}>
+        <Card key={index} id={'ch' + (index+1)} className={'w-full max-w-4xl mx-auto ' + (index % 2 === 0 ? 'border-teal-700' : 'border-teal-500')}>
           <CardContent>
             <div className="text-lg">
-              <h2 className="text-xl font-bold mb-4">{index === 81 ? 'Reference' : chapter.chapterNum + ' (Chapter ' + (index+1) + ')'}</h2>
+              <h2 className="text-xl font-bold mb-4">
+                {chapter.chapterNum + ' (Chapter ' + (index+1) + ')'}
+              </h2>
               <div className="leading-loose">
                 {chapter.segments.map((segment, segIndex) => 
                   renderSegment(segment, segIndex)
                 )}
               </div>
+              <div className="mt-4">
+                <a href="#toc" className="text-teal-700 hover:underline">
+                  Back to Top
+                </a>
+              </div>
             </div>
           </CardContent>
         </Card>
-      ))
+      ))}
+
+      {/* Reference Sources */}
+      <Card id="references" className="w-full max-w-4xl mx-auto border-teal-700 mt-8">
+        <CardContent>
+          <div className="text-lg">
+            <h2 className="text-xl font-bold mb-4">References</h2>
+            <div className="leading-loose flex flex-col gap-4">
+              <div className="flex flex-row gap-2">
+                <h3 className="font-semibold text-teal-700">Standard Text Source:</h3>
+                <a href={sources.standard} className="text-red-800 hover:underline break-all">
+                  {sources.standard}
+                </a>
+              </div>
+              <div className="flex flex-row gap-2">
+                <h3 className="font-semibold text-teal-700">Guodian Text Source:</h3>
+                <a href={sources.guodian} className="text-red-800 hover:underline break-all">
+                  {sources.guodian}
+                </a>
+              </div>
+            </div>
+          </div>
+        </CardContent>
+      </Card>
+    </div>
     //</ScrollArea>
   );
 };
