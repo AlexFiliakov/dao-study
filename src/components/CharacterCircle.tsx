@@ -16,6 +16,7 @@ export default function CharacterCircle() {
   const [charPositions, setCharPositions] = useState<Point[]>([]);
   const [linkedChars, setLinkedChars] = useState<Set<string>>(new Set());
   const [clickedChar, setClickedChar] = useState<CharacterPosition | null>(null);
+  const [fullText, setFullText] = useState<string>('');
 
   // Desktop Grid Config
   const gridWidthDesktop = 45;  // 45 columns
@@ -65,6 +66,15 @@ export default function CharacterCircle() {
     
     loadCharacters();
   }, [gridWidth, gridHeight]);
+
+  useEffect(() => {
+    const fetchText = async () => {
+      const response = await fetch('/docs/ddj_guodian_chu.txt');
+      const text = await response.text();
+      setFullText(text);
+    };
+    fetchText();
+  }, []);
 
   const handleMouseEnter = (char: CharacterPosition) => {
     if (!clickedChar) {
@@ -200,6 +210,38 @@ export default function CharacterCircle() {
     });
   }, [characters, getCharacterZIndex]);
 
+  const getCharacterContext = (char: CharacterPosition) => {
+    if (!fullText) return [];
+  
+    // Use a regex to split text into sentences (each sentence includes its trailing delimiter, if any)
+    const sentenceRegex = /[^；。？！\n]+[；。？！\n]?/g;
+    const sentences = fullText.match(sentenceRegex) || [];
+    
+    // For each sentence that contains our character, compute the context and count occurrences
+    const contexts = sentences.reduce((acc, sentence) => {
+      const firstIndex = sentence.indexOf(char.char);
+      if (firstIndex === -1) return acc;
+  
+      // Count how many times the character appears in this sentence
+      const count = sentence.split(char.char).length - 1;
+      
+      // Only keep sentences with some surrounding text (not a lone character)
+      const preceding = sentence.slice(0, firstIndex);
+      const following = sentence.slice(firstIndex + 1);
+      if ((preceding.length > 0 || following.length > 0) && (preceding + following).trim().length > 0) {
+        acc.push({
+          preceding,
+          current: char.char,
+          following,
+          count,
+        });
+      }
+      return acc;
+    }, [] as { preceding: string; current: string; following: string; count: number }[]);
+  
+    return contexts.sort((a, b) => b.count - a.count).slice(0,10);
+  };
+
   return (
     <div className="relative w-full h-full flex flex-col justify-center items-center">
       <div className="mb-4 p-6 rounded-lg shadow-lg gap-4 bg-white">
@@ -325,10 +367,52 @@ export default function CharacterCircle() {
           </g>
         )}
       </svg>
-      <div className={`bg-white mt-4 p-6 rounded-lg shadow-md ${selectedChar == null ? 'invisible' : 'visible'}`}>
-        <div className="flex justify-center items-center gap-2">
-          <span className="text-sm text-gray-600">{selectedChar == null ? '' : 'Character ' + selectedChar.char}</span>
-          <span className="text-sm text-gray-600">{selectedChar == null ? '' : 'appears ' + selectedChar.positions.length + ' times.'}</span>
+      <div className={`bg-white mt-4 p-6 rounded-lg shadow-md ${selectedChar ? 'visible' : 'invisible'}`}>
+        <div className="flex flex-col items-center gap-4">
+          <div className="flex items-center gap-2">
+            <span className="text-sm text-gray-600">
+              Character {selectedChar?.char} appears {selectedChar?.positions.length} times.
+            </span>
+          </div>
+          <div className="flex items-center gap-2">
+            <span className="text-sm text-gray-600">
+              English meaning: <em>Coming Soon</em>
+            </span>
+          </div>
+          <div className="flex items-center gap-2">
+            <span className="text-sm text-gray-600">
+            {selectedChar && getCharacterContext(selectedChar).length === 10
+              ? 'Top ' + getCharacterContext(selectedChar).length + ' sentences.'
+              : selectedChar && getCharacterContext(selectedChar).length > 1
+              ? getCharacterContext(selectedChar).length + ' sentences.'
+              : selectedChar
+              ? getCharacterContext(selectedChar).length + ' sentence.'
+              : ''
+            }
+            </span>
+          </div>
+          <div className="flex flex-col items-center gap-2 max-w-2xl">
+            {selectedChar && getCharacterContext(selectedChar).map((context, index) => (
+              <div key={index} className="items-center bg-gray-100 p-1">
+                <div className="flex items-center justify-center text-base">
+                  <span className="text-gray-700 text-sm">
+                    {context.preceding}
+                  </span>
+                  <span className="text-green-600 text-sm bg-green-100">
+                    {context.current}
+                  </span>
+                  <span className="text-gray-700 text-sm">
+                    {context.following}
+                  </span>
+                </div>
+                <div className="flex items-center justify-center text-base">
+                  <span className="text-gray-700 text-sm">
+                    <em>English translation coming soon.</em>
+                  </span>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>
