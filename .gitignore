@@ -42,3 +42,4 @@ next-env.d.ts
 
 # vscode
 .vscode
+src/components/chapter_meanings_diffs/ch_template.tsx
