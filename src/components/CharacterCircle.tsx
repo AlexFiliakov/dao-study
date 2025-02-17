@@ -409,9 +409,16 @@ export default function CharacterCircle() {
           <div className="flex items-center">
             {selectedChar && (
               <span className="text-sm text-gray-600">
-                {characterMeanings[selectedChar.char] || (
-                  <em>Character meaning not found.</em>
-                )}<br />
+              {characterMeanings[selectedChar.char] ? (
+                characterMeanings[selectedChar.char].split('<br />').map((line, index) => (
+                <React.Fragment key={index}>
+                  {line}
+                  <br />
+                </React.Fragment>
+                ))
+              ) : (
+                <em>Character meaning not found.</em>
+              )}
               </span>
             )}
           </div>
