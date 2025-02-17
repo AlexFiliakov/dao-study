@@ -142,11 +142,11 @@ const TextComparison: React.FC = () => {
     
     return (
       <span key={index} className="relative group">
-        <span className="text-red-600 bg-red-200">
+        <span className="text-red-600 bg-red-100">
           {segment.standard}
         </span>
         {segment.guodian && (
-          <span className="text-green-600">{segment.guodian}</span>
+          <span className="text-green-600 bg-green-100">{segment.guodian}</span>
         )}
       </span>
     );
@@ -163,7 +163,12 @@ const TextComparison: React.FC = () => {
               {
               //<h2 className="text-xl font-bold">Chapter {(index+1)} Notes</h2>
               }
-              {module.default()}
+              {module.default()}  
+              <div className="mt-4 text-sm flex items-center">
+                <span className="text-gray-700 text-sm">
+                  <em>Analysis of the two texts conducted mainly using ChatGPT.</em>
+                </span>
+              </div>
             </div>
           )
         }))

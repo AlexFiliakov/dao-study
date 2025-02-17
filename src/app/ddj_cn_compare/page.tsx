@@ -37,9 +37,9 @@ export default function DDJCompare () {
           <div className="bg-white mt-8 p-6 rounded-lg shadow-md border-l-4 border-red-800">
             <div className="flex items-top mb-4">
               <h2 className="text-xl text-neutral-800">Comparing the Standard Text (
-                <span className="text-red-600 bg-red-200">red</span>
+                <span className="text-red-600 bg-red-100">red</span>
                 ) with the Guodian Chu (郭店楚簡) and Mawangdui (马王堆帛书) revisions (
-                <span className="text-green-600">green</span>).
+                <span className="text-green-600 bg-green-100">green</span>).
               </h2>
             </div>
             <p className="text-gray-700">
