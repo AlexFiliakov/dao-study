@@ -350,9 +350,11 @@ const TextComparison: React.FC = () => {
                 renderSegment(segment, segIndex)
               )}
             </div>
-            
+            <hr className="my-4 border-t border-neutral-200" />
             {chapterNotesMap[index + 1]}
-
+            <div className="mt-4 flex items-center text-gray-700 text-sm">
+              <em>Analysis of the two texts conducted mainly using ChatGPT.</em>
+            </div>
             <div className="mt-4 text-sm flex items-center">
               <a href="#toc" className="text-teal-700 hover:underline flex items-center">
               <ChevronUp className="mr-1" />
