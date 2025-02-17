@@ -433,27 +433,29 @@ export default function CharacterGrid() {
               : ''
             }
             </h2>
-            {selectedChar && getCharacterContext(selectedChar).map((context, index) => (
-              <div key={index} className="items-center bg-gray-100 p-1">
-                <div className="flex items-center justify-center text-base">
-                  <span className="text-gray-700 text-sm">
-                    {context.preceding}
-                  </span>
-                  <span className="text-green-600 text-sm bg-green-100">
-                    {context.current}
-                  </span>
-                  <span className="text-gray-700 text-sm">
-                    {context.following}
-                  </span>
+            {selectedChar && getCharacterContext(selectedChar).map((context, index) => {
+              const cleanedPreceding = context.preceding.replace(/\r?\n\s*/g, '');
+              const cleanedCurrent = context.current.replace(/\r?\n\s*/g, '');
+              const cleanedFollowing = context.following.replace(/\r?\n\s*/g, '');
+            
+              return (
+                <div key={index} className="bg-gray-100 p-1">
+                  <p className="text-sm whitespace-normal text-gray-700">
+                    {cleanedPreceding}
+                    <em className="text-green-600 text-sm bg-green-100 whitespace-normal">
+                      {cleanedCurrent}
+                    </em>
+                    {cleanedFollowing}
+                  </p>
+                  <div className="flex items-center justify-center text-base">
+                    <span className="text-gray-700 text-sm">
+                      {translations[cleanedPreceding + cleanedCurrent + cleanedFollowing] ||
+                        <em>Translation not found.</em>}<br />
+                    </span>
+                  </div>
                 </div>
-                <div className="flex items-center justify-center text-base">
-                <span className="text-gray-700 text-sm">
-                  {translations[context.preceding + context.current + context.following] ||
-                  <em>Translation not found.</em>}<br />
-                </span>
-                </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
           <div className="flex flex-col items-center gap-2 max-w-2xl">
             <span className="text-gray-700 text-sm">
@@ -462,7 +464,7 @@ export default function CharacterGrid() {
           </div>
         </div>
       </div>
-      {/*
+      {/* 
       <div className="mt-4 p-6 rounded-lg shadow-lg bg-white">
         <h2 className="text-lg font-bold text-gray-600">Character Meanings JSON Dump</h2>
         <pre className="text-sm text-gray-600 bg-gray-100 p-4 rounded-lg overflow-auto max-h-64">
