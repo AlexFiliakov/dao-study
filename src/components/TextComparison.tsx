@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import { ChevronUp } from 'lucide-react';
 import { Card, CardContent } from './ui/card';
 // import { ScrollArea } from './ui/scroll-area';
 
@@ -151,6 +152,67 @@ const TextComparison: React.FC = () => {
     );
   };
 
+  // Create separate ChapterCard component
+  const ChapterCard = React.memo(({ chapter, index }: { chapter: Chapter, index: number }) => {
+    const ChapterNotes = React.lazy(() => 
+      import(`@/components/chapter_meanings_diffs/ch${index + 1}`)
+        .then(module => ({
+          default: () => (
+            <div>
+              <hr className="my-4 border-t border-neutral-200" />
+              {
+              //<h2 className="text-xl font-bold">Chapter {(index+1)} Notes</h2>
+              }
+              {module.default()}
+            </div>
+          )
+        }))
+        .catch(() => ({
+          default: () => <div></div>
+        }))
+    );
+
+    return (
+      <Card 
+        key={index} 
+        id={'ch' + (index+1)} 
+        className={'w-full max-w-4xl mx-auto ' + (index % 2 === 0 ? 'border-teal-700' : 'border-teal-500')}
+      >
+        <CardContent>
+          <div className="text-lg">
+            <h2 className="text-xl font-bold mb-4">
+              {chapter.chapterNum + ' (Chapter ' + (index+1) + ')'}
+            </h2>
+            <div className="leading-loose">
+              {chapter.segments.map((segment, segIndex) => 
+                renderSegment(segment, segIndex)
+              )}
+            </div>
+            
+            <React.Suspense 
+              fallback={
+                <div className="my-4 text-neutral-500">
+                  Loading chapter notes...
+                </div>
+              }
+            >
+              <ChapterNotes />
+            </React.Suspense>
+
+            <div className="mt-4 text-sm flex items-center">
+              <a href="#toc" className="text-teal-700 hover:underline flex items-center">
+              <ChevronUp className="mr-1" />
+              Scroll to Top
+              </a>
+            </div>
+          </div>
+        </CardContent>
+      </Card>
+    );
+  });
+
+  ChapterCard.displayName = 'ChapterCard';
+
   return (
     //<ScrollArea className="h-[600px]">
       <div>
@@ -188,27 +250,13 @@ const TextComparison: React.FC = () => {
           </CardContent>
         </Card>
 
-      {/* Create individual chapters */
-      chapters.map((chapter, index) => (
-        <Card key={index} id={'ch' + (index+1)} className={'w-full max-w-4xl mx-auto ' + (index % 2 === 0 ? 'border-teal-700' : 'border-teal-500')}>
-          <CardContent>
-            <div className="text-lg">
-              <h2 className="text-xl font-bold mb-4">
-                {chapter.chapterNum + ' (Chapter ' + (index+1) + ')'}
-              </h2>
-              <div className="leading-loose">
-                {chapter.segments.map((segment, segIndex) => 
-                  renderSegment(segment, segIndex)
-                )}
-              </div>
-              <div className="mt-4">
-                <a href="#toc" className="text-teal-700 hover:underline">
-                  Back to Top
-                </a>
-              </div>
-            </div>
-          </CardContent>
-        </Card>
+      {/* Create individual chapters */}
+      {chapters.map((chapter, index) => (
+        <ChapterCard 
+          key={index}
+          chapter={chapter} 
+          index={index}
+        />
       ))}
 
       {/* Reference Sources */}
