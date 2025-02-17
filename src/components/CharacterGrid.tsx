@@ -467,9 +467,7 @@ export default function CharacterGrid() {
             })}
           </div>
           <div className="flex flex-col items-center gap-2 max-w-2xl">
-            <span className="text-gray-700 text-sm">
-              <em>Translated mainly by ChatGPT.</em>
-            </span>
+            <em className="text-gray-700 text-sm">Translated mainly by ChatGPT.</em>
           </div>
         </div>
       </div>
