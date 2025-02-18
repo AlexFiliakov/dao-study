@@ -1,0 +1,152 @@
+{
+    "1" : {
+        "hexagram" : "䷀",
+        "gua" : "乾",
+        "pronunciation" : "qián",
+        "translation" : "\"Heaven,\" or \"force.\""
+    },
+    "2" : {
+        "hexagram" : "䷁",
+        "gua" : "坤",
+        "pronunciation" : "kūn",
+        "translation" : "\"field\""
+    },
+    "3" : {
+        "hexagram" : "䷂",
+        "gua" : "屯",
+        "pronunciation" : "zhūn or tun",
+        "translation" : "\"accumulating,\" \"beginning,\" or \"sprouting.\""
+    },
+    "4" : {
+        "hexagram" : "䷃",
+        "gua" : "蒙",
+        "pronunciation" : "méng",
+        "translation" : "\"enveloping\""
+    },
+    "5" : {
+        "hexagram" : "䷄",
+        "gua" : "需",
+        "pronunciation" : "xū",
+        "translation" : "\"attending\""
+    },
+    "6" : {
+        "hexagram" : "䷅",
+        "gua" : "訟",
+        "pronunciation" : "sòng",
+        "translation" : "\"arguing\""
+    },
+    "7" : {
+        "hexagram" : "䷆",
+        "gua" : "師",
+        "pronunciation" : "shī",
+        "translation" : "\"leading\""
+    },
+    "8" : {
+        "hexagram" : "䷇",
+        "gua" : "比",
+        "pronunciation" : "bǐ",
+        "translation" : "\"grouping\""
+    },
+    "9" : {
+        "hexagram" : "䷈",
+        "gua" : "小畜",
+        "pronunciation" : "xiǎoxù",
+        "translation" : "\"small&nbsp;harvest\""
+    },
+    "10" : {
+        "hexagram" : "䷉",
+        "gua" : "履",
+        "pronunciation" : "lǚ",
+        "translation" : "\"treading\""
+    },
+    "11" : {
+        "hexagram" : "䷊",
+        "gua" : "泰",
+        "pronunciation" : "tài",
+        "translation" : "\"pervading\""
+    },
+    "12" : {
+        "hexagram" : "䷋",
+        "gua" : "否",
+        "pronunciation" : "pǐ",
+        "translation" : "\"obstruction\""
+    },
+    "13" : {
+        "hexagram" : "䷌",
+        "gua" : "同人",
+        "pronunciation" : "tóngrén",
+        "translation" : "\"concording&nbsp;people\""
+    },
+    "14" : {
+        "hexagram" : "䷍",
+        "gua" : "大有",
+        "pronunciation" : "dàyǒu",
+        "translation" : "\"great&nbsp;possessing\""
+    },
+    "15" : {
+        "hexagram" : "䷎",
+        "gua" : "謙",
+        "pronunciation" : "qiān",
+        "translation" : "\"humbling\""
+    },
+    "16" : {
+        "hexagram" : "䷏",
+        "gua" : "豫",
+        "pronunciation" : "yù",
+        "translation" : "\"providing-for\""
+    },
+    "17" : {
+        "hexagram" : "䷐",
+        "gua" : "隨",
+        "pronunciation" : "suí",
+        "translation" : "\"following\""
+    },
+    "18" : {
+        "hexagram" : "䷑",
+        "gua" : "蠱",
+        "pronunciation" : "gǔ",
+        "translation" : "\"correcting\""
+    },
+    "19" : {
+        "hexagram" : "䷒",
+        "gua" : "臨",
+        "pronunciation" : "lín",
+        "translation" : "\"nearing\""
+    },
+    "20" : {
+        "hexagram" : "䷓",
+        "gua" : "觀",
+        "pronunciation" : "guàn",
+        "translation" : "\"viewing\""
+    },
+    "21" : {
+        "hexagram" : "䷔",
+        "gua" : "噬嗑",
+        "pronunciation" : "shìhé",
+        "translation" : "\"gnawing&nbsp;bite\""
+    },
+    "22" : {
+        "hexagram" : "䷕",
+        "gua" : "賁",
+        "pronunciation" : "bì",
+        "translation" : "\"adorning\""
+    },
+    "23" : {
+        "hexagram" : "䷖",
+        "gua" : "剝",
+        "pronunciation" : "bāo",
+        "translation" : "\"stripping\""
+    },
+    "24" : {
+        "hexagram" : "䷗",
+        "gua" : "复",
+        "pronunciation" : "fù",
+        "translation" : "\"returning.\""
+    },
+    "25" : {
+        "hexagram" : "",
+        "gua" : "",
+        "pronunciation" : "",
+        "translation" : ""
+    }
+}

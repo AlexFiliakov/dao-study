@@ -100,12 +100,21 @@ interface Chapter {
   guodianSource: string;
 }
 
+interface HexagramDetails {
+  hexagram: string;
+  gua: string;
+  pronunciation: string;
+  translation: string;
+}
+
 const TextComparison: React.FC = () => {
   const [chapters, setChapters] = useState<Chapter[]>([]);
   const [sources, setSources] = useState<{standard: string, guodian: string}>({
     standard: '',
     guodian: ''
   });
+  const [hexagramMapping, setHexagramMapping] = useState<Record<string, string>>({});
+  const [hexagramDetails, setHexagramDetails] = useState<Record<string, HexagramDetails>>({});
 
   useEffect(() => {
     const loadTexts = async (): Promise<void> => {
@@ -163,6 +172,26 @@ const TextComparison: React.FC = () => {
     };
 
     loadTexts();
+  }, []);
+
+  useEffect(() => {
+    const loadHexagramMapping = async () => {
+      try {
+        const [mappingResponse, detailsResponse] = await Promise.all([
+          fetch('/docs/ddj_chapter_to_gua_mapping.json'),
+          fetch('/docs/i_ching_guas.json')
+        ]);
+        
+        const chapterToHexagram = await mappingResponse.json();
+        const hexagramDetails = await detailsResponse.json();
+        
+        setHexagramMapping(chapterToHexagram);
+        setHexagramDetails(hexagramDetails);
+      } catch (error) {
+        console.error('Error loading hexagram mapping:', error);
+      }
+    };
+    loadHexagramMapping();
   }, []);
 
   useEffect(() => {
@@ -345,6 +374,18 @@ const TextComparison: React.FC = () => {
             <h2 className="text-xl font-bold mb-4">
               {chapter.chapterNum + ' (Chapter ' + (index+1) + ')'}
             </h2>
+            <div className="mt-4 flex items-center text-gray-700">
+              {hexagramMapping[(index + 1).toString()] && hexagramDetails[hexagramMapping[(index + 1).toString()]] && (
+                <>
+                  Chapter {index + 1} relates to the I Ching hexagram {hexagramMapping[(index + 1).toString()]},&nbsp;
+                  {hexagramDetails[hexagramMapping[(index + 1).toString()]].hexagram},&nbsp;
+                  gua {hexagramDetails[hexagramMapping[(index + 1).toString()]].gua}&nbsp;
+                  ({hexagramDetails[hexagramMapping[(index + 1).toString()]].pronunciation}),&nbsp;
+                  which means {hexagramDetails[hexagramMapping[(index + 1).toString()]].translation}
+                </>
+              )}
+            </div>
+            <hr className="my-4 border-t border-neutral-200" />
             <div className="leading-loose">
               {chapter.segments.map((segment, segIndex) => 
                 renderSegment(segment, segIndex)
@@ -374,12 +415,13 @@ const TextComparison: React.FC = () => {
       <div>
         <Card id="toc" className="w-full max-w-4xl mx-auto border-teal-700 mt-8 text-lg">
           <CardContent>
+            {/* Create Table of Contents */}
             <h2 className="text-xl font-bold mb-4">Table of Contents</h2>
             <div id="toc-content" className="flex flex-row justify-center items-start gap-8">
               <div id="toc-dao" className="flex flex-col items-center w-[300px]">
                 <h3 className="font-semibold text-neutral-700">Dao (道)</h3>
                 <ul className="list-disc pl-5">
-                  {/* Create Table of Contents */
+                  {/* Create Dao Table of Contents */
                   chapters.slice(0,37).map((chapter, index) => (
                     <li key={'toc-link-' + index}>
                       <a href={'#ch' + (index+1)} className="text-red-800 hover:underline break-all">
@@ -392,7 +434,7 @@ const TextComparison: React.FC = () => {
               <div id="toc-de" className="flex flex-col items-center w-[300px]">
                 <h3 className="font-semibold text-neutral-700">De (德)</h3>
                 <ul className="list-disc pl-5">
-                  {/* Create Table of Contents */
+                  {/* Create De Table of Contents */
                   chapters.slice(37,81).map((chapter, index) => (
                     <li key={'toc-link-' + index}>
                       <a href={'#ch' + (index+1+37)} className="text-red-800 hover:underline break-all">
