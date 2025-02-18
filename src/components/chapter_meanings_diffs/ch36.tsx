@@ -1,4 +1,4 @@
-const Ch36 = () => {
+const Chapter_36 = () => {
     return (
         <div>
           <h3 className="font-bold">Key Differences and Their Implications:</h3>
@@ -9,33 +9,33 @@ const Ch36 = () => {
               <li>Standard text: "When you want to seize something from them, you must first give to them" (夺, duó, "seize").</li>
               <li><strong className="font-semibold">Implication:</strong></li>
               <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
-                <li>取 (qǔ) implies a more gentle or consensual form of taking, which may suggest collaboration or a mutual exchange.</li>
-                <li>夺 (duó) conveys a forceful action, indicating a more aggressive or coercive method of taking possession of something.</li>
+                <li>取 (qǔ) implies a gentler approach, one that feels like a whispered negotiation or a dance of reciprocity, suggesting collaboration or a mutual exchange.</li>
+                <li>夺 (duó) presents a different tone altogether—more like a firm hand extending power, a forceful action that seeks to control rather than persuade.</li>
               </ul>
               <li><strong className="font-semibold">Philosophical Shift:</strong></li>
               <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
-                <li>Earlier text (Guodian/Mawangdui): Emphasizes reciprocity and the notion of achieving your aims through peaceful means.</li>
-                <li>Later text: Highlights a more confrontational approach, suggesting strategic manipulation and power dynamics.</li>
+                <li>Earlier text (Guodian/Mawangdui): This version wraps itself in the fabric of cooperation and peaceful means, emphasizing reciprocity in achieving one's aims.</li>
+                <li>Later text: Here, the focus drifts towards a more confrontational narrative, pointing towards strategic manipulation wrapped up in the intrigue of power dynamics.</li>
               </ul>
             </ul>
           </ol>
           <h3 className="font-bold mt-2">Final Interpretation:</h3>
           <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
-            <li>The Guodian/Mawangdui version suggests a governance style that emphasizes harmony and balance:</li>
+            <li>The Guodian/Mawangdui version suggests a governance style that resonates with harmony and balance:</li>
             <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
-              <li>Achieving goals through subtlety and mutual benefit is favored.</li>
-              <li>This reflects an underlying philosophy of cooperation rather than dominance.</li>
+              <li>Here, attaining goals feels almost like a gentle art—a stroke of subtlety and mutual benefit, favoring cooperation over conflict.</li>
+              <li>Consider, for example, an act of leadership that feels as natural as water flowing around a rock—calm and adaptive.</li>
             </ul>
           </ul>
           <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
-            <li>The later standard text focuses more on strategic power dynamics:</li>
+            <li>The later standard text shifts focus to illustrate a landscape more attuned to strategic power dynamics:</li>
             <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
-              <li>It reflects a shift towards understanding leadership through more confrontational or competitive lenses.</li>
-              <li>A focus is placed on shrewdness and the manipulation of force for achieving political objectives.</li>
+              <li>Here, leadership is interpreted through a lens that values sharpness and the skilled use of force—a dance of intrigue and calculated moves.</li>
+              <li>There’s a sense here, almost like shadows in play, reflecting a shift towards shrewdness and the art of manipulation to achieve political objectives.</li>
             </ul>
           </ul>
         </div>
     );
   };
   
-  export default Ch36;
+  export default Chapter_36;

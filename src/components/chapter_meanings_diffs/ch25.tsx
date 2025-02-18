@@ -1,56 +1,56 @@
-const Ch25 = () => {
-    return (
-        <div>
-          <h3 className="font-bold">Key Differences and Their Implications:</h3>
-          <ol style={{ listStyleType: 'decimal', paddingLeft: '1rem' }}>
-            <li><strong className="font-semibold">"可以为天地母" vs. "可以为天下母"</strong></li>
-            <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
-              <li>Guodian/Mawangdui: "It may serve as the mother of Heaven and Earth."</li>
-              <li>Standard text: "It may serve as the mother of all under Heaven."</li>
-              <li><strong className="font-semibold">Implication:</strong></li>
-              <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
-                <li>The Guodian/Mawangdui text positions the Dao more cosmologically as a fundamental force for Heaven and Earth specifically.</li>
-                <li>The later standard text shifts this focus to all beings and things under heaven, broadening the Dao's role to include all worldly and existential aspects.</li>
-              </ul>
-              <li><strong className="font-semibold">Philosophical Shift:</strong></li>
-              <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
-                <li>Earlier text: Emphasizes the Dao as primordial and the generator of the universe (Heaven and Earth).</li>
-                <li>Later text: Expands the role of the Dao to encompass all life and existence within the world, suggesting a more encompassing view of nature and society.</li>
-              </ul>
-            </ul>
-            <li><strong className="font-semibold">"人亦大" vs. "王亦大"</strong></li>
-            <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
-              <li>Guodian/Mawangdui: "Humans are also great."</li>
-              <li>Standard text: "The ruler is also great."</li>
-              <li><strong className="font-semibold">Implication:</strong></li>
-              <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
-                <li>Guodian/Mawangdui acknowledges the greatness of humans collectively, aligning humanity alongside other great natural forces.</li>
-                <li>The standard text emphasizes the greatness of the king or ruler, suggesting a socio-political structure where governance holds significant importance.</li>
-              </ul>
-              <li><strong className="font-semibold">Philosophical Shift:</strong></li>
-              <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
-                <li>Older text (Guodian/Mawangdui): Views humanity as intrinsically part of the natural order, emphasizing a universal greatness.</li>
-                <li>Later text: Highlights the greatness of political authority, possibly reflecting changes in societal structure and the importance of rulership in maintaining order.</li>
-              </ul>
-            </ul>
-          </ol>
-          <h3 className="font-bold mt-2">Final Interpretation:</h3>
+const Chapter_25 = () => {
+  return (
+    <div>
+      <h3 className="font-bold">Exploring the Differences and Their Philosophical Significance:</h3>
+      <ol style={{ listStyleType: 'decimal', paddingLeft: '1rem' }}>
+        <li><strong className="font-semibold">"可以为天地母" vs. "可以为天下母"</strong></li>
+        <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
+          <li>Guodian/Mawangdui: "It can serve as the mother of Heaven and Earth."</li>
+          <li>Standard text: "It can serve as the mother of all under Heaven."</li>
+          <li><strong className="font-semibold">Implication:</strong></li>
           <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
-            <li>The Guodian/Mawangdui version is more cosmological and egalitarian:</li>
-            <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
-              <li>It focuses on Dao's role as the origin of the Universe and positions human beings as part of an interconnected greatness with other natural entities.</li>
-              <li>Reflects an earlier understanding of Daoism where human beings are seen as naturally significant within the cosmic order.</li>
-            </ul>
+            <li>The Guodian/Mawangdui text narrows in on the Dao’s role within a cosmic framework, emphasizing its primordial nature as the origin of Heaven and Earth.</li>
+            <li>The standard text expands this cosmological focus, considering everything under Heaven, which introduces a broader worldview—a sweeping vision where Dao influences all life and existence.</li>
           </ul>
+          <li><strong className="font-semibold">Philosophical Shift:</strong></li>
           <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
-            <li>The later standard text incorporates a socio-political dimension:</li>
-            <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
-              <li>It broadens the scope of Dao to include societal and existential aspects "under Heaven," suggesting an influence on everyday life and governance.</li>
-              <li>Places importance on the ruler's role as part of what is considered great within the natural and societal order, indicating a shift towards a political structure-focused approach.</li>
-            </ul>
+            <li>Earlier text: Deals with an idea of cosmic origins, presenting the Dao as the generator of the universe itself, giving birth to Heaven and Earth.</li>
+            <li>Later text: This broader approach includes a reflection on societal and existential elements, showcasing a more pervasive influence of the Dao in day-to-day life and nature, hinting at an interconnectedness with worldly matters.</li>
           </ul>
-        </div>
-    );
-  };
-  
-  export default Ch25;
+        </ul>
+        <li><strong className="font-semibold">"人亦大" vs. "王亦大"</strong></li>
+        <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
+          <li>Guodian/Mawangdui: "Humans are also great."</li>
+          <li>Standard text: "The ruler is also great."</li>
+          <li><strong className="font-semibold">Implication:</strong></li>
+          <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
+            <li>The acknowledgment of human greatness in the Guodian/Mawangdui manuscript elevates humanity to a level shared with natural forces, suggesting an intrinsic, collective greatness.</li>
+            <li>The focus on the king in the standard text implies a societal value placed on governance and authority, where leadership and structure gain prominence.</li>
+          </ul>
+          <li><strong className="font-semibold">Philosophical Shift:</strong></li>
+          <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
+            <li>Older text: Represents a vision where humanity is woven into the fabric of the natural order, acknowledging its innate significance.</li>
+            <li>Later text: Underscores political authority as vital, hinting at a shift towards valuing centralized governance in maintaining societal balance—a reflection of the evolving societal framework and its complexities.</li>
+          </ul>
+        </ul>
+      </ol>
+      <h3 className="font-bold mt-2">Final Thoughts:</h3>
+      <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
+        <li>The Guodian/Mawangdui version paints a picture of cosmic equality:</li>
+        <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
+          <li>It presents an image where Dao stands as the source of the universe, binding together Heaven, Earth, and humanity in shared greatness.</li>
+          <li>Reflects a Daoist philosophy where all elements of the cosmos, including humans, are naturally significant as part of a larger universal order.</li>
+        </ul>
+      </ul>
+      <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
+        <li>The standard text brings in social and political dimensions:</li>
+        <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
+          <li>It considers the relevance of Dao within the realm of human endeavors, embedding it in the way society and governance functions.</li>
+          <li>Stresses the ruler's place in the grand scheme, reflecting a world where the mechanics of political power are intertwined with the natural order, indicating a move towards a socially structured perspective.</li>
+        </ul>
+      </ul>
+    </div>
+  );
+};
+
+export default Chapter_25;

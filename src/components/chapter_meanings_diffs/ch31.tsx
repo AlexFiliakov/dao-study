@@ -1,4 +1,4 @@
-const Ch31 = () => {
+const Chapter_31 = () => {
     return (
         <div>
           <h3 className="font-bold">Key Differences and Their Implications:</h3>
@@ -9,13 +9,13 @@ const Ch31 = () => {
               <li>Standard text: "In general, the best weapons are inauspicious tools."</li>
               <li><strong className="font-semibold">Implication:</strong></li>
               <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
-                <li>The older text (Guodian/Mawangdui) makes a broad statement about weapons in general as being negative, without differentiating between types or qualities.</li>
-                <li>The later standard text introduces the idea that even the best weapons belong to the category of ill-favored things, suggesting a deeper scrutiny of instruments of war.</li>
+                <li>In the ancient Guodian/Mawangdui iteration, there's an unvarnished declaration that all weapons are negative, making no distinctions between different types.</li>
+                <li>The later standard text magnifies scrutiny by noting that even the finest weapons carry an inherent inauspiciousness, implying a more profound examination of warfare tools.</li>
               </ul>
               <li><strong className="font-semibold">Philosophical Shift:</strong></li>
               <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
-                <li>Earlier text: Emphasizes a straightforward view on the nature of weaponry, reinforcing a general disdain.</li>
-                <li>Later text: Introduces a subtlety that even exceptional weapons cannot escape their inauspicious nature, reflecting a nuanced philosophical attitude towards martial excellence and its moral implications.</li>
+                <li>The earlier text opts for directness, painting weapons broadly with negativity to reinforce moral aversion.</li>
+                <li>In contrast, the standard version sails into deeper waters, suggesting that excellence in warfare does not nullify its moral repercussions, signaling a shift towards complex reflections on martial virtue.</li>
               </ul>
             </ul>
             <li><strong className="font-semibold">"杀人之众，以悲哀泣之" vs. "杀人之衆, 以哀悲泣之"</strong></li>
@@ -24,34 +24,34 @@ const Ch31 = () => {
               <li>Standard text: "The killings of multitudes, mourn and weep in sadness for them."</li>
               <li><strong className="font-semibold">Implication:</strong></li>
               <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
-                <li>The syntax and choice of words in the Guodian/Mawangdui version emphasize the action "mourn and weep", drawing attention to the process of grieving.</li>
-                <li>The standard text presents a similar sentiment but subtly differs in the emotional weight given to the act of mourning, potentially implying a broader emotional response.</li>
+                <li>The older text places a spotlight on the grieving process itself, urging a visible outpouring of grief and emphasizing the act of mourning.</li>
+                <li>While the standard text transmits a similar essence, it subtly nuances the emotional landscape, allowing for more varied emotional undertakings toward mourning.</li>
               </ul>
               <li><strong className="font-semibold">Philosophical Shift:</strong></li>
               <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
-                <li>Older text (Guodian/Mawangdui): Highlights an expected response from a person of the Way by focusing on the expression of grief for loss.</li>
-                <li>Later text: Allows for a varied interpretation, with slightly more emphasis on broader emotional expressions, suggesting a potential shift towards individual emotional experience over collective ritual normativity.</li>
+                <li>The original rendition calls for a strong expression of grief from those who follow the Way, reinforcing deep moral expectations.</li>
+                <li>Later editions broaden this outlook, subtly hinting at a shift towards personal emotional experiences and a move away from rigid ritualistic expressions.</li>
               </ul>
             </ul>
           </ol>
           <h3 className="font-bold mt-2">Final Interpretation:</h3>
           <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
-            <li>The Guodian/Mawangdui version appears more direct:</li>
+            <li>The Guodian/Mawangdui version offers a raw portrayal:</li>
             <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
-              <li>It unequivocally condemns weapons as negative, focusing on the moral and emotional ramifications of their use.</li>
-              <li>Grieving over death and warfare is portrayed as an expected and necessary action, central to the text's moral teachings.</li>
+              <li>The blanket condemnation of weaponry underscores a focus on the ethical and emotional fallout of their use.</li>
+              <li>It paints mourning over the casualties of war as not just recommended but as an intrinsic and binding part of moral conduct.</li>
             </ul>
           </ul>
           <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
-            <li>The later standard text is marginally nuanced:</li>
+            <li>The standard version adds subtle shading:</li>
             <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
-              <li>It introduces the notion that the excellence of tools or actions does not liberate them from being ill-favored if they disrupt peace.</li>
-              <li>Emphasizes a greater range of emotional responses, hinting at a more personal, individualized interaction with grief and morality, reflective of evolving societal attitudes.</li>
+              <li>It insists that even excellence in weaponry remains plagued by misfortune if it disrupts peace, reflecting an evolving wisdom that questions victory.</li>
+              <li>This version allows for a richer tapestry of emotion, pointing to a shifting societal value towards individualized expressions of morality and grief.</li>
             </ul>
-            <li>Both versions stress the undesirability of warfare, the incongruity of celebrating victory, and advocate for the proper conduct of mourning as a framework for a just society.</li>
+            <li>Both texts remain steadfast in their disdain for the glory of war, condemning the celebration of victory and advocating for grief as a pillar of ethical culture.</li>
           </ul>
         </div>
     );
   };
-  
-  export default Ch31;
+
+  export default Chapter_31;

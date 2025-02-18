@@ -1,43 +1,43 @@
-const Ch69 = () => {
-    return (
-        <div>
-            <h3 className="font-bold">Key Differences and Their Implications:</h3>
-            <ol style={{ listStyleType: 'decimal', paddingLeft: '1rem' }}>
-                <li><strong className="font-semibold">“抗兵相若” vs. “抗兵相加”</strong></li>
-                <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
-                    <li>Guodian/Mawangdui: “When fighting armies are evenly matched (抗兵相若, kàng bīng xiāng ruò), the side that mourns will win.”</li>
-                    <li>Standard text: “When fighting armies become entangled (抗兵相加, kàng bīng xiāng jiā), the side that mourns will win.”</li>
-                    <li><strong className="font-semibold">Implication:</strong></li>
-                    <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
-                        <li>抗兵相若 (kàng bīng xiāng ruò) suggests a situation where forces are comparable in strength, emphasizing equality or parity in the conflict.</li>
-                        <li>抗兵相加 (kàng bīng xiāng jiā) suggests a convergence or piling up of forces, emphasizing the intensity or complexity of the conflict.</li>
-                    </ul>
-                    <li><strong className="font-semibold">Philosophical Shift:</strong></li>
-                    <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
-                        <li>The older text (Guodian/Mawangdui) focuses on a balanced contest, where victory is determined by internal qualities such as forbearance or the ability to mourn.</li>
-                        <li>The later standard text shifts to focus on entanglement, or the complexity of the conflict, which again rewards the side with deeper introspection and mourning.</li>
-                        <li>This reflects a shift from balance to emphasizing the dynamics of conflict itself.</li>
-                    </ul>
-                </ul>
-            </ol>
-            <h3 className="font-bold mt-2">Final Interpretation:</h3>
-            <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
-                <li>The Guodian/Mawangdui version emphasizes warfare as a balanced contest:</li>
-                <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
-                    <li>It indicates that when forces are evenly matched, victory depends on non-material qualities such as emotional depth.</li>
-                    <li>It presents a more philosophical view of leadership that mourns for the costs of war, potentially suggesting introspection and humility as keys to success.</li>
-                </ul>
-            </ul>
-            <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
-                <li>The later standard text shifts toward the complexity of engagement:</li>
-                <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
-                    <li>It suggests the tangled nature of warfare, perhaps emphasizing the chaos and uncertainty involved.</li>
-                    <li>Maintains the notion that emotional depth and reflection provide strategic advantage, showing continuity in Daoist thought.</li>
-                    <li>Both versions retain the essence that reflective, emotionally involved leadership brings victory, emphasizing humility and depth over brute strength.</li>
-                </ul>
-            </ul>
-        </div>
-    );
-  };
-  
-  export default Ch69;
+const Chapter_69 = () => {
+  return (
+    <div>
+      <h3 className="font-bold">Exploring the Differences and Their Philosophical Significance:</h3>
+      <ol style={{ listStyleType: 'decimal', paddingLeft: '1rem' }}>
+        <li><strong className="font-semibold">“抗兵相若” vs. “抗兵相加”</strong></li>
+        <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
+          <li>Guodian/Mawangdui: “When fighting armies are evenly matched (抗兵相若, kàng bīng xiāng ruò), the side that mourns will win.”</li>
+          <li>Standard text: “When fighting armies become entangled (抗兵相加, kàng bīng xiāng jiā), the side that mourns will win.”</li>
+          <li><strong className="font-semibold">Implication:</strong></li>
+          <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
+            <li>抗兵相若 (kàng bīng xiāng ruò) paints a picture of a warfare environment where opposing forces truly match each other in strength. This emphasizes a poetic and almost serene parity.</li>
+            <li>抗兵相加 (kàng bīng xiāng jiā), on the other hand, conjures the imagery of a chaotic clash, where forces merge in a struggle that defines complexity and intensity.</li>
+          </ul>
+          <li><strong className="font-semibold">Philosophical Evolution:</strong></li>
+          <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
+            <li>The first text (Guodian/Mawangdui) guides us toward a view of balance in conflict, where victory stems from qualities more ethereal than tangible, such as mourning and reflection.</li>
+            <li>The later text leans into the difficult nature of warfare itself, suggesting that complexity and conflict are inherent. Here, introspection during entanglement leads to triumph.</li>
+            <li>This represents a shift from a focus on balance to an emphasis on the intricate dance of conflict, from the art of rivaling to the art of entangling.</li>
+          </ul>
+        </ul>
+      </ol>
+      <h3 className="font-bold mt-2">Reflective Interpretation:</h3>
+      <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
+        <li>The Guodian/Mawangdui text shines a light on warfare as a harmonious contest:</li>
+        <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
+          <li>Here, evenly matched forces uncover a path to victory not through sheer power but through the subtle strength of internal qualities.</li>
+          <li>There’s a quiet insistence on leadership that bears the weight of war, urging leaders to consider compassion and reflection as the keys to true success.</li>
+        </ul>
+      </ul>
+      <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
+        <li>Contrastingly, the later standard text delves into the complications of engagement:</li>
+        <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
+          <li>It paints a scene filled with the tangled web of conflict, emphasizing the unpredictable and often chaotic nature inherent in war.</li>
+          <li>This text retains the guiding principle that emotional insight and depth bring a strategic advantage, a thread running through the tapestry of Daoist thought.</li>
+          <li>Both iterations resonate with the recognition that mindful, emotionally aware leadership triumphs, celebrating the power of humility and substance over raw force.</li>
+        </ul>
+      </ul>
+    </div>
+  );
+};
+
+export default Chapter_69;

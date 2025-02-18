@@ -1,56 +1,97 @@
-const Ch21 = () => {
-    return (
-        <div>
-            <h3 className="font-bold">Key Differences and Their Implications:</h3>
-            <ol style={{ listStyleType: 'decimal', paddingLeft: '1rem' }}>
-                <li><strong className="font-semibold">"惚兮恍兮" vs. "忽兮恍兮" and "恍兮惚兮" vs. "恍兮忽兮"</strong></li>
-                <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
-                    <li>Guodian/Mawangdui: "惚兮恍兮" and "恍兮惚兮" are used to describe the elusive nature of the Dao.</li>
-                    <li>Standard text: Replaces "惚" (hū) with "忽" (hū), maintaining a similar elusive meaning but with a subtle shift in nuance.</li>
-                    <li><strong className="font-semibold">Implication:</strong></li>
-                    <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
-                        <li>Both "惚" and "忽" suggest something ephemeral or transient, however "惚" can imply a more mysterious and elusive quality, while "忽" suggests suddenness or an abrupt transformation.</li>
-                    </ul>
-                    <li><strong className="font-semibold">Philosophical Shift:</strong></li>
-                    <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
-                        <li>The term "惚" in Guodian/Mawangdui reflects a deep and intrinsic elusiveness of the Dao, aligning with a mystical understanding.</li>
-                        <li>The shift to "忽" in the standard text might suggest a slightly more dynamic and unpredictable nature of the Dao, potentially highlighting its abrupt transformations.</li>
-                    </ul>
-                </ul>
-                <li><strong className="font-semibold">"自今及古" vs. "自古及今"</strong></li>
-                <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
-                    <li>Guodian/Mawangdui: "自今及古" translates to "from now to ancient times".</li>
-                    <li>Standard text: "自古及今" translates to "from ancient times to now".</li>
-                    <li><strong className="font-semibold">Implication:</strong></li>
-                    <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
-                        <li>The Guodian/Mawangdui text emphasizes a present-forward perspective, suggesting the timeless and continuous presence of Dao from the present into the past.</li>
-                        <li>The standard text's reversal from ancient times to the present highlights a historical continuity and legacy, emphasizing the Dao's consistency through time.</li>
-                    </ul>
-                    <li><strong className="font-semibold">Philosophical Shift:</strong></li>
-                    <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
-                        <li>The Guodian/Mawangdui version may suggest the Dao's immediate relevance and presence, reflecting a focus on its current application and recognition.</li>
-                        <li>The standard version frames the Dao's history and perennial nature, emphasizing its longstanding significance and unchanging nature from past to present.</li>
-                    </ul>
-                </ul>
-            </ol>
-            <h3 className="font-bold mt-2">Final Interpretation:</h3>
-            <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
-                <li>The Guodian/Mawangdui version reflects a more immediate and mystical interpretation of the Dao:</li>
-                <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
-                    <li>It emphasizes the intangible, elusive quality of the Dao as deeply rooted in the present.</li>
-                    <li>The language suggests a direct and almost spontaneous engagement with the Dao's presence.</li>
-                </ul>
-            </ul>
-            <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
-                <li>The later standard text adopts a historical and consistent framing of the Dao:</li>
-                <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
-                    <li>It underscores the Dao's unchanging nature across the ages, from past to present.</li>
-                    <li>The slight shifts in language nuance point toward a more dynamic or transformative aspect of the Dao.</li>
-                    <li>Both versions emphasize the Dao's subtle and profound presence, but they diverge in their temporal focus and the Dao's perceived nature—from mysterious/thestical and immediate in the older text to dynamic/historically consistent in the standard text.</li>
-                </ul>
-            </ul>
-        </div>
-    );
-  };
-  
-  export default Ch21;
+const Chapter_21 = () => {
+  return (
+    <div>
+      <h3 className="font-bold">Key Differences and Their Implications:</h3>
+      <ol style={{ listStyleType: 'decimal', paddingLeft: '1rem' }}>
+        <li><strong className="font-semibold">"惚兮恍兮" vs. "忽兮恍兮" and "恍兮惚兮" vs. "恍兮忽兮"</strong></li>
+        <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
+          <li>
+            In the exquisite dance of the ancient characters, "惚" (hū) and "忽" (hū) might seem almost identical at first glance. But under the scrutiny of a sage, their hidden whispers reveal distinct tales about the Dao.
+          </li>
+          <li>
+            The Guodian/Mawangdui text uses "惚" to paint the Dao with shades of mystery and a sense of the unfathomable. It's as if this version wants us to ponder the Dao as a dream just beyond our reach.
+          </li>
+          <li>
+            The standard text replaces "惚" with "忽," injecting a suddenness and unpredictability into our understanding of the Dao. This suggests a universe ready to surprise, where change sweeps in like a swift, invigorating wind.
+          </li>
+          <li>
+            <strong className="font-semibold">Implication:</strong>
+          </li>
+          <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
+            <li>
+              "惚" embodies the elusive and almost mystical nature of the Dao. In contrast, "忽" nudges us toward seeing it as fluid and ever-shifting, ready to reveal its secrets in a burst of revelation.
+            </li>
+          </ul>
+          <li>
+            <strong className="font-semibold">Philosophical Shift:</strong>
+          </li>
+          <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
+            <li>
+              The use of "惚" in Guodian/Mawangdui may align us more with the mystical tradition, encouraging a slower, deeper contemplation.
+            </li>
+            <li>
+              Switching to "忽" in the standard text might mirror philosophical trends that embraced spontaneity and change as inherent aspects of existence.
+            </li>
+          </ul>
+        </ul>
+        <li><strong className="font-semibold">"自今及古" vs. "自古及今"</strong></li>
+        <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
+          <li>
+            The Guodian/Mawangdui text takes us on a journey from the present to the past, "自今及古." It’s a perspective that places us right here, firmly in the now, before weaving through the tapestry of history.
+          </li>
+          <li>
+            Conversely, the standard text begins from "自古及今," honoring the ancient roots of the Dao and tracing its path to today. This approach invites a reflection on the enduring nature of truth and tradition.
+          </li>
+          <li>
+            <strong className="font-semibold">Implication:</strong>
+          </li>
+          <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
+            <li>
+              The Guodian/Mawangdui reads more like a call to recognize the Dao's presence in this moment. It's a reminder that the past is accessible from the present, weaving timelessness with immediacy.
+            </li>
+            <li>
+              The standard version tells a story of continuity, where the ancient wisdom of the Dao flows toward us, carrying the weight and wisdom of generations.
+            </li>
+          </ul>
+          <li>
+            <strong className="font-semibold">Philosophical Shift:</strong>
+          </li>
+          <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
+            <li>
+              Guodian/Mawangdui urges us to embrace the Dao here and now, hinting at a philosophy that treasures the present moment's mysteries and truths. 
+            </li>
+            <li>
+              The standard text encourages a view of the Dao as a timeless beacon guiding humanity throughout the ages—a philosophy rooted in continuity and consistency.
+            </li>
+          </ul>
+        </ul>
+      </ol>
+      <h3 className="font-bold mt-2">Final Interpretation:</h3>
+      <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
+        <li>
+          The rendition found in Guodian/Mawangdui invites us into a world where the Dao's mysteries seem ever-present and poised on the edge of tangibility:
+        </li>
+        <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
+          <li>
+            It beckons the seeker to engage with the Dao's essence, almost spontaneously and with an open heart tuned to the present.
+          </li>
+        </ul>
+      </ul>
+      <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
+        <li>
+          The standard text, meanwhile, narrates a saga of the Dao that stretches through ages, resonating with the heartbeat of historical echoes:
+        </li>
+        <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
+          <li>
+            It underscores a vision of the Dao as a steadfast companion throughout humanity’s journey, never changing yet allowing for endless transformation in perception.
+          </li>
+          <li>
+            Both versions envelop us with the Dao’s subtle, profound presence, yet they invite us to explore different facets—whether it's the captivating immediacy or the calm, enduring legacy.
+          </li>
+        </ul>
+      </ul>
+    </div>
+  );
+};
+
+export default Chapter_21;

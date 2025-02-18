@@ -1,43 +1,42 @@
-const Ch35 = () => {
-    return (
-        <div>
-          <h3 className="font-bold">Key Differences and Their Implications:</h3>
-          <ol style={{ listStyleType: 'decimal', paddingLeft: '1rem' }}>
-              <li><strong className="font-semibold">"安平泰" vs. "安平大"</strong></li>
-              <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
-                  <li>Guodian/Mawangdui: "安平泰" (ān píng tài) translates to "peaceful and secure in great harmony."</li>
-                  <li>Standard text: "安平大" (ān píng dà) translates to "peaceful and secure in great peace."</li>
-                  <li><strong className="font-semibold">Implication:</strong></li>
-                  <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
-                      <li>The term "泰" (tài) generally means harmony or extreme ease, suggesting a nuanced state of balance and tranquility.</li>
-                      <li>The term "大" (dà) simply emphasizes greatness or vastness, a less nuanced concept focusing on size or magnitude.</li>
-                  </ul>
-                  <li><strong className="font-semibold">Philosophical Shift:</strong></li>
-                  <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
-                      <li>Older text (Guodian/Mawangdui): Emphasizes a state of harmony where everything is in balance.</li>
-                      <li>Later text: Emphasizes a notion of greatness, potentially implying something impressive but less specifically harmonious.</li>
-                      <li>This shift suggests a change from a nuanced philosophical state of balance to a broader, more general state of greatness.</li>
-                  </ul>
-              </ul>
-          </ol>
-          <h3 className="font-bold mt-2">Final Interpretation:</h3>
+const Chapter_35 = () => {
+  return (
+    <div>
+      <h3 className="font-bold">Key Differences and Their Implications:</h3>
+      <ol style={{ listStyleType: 'decimal', paddingLeft: '1rem' }}>
+        <li><strong className="font-semibold">"安平泰" vs. "安平大"</strong></li>
+        <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
+          <li>In the ancient Guodian and Mawangdui texts, "安平泰" (ān píng tài) can be understood as "peaceful and secure in great harmony."</li>
+          <li>Contrast this with the standard version's "安平大" (ān píng dà), which emphasizes "peaceful and secure in great peace."</li>
+          <li><strong className="font-semibold">Implication:</strong></li>
           <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
-              <li>The Guodian/Mawangdui version is more focused on harmony and balance:</li>
-              <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
-                  <li>It highlights an ideal state where peace is achieved through harmonious balance.</li>
-                  <li>This reflects Daoist themes of balance and the middle way.</li>
-              </ul>
+            <li>The character "泰" (tài) conveys a sense of harmony or profound ease, hinting at a balanced tranquility that is almost poetic in its subtlety.</li>
+            <li>Meanwhile, "大" (dà) speaks more to the concept of magnitude or greatness, perhaps painting a less intricate picture where the focus shifts to sheer scale.</li>
           </ul>
+          <li><strong className="font-semibold">Philosophical Shift:</strong></li>
           <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
-              <li>The later standard text moves toward a notion of greatness:</li>
-              <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
-                  <li>It emphasizes the size or magnitude of peace rather than its quality or harmony.</li>
-                  <li>This shift could reflect broader interpretations or changes in philosophical focus by the Three Kingdoms period.</li>
-                  <li>Both versions stress the importance of holding the "great image" or "idea," but differ in their philosophical framing of peace and tranquility.</li>
-              </ul>
+            <li>The older texts (Guodian/Mawangdui) focus on the delicate balance and intrinsic harmony of all things—a core Daoist principle.</li>
+            <li>The later adaptation appears to emphasize notions of greatness, possibly reflecting a society more impressed by grandiosity than finesse.</li>
+            <li>This transition could mirror how philosophical priorities evolved, from valuing sophisticated equilibrium to appreciating sheer vastness.</li>
           </ul>
-        </div>
-    );
-  };
-  
-  export default Ch35;
+        </ul>
+      </ol>
+      <h3 className="font-bold mt-2">Final Interpretation:</h3>
+      <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
+        <li>The Guodian/Mawangdui version, with its focus on harmony and balance, exudes a sense of peace achieved through equilibrium:</li>
+        <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
+          <li>It highlights a world where balance reigns supreme, aligning perfectly with the Daoist pursuit of the middle way and natural order.</li>
+        </ul>
+      </ul>
+      <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
+        <li>In contrast, the later standard text elevates the notion of greatness:</li>
+        <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
+          <li>This version suggests a shift in value—an admiration for magnitude over the serene quality of balance.</li>
+          <li>It’s a fascinating pivot that might reflect broader cultural or philosophical changes during the turbulent Three Kingdoms period, where the sheer size often equated to power.</li>
+          <li>Both interpretations underscore the importance of the "great image" or "idea," yet they frame peace and tranquility through distinct philosophical lenses.</li>
+        </ul>
+      </ul>
+    </div>
+  );
+};
+
+export default Chapter_35;

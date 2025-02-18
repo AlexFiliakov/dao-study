@@ -1,54 +1,54 @@
-const Ch60 = () => {
-    return (
-        <div>
-          <h3 className="font-bold">Key Differences and Their Implications:</h3>
-          <ol style={{ listStyleType: 'decimal', paddingLeft: '1rem' }}>
-            <li><strong className="font-semibold">"其鬼不神，非其鬼不神" vs. "其鬼不神；非其鬼不神"</strong></li>
-            <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
-              <li>Guodian/Mawangdui: "Its ghosts are not supernatural, not that its ghosts are not supernatural."</li>
-              <li>Standard text: "Its ghosts are not supernatural; not that its ghosts are not supernatural."</li>
-              <li><strong className="font-semibold">Implication:</strong></li>
-              <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
-                <li>Both texts start with "its ghosts are not supernatural," indicating a negation of supernatural influence on governance.</li>
-                <li>The Guodian/Mawangdui version lacks explicit separation by punctuation, potentially suggesting a more fluid interpretation of the supernatural theme.</li>
-                <li>The standard text's use of a semicolon creates a stronger separation between the statements, slightly emphasizing the logical flow between them.</li>
-              </ul>
-            </ul>
-        
-            <li><strong className="font-semibold">"其神不伤人，非其神不伤人。圣人亦不伤人" vs. "其神不伤人；非其神不伤人，圣人亦不伤人"</strong></li>
-            <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
-              <li>Guodian/Mawangdui: "Its spirits do not harm people, not that its spirits do not harm people. The sage also does not harm people."</li>
-              <li>Standard text: "Its spirits do not harm people; not that its spirits do not harm people, the sage also does not harm people."</li>
-              <li><strong className="font-semibold">Implication:</strong></li>
-              <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
-                <li>The Guodian/Mawangdui text might indicate a continuous narrative or cyclical reasoning in emphasizing non-harm.</li>
-                <li>The standard text, through punctuation, presents a more segmented approach that explicates the relationship between spirits and sages distinctly.</li>
-              </ul>
-            </ul>
-        
-            <li><strong className="font-semibold">Philosophical Implications:</strong></li>
-            <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
-              <li>The Guodian/Mawangdui version reflects a non-dualistic view where distinctions between entities (e.g., ghosts, spirits, sage) are less structurally defined, emphasizing their interconnectedness in non-harm.</li>
-              <li>The standard text delineates the interplay between supernatural and human governance more explicitly, offering a clearer analytical distinction.</li>
-            </ul>
-          </ol>
-        
-          <h3 className="font-bold mt-2">Final Interpretation:</h3>
+const Chapter_60 = () => {
+  return (
+    <div>
+      <h3 className="font-bold">Key Differences and Their Implications:</h3>
+      <ol style={{ listStyleType: 'decimal', paddingLeft: '1rem' }}>
+        <li><strong className="font-semibold">"其鬼不神，非其鬼不神" vs. "其鬼不神；非其鬼不神"</strong></li>
+        <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
+          <li>The Guodian/Mawangdui text reads more fluidly: "Its ghosts are not supernatural, not that its ghosts are not supernatural."</li>
+          <li>The standard text inserts a break: "Its ghosts are not supernatural; not that its ghosts are not supernatural."</li>
+          <li><strong className="font-semibold">Implication:</strong></li>
           <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
-            <li>The Guodian/Mawangdui version suggests:</li>
-            <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
-              <li>A holistic, nearly seamless approach to governing where distinctions among spirits, supernatural elements, and sages blend in a common pursuit of non-harm.</li>
-              <li>The emphasis lies in the subtle interplay of elements, with a continuous narrative suggesting broader cosmic harmony.</li>
-            </ul>
-        
-            <li>The later standard text offers a more structured analysis:</li>
-            <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
-              <li>It emphasizes a structured segmentation in defining roles and effects of spirits and sages, suggesting a more categorical approach to interpreting governance and influence.</li>
-              <li>This could reflect a historical shift towards more precise philosophical categorization or analysis as Daoism interacted with other philosophical or cultural developments over time.</li>
-            </ul>
+            <li>Both versions begin by challenging the idea that supernatural entities influence governance.</li>
+            <li>The older text's lack of a strict separation might suggest a flow of thought that embraces ambiguity and fluid interpretation regarding supernatural elements.</li>
+            <li>The semicolon in the standard text implies a more deliberate pause, fostering a logical deduction that divides the statement into clearer segments.</li>
           </ul>
-        </div>
-    );
-  };
-  
-  export default Ch60;
+        </ul>
+    
+        <li><strong className="font-semibold">"其神不伤人，非其神不伤人。圣人亦不伤人" vs. "其神不伤人；非其神不伤人，圣人亦不伤人"</strong></li>
+        <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
+          <li>In the Guodian/Mawangdui text: "Its spirits do not harm people, not that its spirits do not harm people. The sage also does not harm people."</li>
+          <li>Standard text provides a distinct separation: "Its spirits do not harm people; not that its spirits do not harm people, the sage also does not harm people."</li>
+          <li><strong className="font-semibold">Implication:</strong></li>
+          <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
+            <li>The older text presents an ongoing discourse, suggesting a recursive emphasis on the principle of non-harm and its universal application.</li>
+            <li>The segmentation in the standard text clearly outlines different realms of influence, distinguishing between the supernatural and the wise sage.</li>
+          </ul>
+        </ul>
+    
+        <li><strong className="font-semibold">Philosophical Implications:</strong></li>
+        <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
+          <li>The Guodian/Mawangdui expression captures a holistic worldview where distinctions between entities blur, promoting an interconnected vision of harmony and non-violence.</li>
+          <li>The standard text reflects an evolution towards precise categorization, possibly influenced by cross-pollination with other philosophical systems that called for clearer definitions and logical analysis.</li>
+        </ul>
+      </ol>
+    
+      <h3 className="font-bold mt-2">Final Interpretation:</h3>
+      <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
+        <li>The more ancient Guodian/Mawangdui version offers an evocative, almost poetic narrative:</li>
+        <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
+          <li>Governing is seen as a grand dance, where the lines between spirits and sages dissolve in a seamless, shared ambition for peace and unity.</li>
+          <li>The flowing narrative suggests a harmony that transcends rigid categories, capturing a cosmic interconnectedness.</li>
+        </ul>
+    
+        <li>Contrastingly, the standard text conveys a sharpened philosophical clarity:</li>
+        <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
+          <li>The text distills the cosmic interplay into distinct roles and effects, advocating for a systematic approach to understanding the dynamics of governance and the supernatural.</li>
+          <li>This shift might mirror the historical landscape where philosophical inquiry became more analytically rigorous as Daoism matured through interactions with Confucian and Buddhist ideas.</li>
+        </ul>
+      </ul>
+    </div>
+  );
+};
+
+export default Chapter_60;

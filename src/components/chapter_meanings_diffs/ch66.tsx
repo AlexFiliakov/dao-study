@@ -1,48 +1,48 @@
-const Ch66 = () => {
-    return (
-        <div>
-          <h3 className="font-bold">Key Differences and Their Implications:</h3>
-          <ol style={{ listStyleType: 'decimal', paddingLeft: '1rem' }}>
-            <li><strong className="font-semibold">"以其善下之" vs. "以其善下之"</strong></li>
-            <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
-              <li>Guodian/Mawangdui: "It is because they are good at placing themselves below."</li>
-              <li>Standard text: "It is because they are good at placing themselves below."</li>
-              <li><strong className="font-semibold">Implication:</strong></li>
-              <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
-                <li>Both texts maintain the same phrase, emphasizing the virtue of humility and lowering oneself to achieve a leadership position like that of an ocean or sea.</li>
-                <li>No significant textual variance or philosophical implications arise from this specific phrase in the translations.</li>
-              </ul>
-            </ul>
-            <li><strong className="font-semibold">"必以言下之" vs. "必以言下之"</strong></li>
-            <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
-              <li>Guodian/Mawangdui: "They must use words to place themselves below."</li>
-              <li>Standard text: "They must use words to place themselves below."</li>
-              <li><strong className="font-semibold">Implication:</strong></li>
-              <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
-                <li>No difference in translation here, but it implies that leadership involves the ability to communicate humbly and put the people first through speech and actions.</li>
-              </ul>
-            </ul>
-            <li><strong className="font-semibold">"以其不争，故天下莫能与之争" vs. "以其不争，故天下莫能与之争"</strong></li>
-            <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
-              <li>Guodian/Mawangdui: "Because they do not strive, the world cannot strive against them."</li>
-              <li>Standard text: "Because they do not strive, the world cannot strive against them."</li>
-              <li><strong className="font-semibold">Implication:</strong></li>
-              <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
-                <li>Both texts present the same idea, highlighting that non-contention is a strategy that leads to a peaceful or uncontested authority.</li>
-              </ul>
-            </ul>
-          </ol>
-          <h3 className="font-bold mt-2">Final Interpretation:</h3>
+const Chapter_66 = () => {
+  return (
+    <div>
+      <h3 className="font-bold">Key Differences and Their Implications:</h3>
+      <ol style={{ listStyleType: 'decimal', paddingLeft: '1rem' }}>
+        <li><strong className="font-semibold">"以其善下之" vs. "以其善下之"</strong></li>
+        <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
+          <li>Guodian/Mawangdui: "It is because they are good at placing themselves below."</li>
+          <li>Standard text: "It is because they are good at placing themselves below."</li>
+          <li><strong className="font-semibold">Implication:</strong></li>
           <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
-            <li>The Guodian/Mawangdui version maintains a clear continuity with the later "standard text" version in this chapter:</li>
-            <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
-              <li>Both emphasize humility, the power of non-contention, and a leadership style that is effective through a lack of overt striving.</li>
-              <li>The philosophical and practical message remains consistent that true leadership is rooted in being humble and non-contentious, thereby gaining respect and command over naturally flowing interactions.</li>
-              <li>The chapter in both versions reinforces the Daoist ideals of passive leadership and the benefits of playing a supportive rather than domineering role in governance.</li>
-            </ul>
+            <li>This phrase echoes through time with the same harmony, resonating with the beauty of humility. The idea is timeless: to lead, one must willingly stand lower, like a gentle ocean cradling myriad streams, commanding respect through quiet strength rather than force.</li>
+            <li>The consistent use of this phrase across both versions suggests that the philosophy of humility has a revered place in Chinese thought, unfazed by centuries of change.</li>
           </ul>
-        </div>
-    );
-  };
-  
-  export default Ch66;
+        </ul>
+        <li><strong className="font-semibold">"必以言下之" vs. "必以言下之"</strong></li>
+        <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
+          <li>Guodian/Mawangdui: "They must use words to place themselves below."</li>
+          <li>Standard text: "They must use words to place themselves below."</li>
+          <li><strong className="font-semibold">Implication:</strong></li>
+          <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
+            <li>Despite different eras, both scripts agree on the power of humble communication in leadership. There's something deeply compelling about using speech not to dominate, but to respectfully position oneself as a servant-leader, letting actions speak softly alongside words.</li>
+          </ul>
+        </ul>
+        <li><strong className="font-semibold">"以其不争，故天下莫能与之争" vs. "以其不争，故天下莫能与之争"</strong></li>
+        <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
+          <li>Guodian/Mawangdui: "Because they do not strive, the world cannot strive against them."</li>
+          <li>Standard text: "Because they do not strive, the world cannot strive against them."</li>
+          <li><strong className="font-semibold">Implication:</strong></li>
+          <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
+            <li>This shared wisdom speaks volumes about a leadership style imbued with grace—a non-aggressive approach, inviting cooperation rather than confrontation. It reflects an unchanging truth that resonates with anyone who believes in peace over ambition.</li>
+          </ul>
+        </ul>
+      </ol>
+      <h3 className="font-bold mt-2">Final Interpretation:</h3>
+      <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
+        <li>The Guodian/Mawangdui version maintains a clear continuity with the later "standard text" in this chapter:</li>
+        <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
+          <li>Both versions articulate a leadership philosophy that embraces humility and laissez-faire management, painting a portrait of wise authority through passive leadership.</li>
+          <li>The texts resonate with a philosophy that remains compelling over centuries: the leader who avoids contention garners true influence, not through force, but by harmonizing with nature's flow.</li>
+          <li>This timeless chapter invites us to embrace a style of governance that remains as serene as a calm sea, where the most effective leadership arises from serving and allowing natural processes to unfold.</li>
+        </ul>
+      </ul>
+    </div>
+  );
+};
+
+export default Chapter_66;
