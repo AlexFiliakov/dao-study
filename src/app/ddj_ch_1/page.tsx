@@ -33,7 +33,7 @@ export default function DDJCh1 () {
                 有，名万物之母也。<br />
                 you, is the mother of all creations.<br />
                 故恒无欲也，以观其眇。<br />
-                Free from desire/expectation, you realise the mystery.<br />
+                Free from desire/expectation, you realize the mystery.<br />
                 恒有欲也，以观其所噭。<br />
                 Caught in desire, you see only the manifestions.<br />
                 两者同出，异名同谓。<br />
