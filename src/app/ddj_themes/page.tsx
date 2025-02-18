@@ -58,42 +58,127 @@ export default function DDJThemes () {
                 <BookOpen className="text-teal-700 mr-3" />
                 <h2 className="text-xl text-neutral-800">Recurring Themes</h2>
             </div> */}
-            道 (dào) – &ldquo;The Way&rdquo; or &ldquo;the Path&rdquo;; central to Daoist philosophy. Dao is the theme of Chapters 1-37 of Dao De Jing.<br /><br />
-            德 (dé) – &ldquo;Virtue&rdquo; or &ldquo;Power&rdquo;; represents the active expression of the Dao. Dé is the theme of Chapters 38-81 of Dao De Jing.
+            道 (dào) can be translated from around 300-200 BCE as: "Way," "Path," "Principle," "Teaching," or "Method."<br />
+            <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
+              <li>Central to Daoist philosophy.</li>
+              <li>Modern meaning has largely remained similar, incorporating additional connotations such as "Tao" in philosophical contexts.</li>
+              <li>Dào is the theme of Chapters 1-37 of Dao De Jing.</li>
+            </ul><br />
+            德 (dé) can be translated from around 300-200 BCE as: "Virtue," "Moral&nbsp;character," "Intrinsic&nbsp;quality," or "Power."<br />
+            <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
+              <li>Represents the active expression of the Dao.</li>
+              <li>Modern meaning has evolved to include the sense of "Ethics" or "Morality."</li>
+              <li>Dé is the theme of Chapters 38-81 of Dao De Jing.</li>
+            </ul>
           </div>
           <div className="bg-white mt-8 p-6 rounded-lg shadow-md border-l-4 border-teal-700">
-            无 (wú) – &ldquo;Non-being&rdquo; or &ldquo;without&rdquo;; key to the Daoist idea of emptiness and non-attachment.<br /><br />
-            有 (yǒu) – &ldquo;Being&rdquo; or &ldquo;existence&rdquo;; often contrasted with wú to express the interplay of opposites.<br /><br />
-            为 (wéi) – &ldquo;To act&rdquo; or &ldquo;to do&rdquo;; central to the idea of wu wei (无为, non-action).<br /><br />
-            无为 (wú wéi) – &ldquo;Non-action&rdquo; or &ldquo;effortless action&rdquo;; a foundational Daoist principle.<br />
-            See Chapters&nbsp;
-            <a href="ddj_ch_2" rel="noopener noreferrer" className="text-red-800 hover:underline">2</a>, 3, 10, 29, 37, 38, 43, 48, 57, and 63.<br />
-            <a href="ddj_ch_16" rel="noopener noreferrer" className="text-red-800 hover:underline">Also see the notes in Chapter 16.</a>
+            无 (wú) can be translated from around 300-200 BCE as: "Nonexistence," "Not&nbsp;having," "Lack," "Negation," or "Without."<br />
+            <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
+              <li>Key to the Daoist idea of emptiness and non-attachment.</li>
+              <li>Modern meaning has remained similar.</li>
+            </ul><br />
+            有 (yǒu) can be translated from around 300-200 BCE as: "Exist," "Having," "Possession," or "Being."<br />
+            <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
+              <li>Often contrasted with wú to express the interplay of opposites.</li>
+              <li>Modern meaning has remained similar.</li>
+            </ul><br />
+            为 (wéi) can be translated from around 300-200 BCE as: "Act," "Do," "Serve," "Become," or "For."<br />
+            <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
+              <li>Central to the idea of wu wei (无为, non-action).</li>
+              <li>Modern meaning has remained similar.</li>
+            </ul><br />
+            无为 (wú wéi) translates roughly to "Non-action" or "Effortless&nbsp;action."<br />
+            <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
+              <li>A foundational Daoist principle.</li>
+              <li>See Chapters&nbsp;
+                <a href="ddj_ch_2" rel="noopener noreferrer" className="text-red-800 hover:underline">2</a>, 3, 10, 29, 37, 38, 43, 48, 57, and 63.</li>
+              <li><a href="ddj_ch_16" rel="noopener noreferrer" className="text-red-800 hover:underline">Also see the notes in Chapter 16.</a></li>
+            </ul>
           </div>
           <div className="bg-white mt-8 p-6 rounded-lg shadow-md border-l-4 border-teal-700">
-            大 (dà) – &ldquo;Great&rdquo; or &ldquo;vast&rdquo;; frequently used to describe the Dao and the natural order.<br /><br />
-            常 (cháng) - &ldquo;Constant,&rdquo; &ldquo;eternal,&rdquo; &ldquo;unchanging,&rdquo; or &ldquo;in accordance with natural law.&rdquo; It is a key concept in Daoism, emphasizing the unchanging flow of the Dao.<br /><br />
-            下 (xià) – &ldquo;Low&rdquo; or &ldquo;below&rdquo;; often used metaphorically (e.g., rivers flowing downward).<br /><br />
-            知 (zhī) - &ldquo;To know,&rdquo; &ldquo;knowledge,&rdquo; or &ldquo;wisdom,&rdquo; and it plays a crucial role in Daoist philosophy, often in contrast with deeper understanding or intuitive knowing.
+            大 (dà) can be translated from around 300-200 BCE as: "Great," "Large," "Grand," "Vast," or "Significant."<br />
+            <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
+              <li>Frequently used to describe the Dao and the natural order.</li>
+              <li>Modern meaning has remained similar.</li>
+            </ul><br />
+            常 (cháng) can be translated from around 300-200 BCE as: "Always," "Constant," or "Eternal."<br />
+            <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
+              <li>It is a key concept in Daoism, emphasizing the unchanging flow of the Dao in accordance with natural law.</li>
+              <li>Modern meaning has evolved to include the sense of "ordinary" or "usual."</li>
+            </ul><br />
+            下 (xià) can be translated from around 300-200 BCE as: "Below," "Under," "Lower," or "Down."<br />
+            <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
+              <li>Often used metaphorically (e.g., rivers flowing downward).</li>
+              <li>Modern meaning has remained similar, generally meaning "Below," "Under," or "Next."</li>
+            </ul><br />
+            知 (zhī) can be translated from around 300-200 BCE as: "Know," "Perceive," or "Awareness."<br />
+            <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
+              <li>It plays a crucial role in Daoist philosophy, often in contrast with deeper understanding or intuitive knowing.</li>
+              <li>Modern meaning has remained similar.</li>
+            </ul>
           </div>
           <div className="bg-white mt-8 p-6 rounded-lg shadow-md border-l-4 border-teal-700">
-            天 (tiān) – &ldquo;Heaven&rdquo; or &ldquo;Nature&rdquo;; often represents the cosmic order.<br /><br />
-            地 (dì) – &ldquo;Earth&rdquo;; complements tiān in describing the natural world.<br /><br />
-            天道 (tiān dào) – &ldquo;The Way of Heaven&rdquo;; a naturalistic concept in Daoism.<br />
-            See Chapters 47 and 79.
+            天 (tiān) can be translated from around 300-200 BCE as: "Heaven," "Sky" or "Nature."<br />
+            <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
+              <li>Often represents the cosmic order.</li>
+              <li>Modern meaning has remained similar, often meaning "Sky" or "Heaven."</li>
+            </ul><br />
+            地 (dì) can be translated from around 300-200 BCE as: "Earth," "Ground," "Land," "Soil," or "Territory."<br />
+            <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
+              <li>Complements Tiān in describing the natural world.</li>
+              <li>Modern meaning has remained similar.</li>
+            </ul><br />
+            天道 (tiān dào) translates roughly to "The Way of Heaven."
+            <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
+              <li>A naturalistic concept in Daoism.</li>
+              <li>See Chapters 47 and 79.</li>
+            </ul>
           </div>
           <div className="bg-white mt-8 p-6 rounded-lg shadow-md border-l-4 border-teal-700">
-            生 (shēng) – &ldquo;Life&rdquo; or &ldquo;to give birth&rdquo;; central to Daoist ideas of nature and existence.<br /><br />
-            死 (sǐ) – &ldquo;Death&rdquo;; contrasts with shēng in discussions of the natural cycle.<br /><br />
-            道生 (dào shēng) – &ldquo;The Dao gives birth&rdquo;; a recurring phrase about creation.<br />
-            See Chapter 42 and 51.
+            生 (shēng) can be translated from around 300-200 BCE as: "Arise," "Begin," "Give&nbsp;Birth," "Generate," "Live," or "Grow."<br />
+            <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
+              <li>Central to Daoist ideas of nature and existence.</li>
+              <li>Modern meaning has generally remained similar.</li>
+            </ul><br />
+            死 (sǐ) can be translated from around 300-200 BCE as: "Death," "Die," or "Perish."<br />
+            <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
+              <li>Contrasts with Shēng in discussions of the natural cycle.</li>
+              <li>Modern meaning has largely remained similar.</li>
+            </ul><br />
+            道生 (dào shēng) translates roughly to "The Dao gives birth."<br />
+            <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
+              <li>A recurring phrase about creation.</li>
+              <li>See Chapters 42 and 51.</li>
+            </ul>
           </div>
           <div className="bg-white mt-8 p-6 rounded-lg shadow-md border-l-4 border-teal-700">
-            自 (zì) – &ldquo;Self&rdquo; or &ldquo;spontaneity&rdquo;; related to ziran (自然), meaning &ldquo;naturalness.&ldquo;<br /><br />
-            圣 (shèng) – Describes the ideal or enlightened ruler. &ldquo;Sage&rdquo; or &ldquo;wise one.&rdquo;<br /><br />
-            王 (wáng) – &ldquo;King&rdquo; or &ldquo;ruler&rdquo; in general.<br /><br />
-            人 (rén) – &ldquo;Person&rdquo; or &ldquo;human&rdquo;; used in discussions about governance and the sage.<br /><br />
-            民 (mín) – &ldquo;People&rdquo;; often mentioned in governance-related passages.
+            自 (zì) can be translated from around 300-200 BCE as: "Self," "From," "By&nbsp;oneself," "Natural," "Inherent," or "Intrinsic."<br />
+            <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
+              <li>Related to Ziran (自然), meaning "Naturalness."</li>
+              <ul style={{ listStyleType: 'circle', paddingLeft: '1rem' }}>
+                <li>See Chapters 17, 23, 25, and 51.</li>
+              </ul>
+              <li>Modern meaning has evolved to include the sense of "oneself," "autonomously," or "automatically."</li>
+            </ul><br />
+            圣 (shèng) can be translated from around 300-200 BCE as: "Sage," "Holy," "Sacred," or "Wise."<br />
+            <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
+              <li>Describes the ideal or enlightened ruler.</li>
+              <li>Modern meaning has remained similar, often emphasizing "Saint" or "Sacred."</li>
+            </ul><br />
+            王 (wáng) can be translated from around 300-200 BCE as: "King," "Ruler," or "Sovereign" in general.<br />
+            <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
+              <li>Modern meaning has evolved to include the sense of "Monarch" or "Leader."</li>
+            </ul><br />
+            人 (rén) can be translated from around 300-200 BCE as: "Person," "Human," "Individual," "Man," or "People."<br />
+            <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
+              <li>Used in discussions about governance and the sage.</li>
+              <li>Modern meaning has largely remained similar.</li>
+            </ul><br />
+            民 (mín) can be translated from around 300-200 BCE as: "People," "Commoners," "The&nbsp;Masses," "Citizens," or "Subjects."<br />
+            <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>
+              <li>Often mentioned in governance-related passages.</li>
+              <li>Modern meaning has remained similar.</li>
+            </ul>
           </div>
         </div>
       </main>
