@@ -10,12 +10,23 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     const fetchLastCommitTime = async () => {
       try {
-        const response = await fetch('/api/last-commit-time');
-        const data = await response.json();
-        const timestamp = data.timestamp;
-        const date = new Date(parseInt(timestamp) * 1000);
+        const response = await fetch('/api/last-commit-time', {
+          headers: {
+            'Accept': 'application/json',
+          },
+        });
         
-        // Format date to EST
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        
+        const data = await response.json();
+        if (!data.timestamp) {
+          throw new Error('No timestamp in response');
+        }
+
+        const date = new Date(parseInt(data.timestamp) * 1000);
+        
         const formatter = new Intl.DateTimeFormat('en-US', {
           timeZone: 'America/New_York',
           year: 'numeric',
