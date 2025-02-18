@@ -61,9 +61,3 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     </div>
   );
 }
-
-{
-  "scripts": {
-    "build": "next build && node scripts/save-commit-time.js"
-  }
-}
