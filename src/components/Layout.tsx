@@ -5,28 +5,21 @@ import Navigation from './Navigation';
 import { colors } from '@/constants/colors';
 
 export default function Layout({ children }: { children: React.ReactNode }) {
-  const [lastUpdated, setLastUpdated] = useState<string>('');
+  const [lastUpdated, setLastUpdated] = useState('');
 
   useEffect(() => {
     const fetchLastCommitTime = async () => {
       try {
-        const response = await fetch('/api/last-commit-time', {
-          headers: {
-            'Accept': 'application/json',
-          },
-        });
-        
+        const response = await fetch('/commit-time.json');
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
-        
         const data = await response.json();
         if (!data.timestamp) {
-          throw new Error('No timestamp in response');
+          throw new Error('No timestamp in commit-time.json');
         }
-
-        const date = new Date(parseInt(data.timestamp) * 1000);
         
+        const date = new Date(parseInt(data.timestamp) * 1000);
         const formatter = new Intl.DateTimeFormat('en-US', {
           timeZone: 'America/New_York',
           year: 'numeric',
@@ -39,7 +32,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         
         setLastUpdated(formatter.format(date));
       } catch (error) {
-        console.error('Error fetching last commit time:', error);
+        console.error('Error fetching commit time:', error);
         setLastUpdated('');
       }
     };
