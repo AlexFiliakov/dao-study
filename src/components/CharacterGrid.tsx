@@ -447,7 +447,7 @@ export default function CharacterGrid() {
               const cleanedFollowing = context.following.replace(/\r?\n\s*/g, '');
 
               return (
-                <div key={index} className="bg-gray-100 p-1">
+                <div key={index} className="bg-gray-100 p-2 rounded-lg">
                   <p className="text-sm whitespace-normal text-gray-700 text-center">
                     {cleanedPreceding}
                     <em className="text-green-600 text-sm bg-green-100 whitespace-normal not-italic">
