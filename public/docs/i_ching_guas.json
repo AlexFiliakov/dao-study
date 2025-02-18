@@ -144,9 +144,243 @@
         "translation" : "\"returning.\""
     },
     "25" : {
+        "hexagram" : "䷘",
+        "gua" : "無妄",
+        "pronunciation" : "wúwàng",
+        "translation" : "\"innocence\""
+    },
+    "26" : {
+        "hexagram" : "䷙",
+        "gua" : "大畜",
+        "pronunciation" : "dàchù",
+        "translation" : "\"great&nbsp;accumulating\""
+    },
+    "27" : {
+        "hexagram" : "䷚",
+        "gua" : "頤",
+        "pronunciation" : "yí",
+        "translation" : "\"swallowing\""
+    },
+    "28" : {
+        "hexagram" : "䷛",
+        "gua" : "大過",
+        "pronunciation" : "dàguò",
+        "translation" : "\"great&nbsp;exceeding\""
+    },
+    "29" : {
+        "hexagram" : "䷜",
+        "gua" : "坎",
+        "pronunciation" : "kǎn",
+        "translation" : "\"gorge\""
+    },
+    "30" : {
+        "hexagram" : "䷝",
+        "gua" : "離",
+        "pronunciation" : "lí",
+        "translation" : "\"radiance\""
+    },
+    "31" : {
+        "hexagram" : "䷞",
+        "gua" : "咸",
+        "pronunciation" : "xián",
+        "translation" : "\"conjoining\""
+    },
+    "32" : {
+        "hexagram" : "䷟",
+        "gua" : "恆",
+        "pronunciation" : "héng",
+        "translation" : "\"persevering\""
+    },
+    "33" : {
+        "hexagram" : "䷠",
+        "gua" : "遯",
+        "pronunciation" : "dùn",
+        "translation" : "\"retiring\""
+    },
+    "34" : {
+        "hexagram" : "䷡",
+        "gua" : "大壯",
+        "pronunciation" : "dàzhuàng",
+        "translation" : "\"great&nbsp;invigorating\""
+    },
+    "35" : {
+        "hexagram" : "䷢",
+        "gua" : "晉",
+        "pronunciation" : "jìn",
+        "translation" : "\"prospering\""
+    },
+    "36" : {
+        "hexagram" : "䷣",
+        "gua" : "明夷",
+        "pronunciation" : "míngyí",
+        "translation" : "\"intelligence&nbsp;hidden\""
+    },
+    "37" : {
+        "hexagram" : "䷤",
+        "gua" : "家人",
+        "pronunciation" : "jiārén",
+        "translation" : "\"dwelling&nbsp;people\""
+    },
+    "38" : {
+        "hexagram" : "䷥",
+        "gua" : "睽",
+        "pronunciation" : "kuí",
+        "translation" : "\"polarizing\""
+    },
+    "39" : {
         "hexagram" : "",
         "gua" : "",
         "pronunciation" : "",
-        "translation" : ""
+        "translation" : "\"\""
+    },
+    "40" : {
+        "hexagram" : "",
+        "gua" : "",
+        "pronunciation" : "",
+        "translation" : "\"\""
+    },
+    "41" : {
+        "hexagram" : "",
+        "gua" : "",
+        "pronunciation" : "",
+        "translation" : "\"\""
+    },
+    "42" : {
+        "hexagram" : "",
+        "gua" : "",
+        "pronunciation" : "",
+        "translation" : "\"\""
+    },
+    "43" : {
+        "hexagram" : "",
+        "gua" : "",
+        "pronunciation" : "",
+        "translation" : "\"\""
+    },
+    "44" : {
+        "hexagram" : "",
+        "gua" : "",
+        "pronunciation" : "",
+        "translation" : "\"\""
+    },
+    "45" : {
+        "hexagram" : "",
+        "gua" : "",
+        "pronunciation" : "",
+        "translation" : "\"\""
+    },
+    "46" : {
+        "hexagram" : "",
+        "gua" : "",
+        "pronunciation" : "",
+        "translation" : "\"\""
+    },
+    "47" : {
+        "hexagram" : "",
+        "gua" : "",
+        "pronunciation" : "",
+        "translation" : "\"\""
+    },
+    "48" : {
+        "hexagram" : "",
+        "gua" : "",
+        "pronunciation" : "",
+        "translation" : "\"\""
+    },
+    "49" : {
+        "hexagram" : "",
+        "gua" : "",
+        "pronunciation" : "",
+        "translation" : "\"\""
+    },
+    "50" : {
+        "hexagram" : "",
+        "gua" : "",
+        "pronunciation" : "",
+        "translation" : "\"\""
+    },
+    "51" : {
+        "hexagram" : "",
+        "gua" : "",
+        "pronunciation" : "",
+        "translation" : "\"\""
+    },
+    "52" : {
+        "hexagram" : "",
+        "gua" : "",
+        "pronunciation" : "",
+        "translation" : "\"\""
+    },
+    "53" : {
+        "hexagram" : "",
+        "gua" : "",
+        "pronunciation" : "",
+        "translation" : "\"\""
+    },
+    "54" : {
+        "hexagram" : "",
+        "gua" : "",
+        "pronunciation" : "",
+        "translation" : "\"\""
+    },
+    "55" : {
+        "hexagram" : "",
+        "gua" : "",
+        "pronunciation" : "",
+        "translation" : "\"\""
+    },
+    "56" : {
+        "hexagram" : "",
+        "gua" : "",
+        "pronunciation" : "",
+        "translation" : "\"\""
+    },
+    "57" : {
+        "hexagram" : "",
+        "gua" : "",
+        "pronunciation" : "",
+        "translation" : "\"\""
+    },
+    "58" : {
+        "hexagram" : "",
+        "gua" : "",
+        "pronunciation" : "",
+        "translation" : "\"\""
+    },
+    "59" : {
+        "hexagram" : "",
+        "gua" : "",
+        "pronunciation" : "",
+        "translation" : "\"\""
+    },
+    "60" : {
+        "hexagram" : "",
+        "gua" : "",
+        "pronunciation" : "",
+        "translation" : "\"\""
+    },
+    "61" : {
+        "hexagram" : "",
+        "gua" : "",
+        "pronunciation" : "",
+        "translation" : "\"\""
+    },
+    "62" : {
+        "hexagram" : "",
+        "gua" : "",
+        "pronunciation" : "",
+        "translation" : "\"\""
+    },
+    "63" : {
+        "hexagram" : "",
+        "gua" : "",
+        "pronunciation" : "",
+        "translation" : "\"\""
+    },
+    "64" : {
+        "hexagram" : "",
+        "gua" : "",
+        "pronunciation" : "",
+        "translation" : "\"\""
     }
 }
