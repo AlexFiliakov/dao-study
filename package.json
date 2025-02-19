@@ -7,7 +7,8 @@
     "build": "next build && node scripts/save-commit-time.js",
     "start": "serve out",
     "lint": "next lint",
-    "postbuild": "node scripts/save-commit-time.js"
+    "postbuild": "node scripts/save-commit-time.js",
+    "clean": "powershell -ExecutionPolicy Bypass -File clean.ps1"
   },
   "dependencies": {
     "child_process": "^1.0.2",

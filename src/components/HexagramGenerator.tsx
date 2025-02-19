@@ -8,7 +8,7 @@ interface HexagramDetails {
   gua: string;
   pronunciation: string;
   translation: string;
-  opposite_gua: string
+  opposite_gua: string;
   inverse_gua: string;
   mutual_gua: string;
 }
