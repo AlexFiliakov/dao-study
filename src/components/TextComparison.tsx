@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronUp } from 'lucide-react';
 import { Card, CardContent } from './ui/card';
+import HexagramDisplay from '@/components/HexagramDisplay';
 import Chapter1Notes from '@/components/chapter_meanings_diffs/ch1';
 import Chapter2Notes from '@/components/chapter_meanings_diffs/ch2';
 import Chapter3Notes from '@/components/chapter_meanings_diffs/ch3';
@@ -100,21 +101,12 @@ interface Chapter {
   guodianSource: string;
 }
 
-interface HexagramDetails {
-  hexagram: string;
-  gua: string;
-  pronunciation: string;
-  translation: string;
-}
-
 const TextComparison: React.FC = () => {
   const [chapters, setChapters] = useState<Chapter[]>([]);
   const [sources, setSources] = useState<{standard: string, guodian: string}>({
     standard: '',
     guodian: ''
   });
-  const [hexagramMapping, setHexagramMapping] = useState<Record<string, string>>({});
-  const [hexagramDetails, setHexagramDetails] = useState<Record<string, HexagramDetails>>({});
 
   useEffect(() => {
     const loadTexts = async (): Promise<void> => {
@@ -172,26 +164,6 @@ const TextComparison: React.FC = () => {
     };
 
     loadTexts();
-  }, []);
-
-  useEffect(() => {
-    const loadHexagramMapping = async () => {
-      try {
-        const [mappingResponse, detailsResponse] = await Promise.all([
-          fetch('/docs/ddj_chapter_to_gua_mapping.json'),
-          fetch('/docs/i_ching_guas.json')
-        ]);
-        
-        const chapterToHexagram = await mappingResponse.json();
-        const hexagramDetails = await detailsResponse.json();
-        
-        setHexagramMapping(chapterToHexagram);
-        setHexagramDetails(hexagramDetails);
-      } catch (error) {
-        console.error('Error loading hexagram mapping:', error);
-      }
-    };
-    loadHexagramMapping();
   }, []);
 
   useEffect(() => {
@@ -375,15 +347,7 @@ const TextComparison: React.FC = () => {
               {chapter.chapterNum + ' (Chapter ' + (index+1) + ')'}
             </h2>
             <div className="mt-4 flex items-center text-gray-700">
-              {hexagramMapping[(index + 1).toString()] && hexagramDetails[hexagramMapping[(index + 1).toString()]] && (
-                <>
-                  Chapter {index + 1} relates to the I Ching hexagram {hexagramMapping[(index + 1).toString()]},&nbsp;
-                  {hexagramDetails[hexagramMapping[(index + 1).toString()]].hexagram},&nbsp;
-                  gua {hexagramDetails[hexagramMapping[(index + 1).toString()]].gua}&nbsp;
-                  ({hexagramDetails[hexagramMapping[(index + 1).toString()]].pronunciation}),&nbsp;
-                  which means {hexagramDetails[hexagramMapping[(index + 1).toString()]].translation}
-                </>
-              )}
+              <HexagramDisplay chapterNumber={(index+1)} />
             </div>
             <hr className="my-4 border-t border-neutral-200" />
             <div className="leading-loose">

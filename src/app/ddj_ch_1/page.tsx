@@ -3,6 +3,7 @@ import { BookOpen, ArrowBigLeft, ArrowBigRight, TableOfContents, SquarePlay } fr
 import Layout from '@/components/Layout';
 import TaoistButton from '@/components/TaoistButton';
 import Link from 'next/link';
+import HexagramDisplay from '@/components/HexagramDisplay';
 
 export const metadata = {
   title: 'Dao De Jing: Chapter 1 | 道 Dao Study Group',
@@ -69,7 +70,7 @@ export default function DDJCh1 () {
               恒 is used in the Mawangdui silk manuscript, while 常 is used in the standard text. 
               The story behind is that there was an emperor called 刘恒. 
               His name couldn’t be spoken of or written down, so every 恒 in a text was changed to another word.<br /><br />
-              Chapter 1 relates to the I Ching hexagram 3, ䷂, 屯 (zhūn or tun), which means &ldquo;accumulating,&rdquo; &ldquo;beginning,&rdquo; or &ldquo;sprouting.&rdquo;
+              <HexagramDisplay chapterNumber={1} />
             </p>
           </div>
 

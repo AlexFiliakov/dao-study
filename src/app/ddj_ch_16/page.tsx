@@ -2,6 +2,7 @@ import React from 'react';
 import { BookOpen, ArrowBigLeft, TableOfContents, SquarePlay } from 'lucide-react';
 import Layout from '@/components/Layout';
 import TaoistButton from '@/components/TaoistButton';
+import HexagramDisplay from '@/components/HexagramDisplay';
 
 export const metadata = {
   title: 'Dao De Jing: Chapter 16 | 道 Dao Study Group',
@@ -77,7 +78,7 @@ export default function DDJCh16 () {
             </p>
             <br />
             <p className="text-neutral-600">
-              Chapter 16 relates to the I Ching hexagram 24, ䷗, 复 (fù), which means &ldquo;returning.&rdquo;
+              <HexagramDisplay chapterNumber={16} />
             </p>
           </div>
 

@@ -2,6 +2,7 @@ import React from 'react';
 import { BookOpen, ArrowBigLeft, ArrowBigRight, TableOfContents, SquarePlay } from 'lucide-react';
 import Layout from '@/components/Layout';
 import TaoistButton from '@/components/TaoistButton';
+import HexagramDisplay from '@/components/HexagramDisplay';
 
 export const metadata = {
   title: 'Dao De Jing: Chapter 2 | 道 Dao Study Group',
@@ -80,7 +81,7 @@ export default function DDJCh2 () {
               >
                 Sai Weng Loses His Horse
               </a>.<br /><br />
-              Chapter 2 relates to the I Ching hexagram 1, ䷀, 乾 (qián), which means &ldquo;Heaven,&rdquo; or &ldquo;force.&rdquo;
+              <HexagramDisplay chapterNumber={2} />
             </p>
           </div>
 
