@@ -3,13 +3,16 @@ import { BookOpen, ArrowBigLeft, ArrowBigRight, TableOfContents, SquarePlay } fr
 import Layout from '@/components/Layout';
 import TaoistButton from '@/components/TaoistButton';
 import HexagramDisplay from '@/components/HexagramDisplay';
+import { getHexagramData } from '@/utils/getHexagramData';
 
 export const metadata = {
   title: 'Dao De Jing: Chapter 2 | 道 Dao Study Group',
   description: 'Exploring the wisdom of the Dao De Jing (道德经).',
 };
 
-export default function DDJCh2 () {
+export default async function DDJCh2 () {
+  const { hexagramMapping, hexagramDetails } = await getHexagramData();
+
   return (
     <Layout>
       {/* Main Content */}
@@ -81,7 +84,11 @@ export default function DDJCh2 () {
               >
                 Sai Weng Loses His Horse
               </a>.<br /><br />
-              <HexagramDisplay chapterNumber={2} />
+              <HexagramDisplay 
+                chapterNumber={2} 
+                hexagramMapping={hexagramMapping} 
+                hexagramDetails={hexagramDetails} 
+              />
             </p>
           </div>
 

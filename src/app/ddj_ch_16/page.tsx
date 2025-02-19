@@ -3,13 +3,16 @@ import { BookOpen, ArrowBigLeft, TableOfContents, SquarePlay } from 'lucide-reac
 import Layout from '@/components/Layout';
 import TaoistButton from '@/components/TaoistButton';
 import HexagramDisplay from '@/components/HexagramDisplay';
+import { getHexagramData } from '@/utils/getHexagramData';
 
 export const metadata = {
   title: 'Dao De Jing: Chapter 16 | 道 Dao Study Group',
   description: 'Exploring the wisdom of the Dao De Jing (道德经).',
 };
 
-export default function DDJCh16 () {
+export default async function DDJCh16 () {
+  const { hexagramMapping, hexagramDetails } = await getHexagramData();
+
   return (
     <Layout>
       {/* Main Content */}
@@ -78,7 +81,11 @@ export default function DDJCh16 () {
             </p>
             <br />
             <p className="text-neutral-600">
-              <HexagramDisplay chapterNumber={16} />
+              <HexagramDisplay 
+                chapterNumber={16} 
+                hexagramMapping={hexagramMapping} 
+                hexagramDetails={hexagramDetails} 
+              />
             </p>
           </div>
 

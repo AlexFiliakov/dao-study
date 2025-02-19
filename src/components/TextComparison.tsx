@@ -85,7 +85,6 @@ import Chapter78Notes from '@/components/chapter_meanings_diffs/ch78';
 import Chapter79Notes from '@/components/chapter_meanings_diffs/ch79';
 import Chapter80Notes from '@/components/chapter_meanings_diffs/ch80';
 import Chapter81Notes from '@/components/chapter_meanings_diffs/ch81';
-// import { ScrollArea } from './ui/scroll-area';
 
 interface TextSegment {
   type: 'same' | 'diff';
@@ -101,9 +100,21 @@ interface Chapter {
   guodianSource: string;
 }
 
-const TextComparison: React.FC = () => {
+interface HexagramDetails {
+  hexagram: string;
+  gua: string;
+  pronunciation: string;
+  translation: string;
+}
+
+interface TextComparisonProps {
+  hexagramMapping: Record<string, string>;
+  hexagramDetails: Record<string, HexagramDetails>;
+}
+
+const TextComparison: React.FC<TextComparisonProps> = ({ hexagramMapping, hexagramDetails }) => {
   const [chapters, setChapters] = useState<Chapter[]>([]);
-  const [sources, setSources] = useState<{standard: string, guodian: string}>({
+  const [sources, setSources] = useState<{ standard: string, guodian: string }>({
     standard: '',
     guodian: ''
   });
@@ -122,8 +133,8 @@ const TextComparison: React.FC = () => {
         ]);
 
         // Split texts into chapters
-        const standardChapters: string[] = standardText.split(/\n(?=[\d一二三四五六七八九十]+章|http)/).slice(0,81);
-        const guodianChapters: string[] = guodianText.split(/\n(?=[\d一二三四五六七八九十]+章|http)/).slice(0,81);
+        const standardChapters: string[] = standardText.split(/\n(?=[\d一二三四五六七八九十]+章|http)/).slice(0, 81);
+        const guodianChapters: string[] = guodianText.split(/\n(?=[\d一二三四五六七八九十]+章|http)/).slice(0, 81);
 
         const standardSource: string = standardText.split(/\n(?=[\d一二三四五六七八九十]+章|http)/)[81];
         const guodianSource: string = guodianText.split(/\n(?=[\d一二三四五六七八九十]+章|http)/)[81];
@@ -137,11 +148,11 @@ const TextComparison: React.FC = () => {
         // Process chapters
         const processedChapters: Chapter[] = standardChapters.map((standardChapter, index) => {
           const guodianChapter: string = guodianChapters[index] || '';
-          
+
           // Extract chapter number and content
           const chapterMatch = standardChapter.match(/^([\d一二三四五六七八九十]+章)/);
           const chapterNum: string = chapterMatch ? chapterMatch[1] : '';
-          
+
           // Keep chapter numbers for comparison
           const standardContent: string = standardChapter.replace(/^[\d一二三四五六七八九十]+章[　]?/, '');
           const guodianContent: string = guodianChapter.replace(/^[\d一二三四五六七八九十]+章[　]?/, '');
@@ -232,7 +243,7 @@ const TextComparison: React.FC = () => {
     if (segment.type === 'same') {
       return <span key={index}>{segment.text}</span>;
     }
-    
+
     return (
       <span key={index} className="relative group">
         <span className="text-red-600 bg-red-100">
@@ -247,10 +258,6 @@ const TextComparison: React.FC = () => {
 
   // Create separate ChapterCard component
   const ChapterCard = React.memo(({ chapter, index }: { chapter: Chapter, index: number }) => {
-    // No lazy import
-    // Instead, directly import each chapter's notes
-    // Or conditionally render based on index
-
     const chapterNotesMap: { [key: number]: React.ReactNode } = {
       1: <Chapter1Notes />,
       2: <Chapter2Notes />,
@@ -347,7 +354,7 @@ const TextComparison: React.FC = () => {
               {chapter.chapterNum + ' (Chapter ' + (index+1) + ')'}
             </h2>
             <div className="mt-4 flex items-center text-gray-700">
-              <HexagramDisplay chapterNumber={(index+1)} />
+              <HexagramDisplay chapterNumber={(index+1)} hexagramMapping={hexagramMapping} hexagramDetails={hexagramDetails} />
             </div>
             <hr className="my-4 border-t border-neutral-200" />
             <div className="leading-loose">
@@ -375,42 +382,41 @@ const TextComparison: React.FC = () => {
   ChapterCard.displayName = 'ChapterCard';
 
   return (
-    //<ScrollArea className="h-[600px]">
-      <div>
-        <Card id="toc" className="w-full max-w-4xl mx-auto border-teal-700 mt-8 text-lg">
-          <CardContent>
-            {/* Create Table of Contents */}
-            <h2 className="text-xl font-bold mb-4">Table of Contents</h2>
-            <div id="toc-content" className="flex flex-row justify-center items-start gap-8">
-              <div id="toc-dao" className="flex flex-col items-center w-[300px]">
-                <h3 className="font-semibold text-neutral-700">Dao (道)</h3>
-                <ul className="list-disc pl-5">
-                  {/* Create Dao Table of Contents */
-                  chapters.slice(0,37).map((chapter, index) => (
-                    <li key={'toc-link-' + index}>
-                      <a href={'#ch' + (index+1)} className="text-red-800 hover:underline break-all">
-                        Chapter {index+1}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div id="toc-de" className="flex flex-col items-center w-[300px]">
-                <h3 className="font-semibold text-neutral-700">De (德)</h3>
-                <ul className="list-disc pl-5">
-                  {/* Create De Table of Contents */
-                  chapters.slice(37,81).map((chapter, index) => (
-                    <li key={'toc-link-' + index}>
-                      <a href={'#ch' + (index+1+37)} className="text-red-800 hover:underline break-all">
-                        Chapter {index+1+37}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+    <div>
+      <Card id="toc" className="w-full max-w-4xl mx-auto border-teal-700 mt-8 text-lg">
+        <CardContent>
+          {/* Create Table of Contents */}
+          <h2 className="text-xl font-bold mb-4">Table of Contents</h2>
+          <div id="toc-content" className="flex flex-row justify-center items-start gap-8">
+            <div id="toc-dao" className="flex flex-col items-center w-[300px]">
+              <h3 className="font-semibold text-neutral-700">Dao (道)</h3>
+              <ul className="list-disc pl-5">
+                {/* Create Dao Table of Contents */}
+                {chapters.slice(0,37).map((chapter, index) => (
+                  <li key={'toc-link-' + index}>
+                    <a href={'#ch' + (index+1)} className="text-red-800 hover:underline break-all">
+                      Chapter {index+1}
+                    </a>
+                  </li>
+                ))}
+              </ul>
             </div>
-          </CardContent>
-        </Card>
+            <div id="toc-de" className="flex flex-col items-center w-[300px]">
+              <h3 className="font-semibold text-neutral-700">De (德)</h3>
+              <ul className="list-disc pl-5">
+                {/* Create De Table of Contents */}
+                {chapters.slice(37,81).map((chapter, index) => (
+                  <li key={'toc-link-' + index}>
+                    <a href={'#ch' + (index+1+37)} className="text-red-800 hover:underline break-all">
+                      Chapter {index+1+37}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </CardContent>
+      </Card>
 
       {/* Create individual chapters */}
       {chapters.map((chapter, index) => (
@@ -444,7 +450,6 @@ const TextComparison: React.FC = () => {
         </CardContent>
       </Card>
     </div>
-    //</ScrollArea>
   );
 };
 

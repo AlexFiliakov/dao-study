@@ -4,13 +4,16 @@ import Layout from '@/components/Layout';
 import TaoistButton from '@/components/TaoistButton';
 import Link from 'next/link';
 import HexagramDisplay from '@/components/HexagramDisplay';
+import { getHexagramData } from '@/utils/getHexagramData';
 
 export const metadata = {
   title: 'Dao De Jing: Chapter 1 | 道 Dao Study Group',
   description: 'Exploring the wisdom of the Dao De Jing (道德经).',
 };
 
-export default function DDJCh1 () {
+export default async function DDJCh1() {
+  const { hexagramMapping, hexagramDetails } = await getHexagramData();
+
   return (
     <Layout>
       {/* Main Content */}
@@ -70,7 +73,11 @@ export default function DDJCh1 () {
               恒 is used in the Mawangdui silk manuscript, while 常 is used in the standard text. 
               The story behind is that there was an emperor called 刘恒. 
               His name couldn’t be spoken of or written down, so every 恒 in a text was changed to another word.<br /><br />
-              <HexagramDisplay chapterNumber={1} />
+              <HexagramDisplay 
+                chapterNumber={1} 
+                hexagramMapping={hexagramMapping} 
+                hexagramDetails={hexagramDetails} 
+              />
             </p>
           </div>
 

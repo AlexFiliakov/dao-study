@@ -2,13 +2,16 @@ import TextComparison from '@/components/TextComparison';
 import React from 'react';
 import Layout from '@/components/Layout';
 import Image from 'next/image';
+import { getHexagramData } from '@/utils/getHexagramData';
 
 export const metadata = {
   title: 'Dao De Jing Text Comparison | 道 Dao Study Group',
   description: 'Comparing the Standard Text of Dao De Jing (道德经) with the Guodian Chu (郭店楚簡) and Mawangdui (马王堆帛书) revisions .',
 };
 
-export default function DDJCompare () {
+export default async function DDJCompare() {
+  const { hexagramMapping, hexagramDetails } = await getHexagramData();
+
   return (
     <Layout>
       {/* Main Content */}
@@ -46,7 +49,10 @@ export default function DDJCompare () {
               The difference between the two versions of Dao De Jing is subtle but profound, especially when considering the historical evolution of Chinese character meanings and philosophical implications.
             </p>
           </div>
-          <TextComparison />
+          <TextComparison 
+            hexagramMapping={hexagramMapping} 
+            hexagramDetails={hexagramDetails} 
+          />
         </div>
       </main>
     </Layout>
