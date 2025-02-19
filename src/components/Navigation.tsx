@@ -17,6 +17,12 @@ export const menuItems = [
       { name: 'Character Relationships', path: '/ddj_grid' },
     ]
   },
+  { 
+    name: 'Yi Jing', 
+    subItems: [
+      { name: 'Hexagram Matrix', path: '/ic_grid' },
+    ]
+  },
   { name: 'Recommended Reading', path: '/reading_list' },
 ];
 

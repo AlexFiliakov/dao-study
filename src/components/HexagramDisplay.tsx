@@ -5,6 +5,8 @@ interface HexagramDetails {
   gua: string;
   pronunciation: string;
   translation: string;
+  upper: string;
+  lower: string;
 }
 
 interface HexagramDisplayProps {
