@@ -3,384 +3,560 @@
         "hexagram" : "䷀",
         "gua" : "乾",
         "pronunciation" : "qián",
-        "translation" : "\"initiating\", \"Heaven,\" or \"force.\""
+        "translation" : "\"initiating\", \"Heaven,\" or \"force.\"",
+        "upper" : "☰",
+        "lower" : "☰"
     },
     "2" : {
         "hexagram" : "䷁",
         "gua" : "坤",
         "pronunciation" : "kūn",
-        "translation" : "\"responding\", \"field.\""
+        "translation" : "\"responding\", \"field.\"",
+        "upper" : "☷",
+        "lower" : "☷"
     },
     "3" : {
         "hexagram" : "䷂",
         "gua" : "屯",
         "pronunciation" : "zhūn or tun",
-        "translation" : "\"accumulating,\" \"beginning,\" or \"sprouting.\""
+        "translation" : "\"accumulating,\" \"beginning,\" or \"sprouting.\"",
+        "upper" : "☵",
+        "lower" : "☳"
     },
     "4" : {
         "hexagram" : "䷃",
         "gua" : "蒙",
         "pronunciation" : "méng",
-        "translation" : "\"childhood\", \"enveloping.\""
+        "translation" : "\"childhood\", \"enveloping.\"",
+        "upper" : "☶",
+        "lower" : "☵"
     },
     "5" : {
         "hexagram" : "䷄",
         "gua" : "需",
         "pronunciation" : "xū",
-        "translation" : "\"needing\", \"attending.\""
+        "translation" : "\"needing\", \"attending.\"",
+        "upper" : "☵",
+        "lower" : "☰"
     },
     "6" : {
         "hexagram" : "䷅",
         "gua" : "訟",
         "pronunciation" : "sòng",
-        "translation" : "\"contention\", \"arguing.\""
+        "translation" : "\"contention\", \"arguing.\"",
+        "upper" : "☰",
+        "lower" : "☵"
     },
     "7" : {
         "hexagram" : "䷆",
         "gua" : "師",
         "pronunciation" : "shī",
-        "translation" : "\"multitude\", \"leading.\""
+        "translation" : "\"multitude\", \"leading.\"",
+        "upper" : "☷",
+        "lower" : "☵"
     },
     "8" : {
         "hexagram" : "䷇",
         "gua" : "比",
         "pronunciation" : "bǐ",
-        "translation" : "\"union\", \"grouping.\""
+        "translation" : "\"union\", \"grouping.\"",
+        "upper" : "☵",
+        "lower" : "☷"
     },
     "9" : {
         "hexagram" : "䷈",
         "gua" : "小畜",
         "pronunciation" : "xiǎo xù",
-        "translation" : "\"small&nbsp;accumulation\", \"small&nbsp;harvest.\""
+        "translation" : "\"small&nbsp;accumulation\", \"small&nbsp;harvest.\"",
+        "upper" : "☴",
+        "lower" : "☰"
     },
     "10" : {
         "hexagram" : "䷉",
         "gua" : "履",
         "pronunciation" : "lǚ",
-        "translation" : "\"treading\", \"treading.\""
+        "translation" : "\"treading\", \"treading.\"",
+        "upper" : "☰",
+        "lower" : "☱"
     },
     "11" : {
         "hexagram" : "䷊",
         "gua" : "泰",
         "pronunciation" : "tài",
-        "translation" : "\"pervading.\""
+        "translation" : "\"pervading.\"",
+        "upper" : "☷",
+        "lower" : "☰"
     },
     "12" : {
         "hexagram" : "䷋",
         "gua" : "否",
         "pronunciation" : "pǐ",
-        "translation" : "\"standstill\", \"obstruction.\""
+        "translation" : "\"standstill\", \"obstruction.\"",
+        "upper" : "☰",
+        "lower" : "☷"
     },
     "13" : {
         "hexagram" : "䷌",
         "gua" : "同人",
         "pronunciation" : "tóng rén",
-        "translation" : "\"harmonizing&nbsp;people\", \"concording&nbsp;people.\""
+        "translation" : "\"harmonizing&nbsp;people\", \"concording&nbsp;people.\"",
+        "upper" : "☰",
+        "lower" : "☲"
     },
     "14" : {
         "hexagram" : "䷍",
         "gua" : "大有",
         "pronunciation" : "dà yǒu",
-        "translation" : "\"great&nbsp;possessing.\""
+        "translation" : "\"great&nbsp;possessing.\"",
+        "upper" : "☲",
+        "lower" : "☰"
     },
     "15" : {
         "hexagram" : "䷎",
         "gua" : "謙",
         "pronunciation" : "qiān",
-        "translation" : "\"humbling.\""
+        "translation" : "\"humbling.\"",
+        "upper" : "☷",
+        "lower" : "☶"
     },
     "16" : {
         "hexagram" : "䷏",
         "gua" : "豫",
         "pronunciation" : "yù",
-        "translation" : "\"providing-for.\""
+        "translation" : "\"providing-for.\"",
+        "upper" : "☳",
+        "lower" : "☷"
     },
     "17" : {
         "hexagram" : "䷐",
         "gua" : "隨",
         "pronunciation" : "suí",
-        "translation" : "\"following.\""
+        "translation" : "\"following.\"",
+        "upper" : "☱",
+        "lower" : "☳"
     },
     "18" : {
         "hexagram" : "䷑",
         "gua" : "蠱",
         "pronunciation" : "gǔ",
-        "translation" : "\"remedying\", \"correcting.\""
+        "translation" : "\"remedying\", \"correcting.\"",
+        "upper" : "☶",
+        "lower" : "☴"
     },
     "19" : {
         "hexagram" : "䷒",
         "gua" : "臨",
         "pronunciation" : "lín",
-        "translation" : "\"approaching\", \"nearing.\""
+        "translation" : "\"approaching\", \"nearing.\"",
+        "upper" : "☷",
+        "lower" : "☱"
     },
     "20" : {
         "hexagram" : "䷓",
         "gua" : "觀",
         "pronunciation" : "guàn",
-        "translation" : "\"viewing.\""
+        "translation" : "\"viewing.\"",
+        "upper" : "☴",
+        "lower" : "☷"
     },
     "21" : {
         "hexagram" : "䷔",
         "gua" : "噬嗑",
         "pronunciation" : "shì hé",
-        "translation" : "\"biting&nbsp;through\", \"gnawing&nbsp;bite.\""
+        "translation" : "\"biting&nbsp;through\", \"gnawing&nbsp;bite.\"",
+        "upper" : "☲",
+        "lower" : "☳"
     },
     "22" : {
         "hexagram" : "䷕",
         "gua" : "賁",
         "pronunciation" : "bì",
-        "translation" : "\"adorning.\""
+        "translation" : "\"adorning.\"",
+        "upper" : "☶",
+        "lower" : "☲"
     },
     "23" : {
         "hexagram" : "䷖",
         "gua" : "剝",
         "pronunciation" : "bāo",
-        "translation" : "\"stripping.\""
+        "translation" : "\"stripping.\"",
+        "upper" : "☶",
+        "lower" : "☷"
     },
     "24" : {
         "hexagram" : "䷗",
         "gua" : "复",
         "pronunciation" : "fù",
-        "translation" : "\"returning.\""
+        "translation" : "\"returning.\"",
+        "upper" : "☷",
+        "lower" : "☳"
     },
     "25" : {
         "hexagram" : "䷘",
         "gua" : "無妄",
         "pronunciation" : "wú wàng",
-        "translation" : "\"without&nbsp;falsehood\", \"innocence.\""
+        "translation" : "\"without&nbsp;falsehood\", \"innocence.\"",
+        "upper" : "☰",
+        "lower" : "☳"
     },
     "26" : {
         "hexagram" : "䷙",
         "gua" : "大畜",
         "pronunciation" : "dà chù",
-        "translation" : "\"great&nbsp;accumulation\", \"great&nbsp;accumulating.\""
+        "translation" : "\"great&nbsp;accumulation\", \"great&nbsp;accumulating.\"",
+        "upper" : "☶",
+        "lower" : "☰"
     },
     "27" : {
         "hexagram" : "䷚",
         "gua" : "頤",
         "pronunciation" : "yí",
-        "translation" : "\"nourishing\", \"swallowing.\""
+        "translation" : "\"nourishing\", \"swallowing.\"",
+        "upper" : "☶",
+        "lower" : "☳"
     },
     "28" : {
         "hexagram" : "䷛",
         "gua" : "大過",
         "pronunciation" : "dà guò",
-        "translation" : "\"great&nbsp;exceeding.\""
+        "translation" : "\"great&nbsp;exceeding.\"",
+        "upper" : "☱",
+        "lower" : "☴"
     },
     "29" : {
         "hexagram" : "䷜",
         "gua" : "坎",
         "pronunciation" : "kǎn",
-        "translation" : "\"abysmal&nbsp;water\", \"gorge.\""
+        "translation" : "\"abysmal&nbsp;water\", \"gorge.\"",
+        "upper" : "☵",
+        "lower" : "☵"
     },
     "30" : {
         "hexagram" : "䷝",
         "gua" : "離",
         "pronunciation" : "lí",
-        "translation" : "\"radiance.\""
+        "translation" : "\"radiance.\"",
+        "upper" : "☲",
+        "lower" : "☲"
     },
     "31" : {
         "hexagram" : "䷞",
         "gua" : "咸",
         "pronunciation" : "xián",
-        "translation" : "\"mutual&nbsp;influence\", \"conjoining.\""
+        "translation" : "\"mutual&nbsp;influence\", \"conjoining.\"",
+        "upper" : "☱",
+        "lower" : "☶"
     },
     "32" : {
         "hexagram" : "䷟",
         "gua" : "恆",
         "pronunciation" : "héng",
-        "translation" : "\"persevering.\""
+        "translation" : "\"persevering.\"",
+        "upper" : "☳",
+        "lower" : "☴"
     },
     "33" : {
         "hexagram" : "䷠",
         "gua" : "遯",
         "pronunciation" : "dùn",
-        "translation" : "\"retreating\", \"retiring.\""
+        "translation" : "\"retreating\", \"retiring.\"",
+        "upper" : "☰",
+        "lower" : "☶"
     },
     "34" : {
         "hexagram" : "䷡",
         "gua" : "大壯",
         "pronunciation" : "dà zhuàng",
-        "translation" : "\"great&nbsp;strength\", \"great&nbsp;invigorating.\""
+        "translation" : "\"great&nbsp;strength\", \"great&nbsp;invigorating.\"",
+        "upper" : "☳",
+        "lower" : "☰"
     },
     "35" : {
         "hexagram" : "䷢",
         "gua" : "晉",
         "pronunciation" : "jìn",
-        "translation" : "\"prospering.\""
+        "translation" : "\"prospering.\"",
+        "upper" : "☲",
+        "lower" : "☷"
     },
     "36" : {
         "hexagram" : "䷣",
         "gua" : "明夷",
         "pronunciation" : "míng yí",
-        "translation" : "\"brilliance&nbsp;injured\", \"intelligence&nbsp;hidden.\""
+        "translation" : "\"brilliance&nbsp;injured\", \"intelligence&nbsp;hidden.\"",
+        "upper" : "☷",
+        "lower" : "☲"
     },
     "37" : {
         "hexagram" : "䷤",
         "gua" : "家人",
         "pronunciation" : "jiā rén",
-        "translation" : "\"household\", \"dwelling&nbsp;people.\""
+        "translation" : "\"household\", \"dwelling&nbsp;people.\"",
+        "upper" : "☴",
+        "lower" : "☲"
     },
     "38" : {
         "hexagram" : "䷥",
         "gua" : "睽",
         "pronunciation" : "kuí",
-        "translation" : "\"polarizing.\""
+        "translation" : "\"polarizing.\"",
+        "upper" : "☲",
+        "lower" : "☱"
     },
     "39" : {
         "hexagram" : "䷦",
         "gua" : "蹇",
         "pronunciation" : "jiǎn",
-        "translation" : "\"hardship\", \"limping.\""
+        "translation" : "\"hardship\", \"limping.\"",
+        "upper" : "☵",
+        "lower" : "☶"
     },
     "40" : {
         "hexagram" : "䷧",
         "gua" : "解",
         "pronunciation" : "jiě",
-        "translation" : "\"relief\", \"deliverance.\""
+        "translation" : "\"relief\", \"deliverance.\"",
+        "upper" : "☳",
+        "lower" : "☵"
     },
     "41" : {
         "hexagram" : "䷨",
         "gua" : "損",
         "pronunciation" : "sǔn",
-        "translation" : "\"diminishing.\""
+        "translation" : "\"diminishing.\"",
+        "upper" : "☶",
+        "lower" : "☱"
     },
     "42" : {
         "hexagram" : "䷩",
         "gua" : "益",
         "pronunciation" : "yì",
-        "translation" : "\"augmenting.\""
+        "translation" : "\"augmenting.\"",
+        "upper" : "☴",
+        "lower" : "☳"
     },
     "43" : {
         "hexagram" : "䷪",
         "gua" : "夬",
         "pronunciation" : "guài",
-        "translation" : "\"resoluteness\", \"displacement.\""
+        "translation" : "\"resoluteness\", \"displacement.\"",
+        "upper" : "☱",
+        "lower" : "☰"
     },
     "44" : {
         "hexagram" : "䷫",
         "gua" : "姤",
         "pronunciation" : "gòu",
-        "translation" : "\"encountering\", \"coupling.\""
+        "translation" : "\"encountering\", \"coupling.\"",
+        "upper" : "☰",
+        "lower" : "☴"
     },
     "45" : {
         "hexagram" : "䷬",
         "gua" : "萃",
         "pronunciation" : "cuì",
-        "translation" : "\"gathering\", \"clustering.\""
+        "translation" : "\"gathering\", \"clustering.\"",
+        "upper" : "☱",
+        "lower" : "☷"
     },
     "46" : {
         "hexagram" : "䷭",
         "gua" : "升",
         "pronunciation" : "shēng",
-        "translation" : "\"ascending.\""
+        "translation" : "\"ascending.\"",
+        "upper" : "☷",
+        "lower" : "☴"
     },
     "47" : {
         "hexagram" : "䷮",
         "gua" : "困",
         "pronunciation" : "kùn",
-        "translation" : "\"confining.\""
+        "translation" : "\"confining.\"",
+        "upper" : "☱",
+        "lower" : "☵"
     },
     "48" : {
         "hexagram" : "䷯",
         "gua" : "井",
         "pronunciation" : "jǐng",
-        "translation" : "\"welling.\""
+        "translation" : "\"welling.\"",
+        "upper" : "☵",
+        "lower" : "☴"
     },
     "49" : {
         "hexagram" : "䷰",
         "gua" : "革",
         "pronunciation" : "gé",
-        "translation" : "\"abolishing&nbsp;the&nbsp;old\", \"skinning.\""
+        "translation" : "\"abolishing&nbsp;the&nbsp;old\", \"skinning.\"",
+        "upper" : "☱",
+        "lower" : "☲"
     },
     "50" : {
         "hexagram" : "䷱",
         "gua" : "鼎",
         "pronunciation" : "dǐng",
-        "translation" : "\"establishing&nbsp;the&nbsp;new\", \"holding.\""
+        "translation" : "\"establishing&nbsp;the&nbsp;new\", \"holding.\"",
+        "upper" : "☲",
+        "lower" : "☴"
     },
     "51" : {
         "hexagram" : "䷲",
         "gua" : "震",
         "pronunciation" : "zhèn",
-        "translation" : "\"taking&nbsp;action\", \"shake.\""
+        "translation" : "\"taking&nbsp;action\", \"shake.\"",
+        "upper" : "☳",
+        "lower" : "☳"
     },
     "52" : {
         "hexagram" : "䷳",
         "gua" : "艮",
         "pronunciation" : "gèn",
-        "translation" : "\"keeping&nbsp;still\", \"bound.\""
+        "translation" : "\"keeping&nbsp;still\", \"bound.\"",
+        "upper" : "☶",
+        "lower" : "☶"
     },
     "53" : {
         "hexagram" : "䷴",
         "gua" : "漸",
         "pronunciation" : "jiàn",
-        "translation" : "\"developing&nbsp;gradually\", \"infiltrating.\""
+        "translation" : "\"developing&nbsp;gradually\", \"infiltrating.\"",
+        "upper" : "☴",
+        "lower" : "☶"
     },
     "54" : {
         "hexagram" : "䷵",
         "gua" : "歸妹",
         "pronunciation" : "guī mèi",
-        "translation" : "\"marrying&nbsp;maiden\", \"converting&nbsp;the&nbsp;maiden.\""
+        "translation" : "\"marrying&nbsp;maiden\", \"converting&nbsp;the&nbsp;maiden.\"",
+        "upper" : "☳",
+        "lower" : "☱"
     },
     "55" : {
         "hexagram" : "䷶",
         "gua" : "豐",
         "pronunciation" : "fēng",
-        "translation" : "\"abundance\", \"abounding.\""
+        "translation" : "\"abundance\", \"abounding.\"",
+        "upper" : "☳",
+        "lower" : "☲"
     },
     "56" : {
         "hexagram" : "䷷",
         "gua" : "旅",
         "pronunciation" : "lǚ",
-        "translation" : "\"traveling\", \"sojourning.\""
+        "translation" : "\"traveling\", \"sojourning.\"",
+        "upper" : "☲",
+        "lower" : "☶"
     },
     "57" : {
         "hexagram" : "䷸",
         "gua" : "巽",
         "pronunciation" : "xùn",
-        "translation" : "\"ground.\""
+        "translation" : "\"ground.\"",
+        "upper" : "☴",
+        "lower" : "☴"
     },
     "58" : {
         "hexagram" : "䷹",
         "gua" : "兌",
         "pronunciation" : "duì",
-        "translation" : "\"joyful\", \"open.\""
+        "translation" : "\"joyful\", \"open.\"",
+        "upper" : "☱",
+        "lower" : "☱"
     },
     "59" : {
         "hexagram" : "䷺",
         "gua" : "渙",
         "pronunciation" : "huàn",
-        "translation" : "\"dispersing.\""
+        "translation" : "\"dispersing.\"",
+        "upper" : "☴",
+        "lower" : "☵"
     },
     "60" : {
         "hexagram" : "䷻",
         "gua" : "節",
         "pronunciation" : "jié",
-        "translation" : "\"articulating.\""
+        "translation" : "\"articulating.\"",
+        "upper" : "☵",
+        "lower" : "☱"
     },
     "61" : {
         "hexagram" : "䷼",
         "gua" : "中孚",
         "pronunciation" : "zhōng fú",
-        "translation" : "\"innermost&nbsp;sincerity\", \"inner&nbsp;truth.\""
+        "translation" : "\"innermost&nbsp;sincerity\", \"inner&nbsp;truth.\"",
+        "upper" : "☴",
+        "lower" : "☱"
     },
     "62" : {
         "hexagram" : "䷽",
         "gua" : "小過",
         "pronunciation" : "xiǎo guò",
-        "translation" : "\"small&nbsp;exceeding.\""
+        "translation" : "\"small&nbsp;exceeding.\"",
+        "upper" : "☳",
+        "lower" : "☶"
     },
     "63" : {
         "hexagram" : "䷾",
         "gua" : "既濟",
         "pronunciation" : "jì jì",
-        "translation" : "\"already&nbsp;fulfilled\", \"already&nbsp;fording.\""
+        "translation" : "\"already&nbsp;fulfilled\", \"already&nbsp;fording.\"",
+        "upper" : "☵",
+        "lower" : "☲"
     },
     "64" : {
         "hexagram" : "䷿",
         "gua" : "未濟",
         "pronunciation" : "wèi jì",
-        "translation" : "\"not&nbsp;yet&nbsp;fulfilled\", \"before&nbsp;completion.\""
+        "translation" : "\"not&nbsp;yet&nbsp;fulfilled\", \"before&nbsp;completion.\"",
+        "upper" : "☲",
+        "lower" : "☵"
+    },
+    "heaven" : {
+        "trigram" : "☰",
+        "gua" : "乾",
+        "pronunciation" : "qián",
+        "translation" : "\"Heaven.\""
+    },
+    "lake" : {
+        "trigram" : "☱",
+        "gua" : "兌",
+        "pronunciation" : "duì",
+        "translation" : "\"Lake.\""
+    },
+    "flame" : {
+        "trigram" : "☲",
+        "gua" : "離",
+        "pronunciation" : "lí",
+        "translation" : "\"Flame.\""
+    },
+    "thunder" : {
+        "trigram" : "☳",
+        "gua" : "震",
+        "pronunciation" : "zhèn",
+        "translation" : "\"Thunder.\""
+    },
+    "wind" : {
+        "trigram" : "☴",
+        "gua" : "巽",
+        "pronunciation" : "xùn",
+        "translation" : "\"Wind.\""
+    },
+    "water" : {
+        "trigram" : "☵",
+        "gua" : "坎",
+        "pronunciation" : "kǎn",
+        "translation" : "\"Water.\""
+    },
+    "mountain" : {
+        "trigram" : "☶",
+        "gua" : "艮",
+        "pronunciation" : "gèn",
+        "translation" : "\"Mountain.\""
+    },
+    "earth" : {
+        "trigram" : "☷",
+        "gua" : "坤",
+        "pronunciation" : "kūn",
+        "translation" : "\"Earth.\""
     }
 }
