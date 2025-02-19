@@ -5,7 +5,10 @@
         "pronunciation" : "qián",
         "translation" : "\"initiating\", \"Heaven,\" or \"force.\"",
         "upper" : "☰",
-        "lower" : "☰"
+        "lower" : "☰",
+        "opposite_gua" : "2",
+        "inverse_gua" : "1",
+        "mutual_gua" : "1"
     },
     "2" : {
         "hexagram" : "䷁",
@@ -13,7 +16,10 @@
         "pronunciation" : "kūn",
         "translation" : "\"responding\", \"field.\"",
         "upper" : "☷",
-        "lower" : "☷"
+        "lower" : "☷",
+        "opposite_gua" : "1",
+        "inverse_gua" : "2",
+        "mutual_gua" : "2"
     },
     "3" : {
         "hexagram" : "䷂",
@@ -21,7 +27,10 @@
         "pronunciation" : "zhūn or tun",
         "translation" : "\"accumulating,\" \"beginning,\" or \"sprouting.\"",
         "upper" : "☵",
-        "lower" : "☳"
+        "lower" : "☳",
+        "opposite_gua" : "50",
+        "inverse_gua" : "4",
+        "mutual_gua" : "23"
     },
     "4" : {
         "hexagram" : "䷃",
@@ -29,7 +38,10 @@
         "pronunciation" : "méng",
         "translation" : "\"childhood\", \"enveloping.\"",
         "upper" : "☶",
-        "lower" : "☵"
+        "lower" : "☵",
+        "opposite_gua" : "49",
+        "inverse_gua" : "3",
+        "mutual_gua" : "24"
     },
     "5" : {
         "hexagram" : "䷄",
@@ -37,7 +49,10 @@
         "pronunciation" : "xū",
         "translation" : "\"needing\", \"attending.\"",
         "upper" : "☵",
-        "lower" : "☰"
+        "lower" : "☰",
+        "opposite_gua" : "35",
+        "inverse_gua" : "6",
+        "mutual_gua" : "38"
     },
     "6" : {
         "hexagram" : "䷅",
@@ -45,7 +60,10 @@
         "pronunciation" : "sòng",
         "translation" : "\"contention\", \"arguing.\"",
         "upper" : "☰",
-        "lower" : "☵"
+        "lower" : "☵",
+        "opposite_gua" : "36",
+        "inverse_gua" : "5",
+        "mutual_gua" : "37"
     },
     "7" : {
         "hexagram" : "䷆",
@@ -53,7 +71,10 @@
         "pronunciation" : "shī",
         "translation" : "\"multitude\", \"leading.\"",
         "upper" : "☷",
-        "lower" : "☵"
+        "lower" : "☵",
+        "opposite_gua" : "13",
+        "inverse_gua" : "8",
+        "mutual_gua" : "24"
     },
     "8" : {
         "hexagram" : "䷇",
@@ -61,7 +82,10 @@
         "pronunciation" : "bǐ",
         "translation" : "\"union\", \"grouping.\"",
         "upper" : "☵",
-        "lower" : "☷"
+        "lower" : "☷",
+        "opposite_gua" : "14",
+        "inverse_gua" : "7",
+        "mutual_gua" : "23"
     },
     "9" : {
         "hexagram" : "䷈",
@@ -69,7 +93,10 @@
         "pronunciation" : "xiǎo xù",
         "translation" : "\"small accumulation\", \"small harvest.\"",
         "upper" : "☴",
-        "lower" : "☰"
+        "lower" : "☰",
+        "opposite_gua" : "16",
+        "inverse_gua" : "10",
+        "mutual_gua" : "38"
     },
     "10" : {
         "hexagram" : "䷉",
@@ -77,7 +104,10 @@
         "pronunciation" : "lǚ",
         "translation" : "\"treading\", \"treading.\"",
         "upper" : "☰",
-        "lower" : "☱"
+        "lower" : "☱",
+        "opposite_gua" : "15",
+        "inverse_gua" : "9",
+        "mutual_gua" : "37"
     },
     "11" : {
         "hexagram" : "䷊",
@@ -85,7 +115,10 @@
         "pronunciation" : "tài",
         "translation" : "\"pervading.\"",
         "upper" : "☷",
-        "lower" : "☰"
+        "lower" : "☰",
+        "opposite_gua" : "12",
+        "inverse_gua" : "12",
+        "mutual_gua" : "54"
     },
     "12" : {
         "hexagram" : "䷋",
@@ -93,7 +126,10 @@
         "pronunciation" : "pǐ",
         "translation" : "\"standstill\", \"obstruction.\"",
         "upper" : "☰",
-        "lower" : "☷"
+        "lower" : "☷",
+        "opposite_gua" : "11",
+        "inverse_gua" : "11",
+        "mutual_gua" : "53"
     },
     "13" : {
         "hexagram" : "䷌",
@@ -101,7 +137,10 @@
         "pronunciation" : "tóng rén",
         "translation" : "\"harmonizing people\", \"concording people.\"",
         "upper" : "☰",
-        "lower" : "☲"
+        "lower" : "☲",
+        "opposite_gua" : "7",
+        "inverse_gua" : "14",
+        "mutual_gua" : "44"
     },
     "14" : {
         "hexagram" : "䷍",
@@ -109,7 +148,10 @@
         "pronunciation" : "dà yǒu",
         "translation" : "\"great possessing.\"",
         "upper" : "☲",
-        "lower" : "☰"
+        "lower" : "☰",
+        "opposite_gua" : "8",
+        "inverse_gua" : "13",
+        "mutual_gua" : "43"
     },
     "15" : {
         "hexagram" : "䷎",
@@ -117,7 +159,10 @@
         "pronunciation" : "qiān",
         "translation" : "\"humbling.\"",
         "upper" : "☷",
-        "lower" : "☶"
+        "lower" : "☶",
+        "opposite_gua" : "10",
+        "inverse_gua" : "16",
+        "mutual_gua" : "40"
     },
     "16" : {
         "hexagram" : "䷏",
@@ -125,7 +170,10 @@
         "pronunciation" : "yù",
         "translation" : "\"providing-for.\"",
         "upper" : "☳",
-        "lower" : "☷"
+        "lower" : "☷",
+        "opposite_gua" : "9",
+        "inverse_gua" : "15",
+        "mutual_gua" : "39"
     },
     "17" : {
         "hexagram" : "䷐",
@@ -133,7 +181,10 @@
         "pronunciation" : "suí",
         "translation" : "\"following.\"",
         "upper" : "☱",
-        "lower" : "☳"
+        "lower" : "☳",
+        "opposite_gua" : "18",
+        "inverse_gua" : "18",
+        "mutual_gua" : "53"
     },
     "18" : {
         "hexagram" : "䷑",
@@ -141,7 +192,10 @@
         "pronunciation" : "gǔ",
         "translation" : "\"remedying\", \"correcting.\"",
         "upper" : "☶",
-        "lower" : "☴"
+        "lower" : "☴",
+        "opposite_gua" : "17",
+        "inverse_gua" : "17",
+        "mutual_gua" : "54"
     },
     "19" : {
         "hexagram" : "䷒",
@@ -149,7 +203,10 @@
         "pronunciation" : "lín",
         "translation" : "\"approaching\", \"nearing.\"",
         "upper" : "☷",
-        "lower" : "☱"
+        "lower" : "☱",
+        "opposite_gua" : "33",
+        "inverse_gua" : "20",
+        "mutual_gua" : "24"
     },
     "20" : {
         "hexagram" : "䷓",
@@ -157,7 +214,10 @@
         "pronunciation" : "guàn",
         "translation" : "\"viewing.\"",
         "upper" : "☴",
-        "lower" : "☷"
+        "lower" : "☷",
+        "opposite_gua" : "34",
+        "inverse_gua" : "19",
+        "mutual_gua" : "23"
     },
     "21" : {
         "hexagram" : "䷔",
@@ -165,7 +225,10 @@
         "pronunciation" : "shì hé",
         "translation" : "\"biting through\", \"gnawing bite.\"",
         "upper" : "☲",
-        "lower" : "☳"
+        "lower" : "☳",
+        "opposite_gua" : "48",
+        "inverse_gua" : "22",
+        "mutual_gua" : "39"
     },
     "22" : {
         "hexagram" : "䷕",
@@ -173,7 +236,10 @@
         "pronunciation" : "bì",
         "translation" : "\"adorning.\"",
         "upper" : "☶",
-        "lower" : "☲"
+        "lower" : "☲",
+        "opposite_gua" : "47",
+        "inverse_gua" : "21",
+        "mutual_gua" : "40"
     },
     "23" : {
         "hexagram" : "䷖",
@@ -181,7 +247,10 @@
         "pronunciation" : "bāo",
         "translation" : "\"stripping.\"",
         "upper" : "☶",
-        "lower" : "☷"
+        "lower" : "☷",
+        "opposite_gua" : "43",
+        "inverse_gua" : "24",
+        "mutual_gua" : "2"
     },
     "24" : {
         "hexagram" : "䷗",
@@ -189,7 +258,10 @@
         "pronunciation" : "fù",
         "translation" : "\"returning.\"",
         "upper" : "☷",
-        "lower" : "☳"
+        "lower" : "☳",
+        "opposite_gua" : "44",
+        "inverse_gua" : "23",
+        "mutual_gua" : "2"
     },
     "25" : {
         "hexagram" : "䷘",
@@ -197,7 +269,10 @@
         "pronunciation" : "wú wàng",
         "translation" : "\"without falsehood\", \"innocence.\"",
         "upper" : "☰",
-        "lower" : "☳"
+        "lower" : "☳",
+        "opposite_gua" : "46",
+        "inverse_gua" : "26",
+        "mutual_gua" : "53"
     },
     "26" : {
         "hexagram" : "䷙",
@@ -205,7 +280,10 @@
         "pronunciation" : "dà chù",
         "translation" : "\"great accumulation\", \"great accumulating.\"",
         "upper" : "☶",
-        "lower" : "☰"
+        "lower" : "☰",
+        "opposite_gua" : "45",
+        "inverse_gua" : "25",
+        "mutual_gua" : "54"
     },
     "27" : {
         "hexagram" : "䷚",
@@ -213,7 +291,10 @@
         "pronunciation" : "yí",
         "translation" : "\"nourishing\", \"swallowing.\"",
         "upper" : "☶",
-        "lower" : "☳"
+        "lower" : "☳",
+        "opposite_gua" : "28",
+        "inverse_gua" : "27",
+        "mutual_gua" : "2"
     },
     "28" : {
         "hexagram" : "䷛",
@@ -221,7 +302,10 @@
         "pronunciation" : "dà guò",
         "translation" : "\"great exceeding.\"",
         "upper" : "☱",
-        "lower" : "☴"
+        "lower" : "☴",
+        "opposite_gua" : "27",
+        "inverse_gua" : "28",
+        "mutual_gua" : "1"
     },
     "29" : {
         "hexagram" : "䷜",
@@ -229,7 +313,10 @@
         "pronunciation" : "kǎn",
         "translation" : "\"abysmal water\", \"gorge.\"",
         "upper" : "☵",
-        "lower" : "☵"
+        "lower" : "☵",
+        "opposite_gua" : "30",
+        "inverse_gua" : "29",
+        "mutual_gua" : "27"
     },
     "30" : {
         "hexagram" : "䷝",
@@ -237,7 +324,10 @@
         "pronunciation" : "lí",
         "translation" : "\"radiance.\"",
         "upper" : "☲",
-        "lower" : "☲"
+        "lower" : "☲",
+        "opposite_gua" : "29",
+        "inverse_gua" : "30",
+        "mutual_gua" : "28"
     },
     "31" : {
         "hexagram" : "䷞",
@@ -245,7 +335,10 @@
         "pronunciation" : "xián",
         "translation" : "\"mutual influence\", \"conjoining.\"",
         "upper" : "☱",
-        "lower" : "☶"
+        "lower" : "☶",
+        "opposite_gua" : "41",
+        "inverse_gua" : "32",
+        "mutual_gua" : "44"
     },
     "32" : {
         "hexagram" : "䷟",
@@ -253,7 +346,10 @@
         "pronunciation" : "héng",
         "translation" : "\"persevering.\"",
         "upper" : "☳",
-        "lower" : "☴"
+        "lower" : "☴",
+        "opposite_gua" : "42",
+        "inverse_gua" : "31",
+        "mutual_gua" : "43"
     },
     "33" : {
         "hexagram" : "䷠",
@@ -261,7 +357,10 @@
         "pronunciation" : "dùn",
         "translation" : "\"retreating\", \"retiring.\"",
         "upper" : "☰",
-        "lower" : "☶"
+        "lower" : "☶",
+        "opposite_gua" : "19",
+        "inverse_gua" : "34",
+        "mutual_gua" : "44"
     },
     "34" : {
         "hexagram" : "䷡",
@@ -269,7 +368,10 @@
         "pronunciation" : "dà zhuàng",
         "translation" : "\"great strength\", \"great invigorating.\"",
         "upper" : "☳",
-        "lower" : "☰"
+        "lower" : "☰",
+        "opposite_gua" : "20",
+        "inverse_gua" : "33",
+        "mutual_gua" : "43"
     },
     "35" : {
         "hexagram" : "䷢",
@@ -277,7 +379,10 @@
         "pronunciation" : "jìn",
         "translation" : "\"prospering.\"",
         "upper" : "☲",
-        "lower" : "☷"
+        "lower" : "☷",
+        "opposite_gua" : "5",
+        "inverse_gua" : "36",
+        "mutual_gua" : "39"
     },
     "36" : {
         "hexagram" : "䷣",
@@ -285,7 +390,10 @@
         "pronunciation" : "míng yí",
         "translation" : "\"brilliance injured\", \"intelligence hidden.\"",
         "upper" : "☷",
-        "lower" : "☲"
+        "lower" : "☲",
+        "opposite_gua" : "6",
+        "inverse_gua" : "35",
+        "mutual_gua" : "40"
     },
     "37" : {
         "hexagram" : "䷤",
@@ -293,7 +401,10 @@
         "pronunciation" : "jiā rén",
         "translation" : "\"household\", \"dwelling people.\"",
         "upper" : "☴",
-        "lower" : "☲"
+        "lower" : "☲",
+        "opposite_gua" : "40",
+        "inverse_gua" : "38",
+        "mutual_gua" : "64"
     },
     "38" : {
         "hexagram" : "䷥",
@@ -301,7 +412,10 @@
         "pronunciation" : "kuí",
         "translation" : "\"polarizing.\"",
         "upper" : "☲",
-        "lower" : "☱"
+        "lower" : "☱",
+        "opposite_gua" : "39",
+        "inverse_gua" : "37",
+        "mutual_gua" : "63"
     },
     "39" : {
         "hexagram" : "䷦",
@@ -309,7 +423,10 @@
         "pronunciation" : "jiǎn",
         "translation" : "\"hardship\", \"limping.\"",
         "upper" : "☵",
-        "lower" : "☶"
+        "lower" : "☶",
+        "opposite_gua" : "38",
+        "inverse_gua" : "40",
+        "mutual_gua" : "64"
     },
     "40" : {
         "hexagram" : "䷧",
@@ -317,7 +434,10 @@
         "pronunciation" : "jiě",
         "translation" : "\"relief\", \"deliverance.\"",
         "upper" : "☳",
-        "lower" : "☵"
+        "lower" : "☵",
+        "opposite_gua" : "37",
+        "inverse_gua" : "39",
+        "mutual_gua" : "63"
     },
     "41" : {
         "hexagram" : "䷨",
@@ -325,7 +445,10 @@
         "pronunciation" : "sǔn",
         "translation" : "\"diminishing.\"",
         "upper" : "☶",
-        "lower" : "☱"
+        "lower" : "☱",
+        "opposite_gua" : "31",
+        "inverse_gua" : "42",
+        "mutual_gua" : "24"
     },
     "42" : {
         "hexagram" : "䷩",
@@ -333,7 +456,10 @@
         "pronunciation" : "yì",
         "translation" : "\"augmenting.\"",
         "upper" : "☴",
-        "lower" : "☳"
+        "lower" : "☳",
+        "opposite_gua" : "32",
+        "inverse_gua" : "41",
+        "mutual_gua" : "23"
     },
     "43" : {
         "hexagram" : "䷪",
@@ -341,7 +467,10 @@
         "pronunciation" : "guài",
         "translation" : "\"resoluteness\", \"displacement.\"",
         "upper" : "☱",
-        "lower" : "☰"
+        "lower" : "☰",
+        "opposite_gua" : "23",
+        "inverse_gua" : "44",
+        "mutual_gua" : "1"
     },
     "44" : {
         "hexagram" : "䷫",
@@ -349,7 +478,10 @@
         "pronunciation" : "gòu",
         "translation" : "\"encountering\", \"coupling.\"",
         "upper" : "☰",
-        "lower" : "☴"
+        "lower" : "☴",
+        "opposite_gua" : "24",
+        "inverse_gua" : "43",
+        "mutual_gua" : "1"
     },
     "45" : {
         "hexagram" : "䷬",
@@ -357,7 +489,10 @@
         "pronunciation" : "cuì",
         "translation" : "\"gathering\", \"clustering.\"",
         "upper" : "☱",
-        "lower" : "☷"
+        "lower" : "☷",
+        "opposite_gua" : "26",
+        "inverse_gua" : "46",
+        "mutual_gua" : "53"
     },
     "46" : {
         "hexagram" : "䷭",
@@ -365,7 +500,10 @@
         "pronunciation" : "shēng",
         "translation" : "\"ascending.\"",
         "upper" : "☷",
-        "lower" : "☴"
+        "lower" : "☴",
+        "opposite_gua" : "25",
+        "inverse_gua" : "45",
+        "mutual_gua" : "54"
     },
     "47" : {
         "hexagram" : "䷮",
@@ -373,7 +511,10 @@
         "pronunciation" : "kùn",
         "translation" : "\"confining.\"",
         "upper" : "☱",
-        "lower" : "☵"
+        "lower" : "☵",
+        "opposite_gua" : "22",
+        "inverse_gua" : "48",
+        "mutual_gua" : "37"
     },
     "48" : {
         "hexagram" : "䷯",
@@ -381,7 +522,10 @@
         "pronunciation" : "jǐng",
         "translation" : "\"welling.\"",
         "upper" : "☵",
-        "lower" : "☴"
+        "lower" : "☴",
+        "opposite_gua" : "21",
+        "inverse_gua" : "47",
+        "mutual_gua" : "38"
     },
     "49" : {
         "hexagram" : "䷰",
@@ -389,7 +533,10 @@
         "pronunciation" : "gé",
         "translation" : "\"abolishing the old\", \"skinning.\"",
         "upper" : "☱",
-        "lower" : "☲"
+        "lower" : "☲",
+        "opposite_gua" : "4",
+        "inverse_gua" : "50",
+        "mutual_gua" : "44"
     },
     "50" : {
         "hexagram" : "䷱",
@@ -397,7 +544,10 @@
         "pronunciation" : "dǐng",
         "translation" : "\"establishing the new\", \"holding.\"",
         "upper" : "☲",
-        "lower" : "☴"
+        "lower" : "☴",
+        "opposite_gua" : "3",
+        "inverse_gua" : "49",
+        "mutual_gua" : "43"
     },
     "51" : {
         "hexagram" : "䷲",
@@ -405,7 +555,10 @@
         "pronunciation" : "zhèn",
         "translation" : "\"taking action\", \"shake.\"",
         "upper" : "☳",
-        "lower" : "☳"
+        "lower" : "☳",
+        "opposite_gua" : "57",
+        "inverse_gua" : "52",
+        "mutual_gua" : "39"
     },
     "52" : {
         "hexagram" : "䷳",
@@ -413,7 +566,10 @@
         "pronunciation" : "gèn",
         "translation" : "\"keeping still\", \"bound.\"",
         "upper" : "☶",
-        "lower" : "☶"
+        "lower" : "☶",
+        "opposite_gua" : "58",
+        "inverse_gua" : "51",
+        "mutual_gua" : "40"
     },
     "53" : {
         "hexagram" : "䷴",
@@ -421,7 +577,10 @@
         "pronunciation" : "jiàn",
         "translation" : "\"developing gradually\", \"infiltrating.\"",
         "upper" : "☴",
-        "lower" : "☶"
+        "lower" : "☶",
+        "opposite_gua" : "54",
+        "inverse_gua" : "54",
+        "mutual_gua" : "64"
     },
     "54" : {
         "hexagram" : "䷵",
@@ -429,7 +588,10 @@
         "pronunciation" : "guī mèi",
         "translation" : "\"marrying maiden\", \"converting the maiden.\"",
         "upper" : "☳",
-        "lower" : "☱"
+        "lower" : "☱",
+        "opposite_gua" : "53",
+        "inverse_gua" : "53",
+        "mutual_gua" : "63"
     },
     "55" : {
         "hexagram" : "䷶",
@@ -437,7 +599,10 @@
         "pronunciation" : "fēng",
         "translation" : "\"abundance\", \"abounding.\"",
         "upper" : "☳",
-        "lower" : "☲"
+        "lower" : "☲",
+        "opposite_gua" : "59",
+        "inverse_gua" : "56",
+        "mutual_gua" : "28"
     },
     "56" : {
         "hexagram" : "䷷",
@@ -445,7 +610,10 @@
         "pronunciation" : "lǚ",
         "translation" : "\"traveling\", \"sojourning.\"",
         "upper" : "☲",
-        "lower" : "☶"
+        "lower" : "☶",
+        "opposite_gua" : "60",
+        "inverse_gua" : "55",
+        "mutual_gua" : "28"
     },
     "57" : {
         "hexagram" : "䷸",
@@ -453,7 +621,10 @@
         "pronunciation" : "xùn",
         "translation" : "\"ground.\"",
         "upper" : "☴",
-        "lower" : "☴"
+        "lower" : "☴",
+        "opposite_gua" : "51",
+        "inverse_gua" : "58",
+        "mutual_gua" : "38"
     },
     "58" : {
         "hexagram" : "䷹",
@@ -461,7 +632,10 @@
         "pronunciation" : "duì",
         "translation" : "\"joyful\", \"open.\"",
         "upper" : "☱",
-        "lower" : "☱"
+        "lower" : "☱",
+        "opposite_gua" : "52",
+        "inverse_gua" : "57",
+        "mutual_gua" : "37"
     },
     "59" : {
         "hexagram" : "䷺",
@@ -469,7 +643,10 @@
         "pronunciation" : "huàn",
         "translation" : "\"dispersing.\"",
         "upper" : "☴",
-        "lower" : "☵"
+        "lower" : "☵",
+        "opposite_gua" : "55",
+        "inverse_gua" : "60",
+        "mutual_gua" : "27"
     },
     "60" : {
         "hexagram" : "䷻",
@@ -477,7 +654,10 @@
         "pronunciation" : "jié",
         "translation" : "\"articulating.\"",
         "upper" : "☵",
-        "lower" : "☱"
+        "lower" : "☱",
+        "opposite_gua" : "56",
+        "inverse_gua" : "59",
+        "mutual_gua" : "27"
     },
     "61" : {
         "hexagram" : "䷼",
@@ -485,7 +665,10 @@
         "pronunciation" : "zhōng fú",
         "translation" : "\"innermost sincerity\", \"inner truth.\"",
         "upper" : "☴",
-        "lower" : "☱"
+        "lower" : "☱",
+        "opposite_gua" : "62",
+        "inverse_gua" : "61",
+        "mutual_gua" : "27"
     },
     "62" : {
         "hexagram" : "䷽",
@@ -493,7 +676,10 @@
         "pronunciation" : "xiǎo guò",
         "translation" : "\"small exceeding.\"",
         "upper" : "☳",
-        "lower" : "☶"
+        "lower" : "☶",
+        "opposite_gua" : "61",
+        "inverse_gua" : "62",
+        "mutual_gua" : "28"
     },
     "63" : {
         "hexagram" : "䷾",
@@ -501,7 +687,10 @@
         "pronunciation" : "jì jì",
         "translation" : "\"already fulfilled\", \"already fording.\"",
         "upper" : "☵",
-        "lower" : "☲"
+        "lower" : "☲",
+        "opposite_gua" : "64",
+        "inverse_gua" : "64",
+        "mutual_gua" : "64"
     },
     "64" : {
         "hexagram" : "䷿",
@@ -509,7 +698,10 @@
         "pronunciation" : "wèi jì",
         "translation" : "\"not yet fulfilled\", \"before completion.\"",
         "upper" : "☲",
-        "lower" : "☵"
+        "lower" : "☵",
+        "opposite_gua" : "63",
+        "inverse_gua" : "63",
+        "mutual_gua" : "63"
     },
     "heaven" : {
         "trigram" : "☰",

@@ -107,6 +107,9 @@ interface HexagramDetails {
   translation: string;
   upper: string;
   lower: string;
+  opposite_gua: string
+  inverse_gua: string;
+  mutual_gua: string;
 }
 
 interface TextComparisonProps {

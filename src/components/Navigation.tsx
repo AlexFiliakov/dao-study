@@ -21,6 +21,7 @@ export const menuItems = [
     name: 'Yi Jing', 
     subItems: [
       { name: 'Hexagram Matrix', path: '/ic_grid' },
+      { name: 'Hexagram Generator', path: '/ic_gen' },
     ]
   },
   { name: 'Recommended Reading', path: '/reading_list' },
