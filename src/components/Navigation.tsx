@@ -31,7 +31,7 @@ export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 px-6 py-4 z-[100]">
+    <nav className="fixed top-0 left-0 right-0 px-6 py-4 z-[1000] bg-white/75 border-b-1 border-gray-500/50 shadow-lg">
       <div className="flex justify-between items-center w-full">
         <div className="w-fit">
           <button 
@@ -57,7 +57,7 @@ export default function Navigation() {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="absolute left-0 top-16 w-fit min-w-[200px] bg-white shadow-lg rounded-lg z-[101]">
+        <div className="absolute left-0 top-16 w-fit min-w-[200px] bg-white shadow-lg rounded-lg z-[1001]">
           <div className="p-4">
             {menuItems.map((item, index) => (
               <div key={index} className="py-2 whitespace-nowrap">

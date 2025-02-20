@@ -43,7 +43,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <div className="min-h-screen flex flex-col" style={{ backgroundColor: colors.background, color: colors.text }}>
       <Navigation />
-      <main className="flex-grow">
+      <main className="flex-grow mt-12">
         {children}
       </main>
       {lastUpdated && (
