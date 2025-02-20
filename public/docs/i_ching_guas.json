@@ -8,7 +8,8 @@
         "lower" : "☰",
         "opposite_gua" : "2",
         "inverse_gua" : "1",
-        "mutual_gua" : "1"
+        "mutual_gua" : "1",
+        "binary" : "111111"
     },
     "2" : {
         "hexagram" : "䷁",
@@ -19,7 +20,8 @@
         "lower" : "☷",
         "opposite_gua" : "1",
         "inverse_gua" : "2",
-        "mutual_gua" : "2"
+        "mutual_gua" : "2",
+        "binary" : "000000"
     },
     "3" : {
         "hexagram" : "䷂",
@@ -30,7 +32,8 @@
         "lower" : "☳",
         "opposite_gua" : "50",
         "inverse_gua" : "4",
-        "mutual_gua" : "23"
+        "mutual_gua" : "23",
+        "binary" : "100010"
     },
     "4" : {
         "hexagram" : "䷃",
@@ -41,7 +44,8 @@
         "lower" : "☵",
         "opposite_gua" : "49",
         "inverse_gua" : "3",
-        "mutual_gua" : "24"
+        "mutual_gua" : "24",
+        "binary" : "010001"
     },
     "5" : {
         "hexagram" : "䷄",
@@ -52,7 +56,8 @@
         "lower" : "☰",
         "opposite_gua" : "35",
         "inverse_gua" : "6",
-        "mutual_gua" : "38"
+        "mutual_gua" : "38",
+        "binary" : "111010"
     },
     "6" : {
         "hexagram" : "䷅",
@@ -63,7 +68,8 @@
         "lower" : "☵",
         "opposite_gua" : "36",
         "inverse_gua" : "5",
-        "mutual_gua" : "37"
+        "mutual_gua" : "37",
+        "binary" : "010111"
     },
     "7" : {
         "hexagram" : "䷆",
@@ -74,7 +80,8 @@
         "lower" : "☵",
         "opposite_gua" : "13",
         "inverse_gua" : "8",
-        "mutual_gua" : "24"
+        "mutual_gua" : "24",
+        "binary" : "010000"
     },
     "8" : {
         "hexagram" : "䷇",
@@ -85,7 +92,8 @@
         "lower" : "☷",
         "opposite_gua" : "14",
         "inverse_gua" : "7",
-        "mutual_gua" : "23"
+        "mutual_gua" : "23",
+        "binary" : "000010"
     },
     "9" : {
         "hexagram" : "䷈",
@@ -96,7 +104,8 @@
         "lower" : "☰",
         "opposite_gua" : "16",
         "inverse_gua" : "10",
-        "mutual_gua" : "38"
+        "mutual_gua" : "38",
+        "binary" : "111011"
     },
     "10" : {
         "hexagram" : "䷉",
@@ -107,7 +116,8 @@
         "lower" : "☱",
         "opposite_gua" : "15",
         "inverse_gua" : "9",
-        "mutual_gua" : "37"
+        "mutual_gua" : "37",
+        "binary" : "110111"
     },
     "11" : {
         "hexagram" : "䷊",
@@ -118,7 +128,8 @@
         "lower" : "☰",
         "opposite_gua" : "12",
         "inverse_gua" : "12",
-        "mutual_gua" : "54"
+        "mutual_gua" : "54",
+        "binary" : "111000"
     },
     "12" : {
         "hexagram" : "䷋",
@@ -129,7 +140,8 @@
         "lower" : "☷",
         "opposite_gua" : "11",
         "inverse_gua" : "11",
-        "mutual_gua" : "53"
+        "mutual_gua" : "53",
+        "binary" : "000111"
     },
     "13" : {
         "hexagram" : "䷌",
@@ -140,7 +152,8 @@
         "lower" : "☲",
         "opposite_gua" : "7",
         "inverse_gua" : "14",
-        "mutual_gua" : "44"
+        "mutual_gua" : "44",
+        "binary" : "101111"
     },
     "14" : {
         "hexagram" : "䷍",
@@ -151,7 +164,8 @@
         "lower" : "☰",
         "opposite_gua" : "8",
         "inverse_gua" : "13",
-        "mutual_gua" : "43"
+        "mutual_gua" : "43",
+        "binary" : "111101"
     },
     "15" : {
         "hexagram" : "䷎",
@@ -162,7 +176,8 @@
         "lower" : "☶",
         "opposite_gua" : "10",
         "inverse_gua" : "16",
-        "mutual_gua" : "40"
+        "mutual_gua" : "40",
+        "binary" : "001000"
     },
     "16" : {
         "hexagram" : "䷏",
@@ -173,7 +188,8 @@
         "lower" : "☷",
         "opposite_gua" : "9",
         "inverse_gua" : "15",
-        "mutual_gua" : "39"
+        "mutual_gua" : "39",
+        "binary" : "000100"
     },
     "17" : {
         "hexagram" : "䷐",
@@ -184,7 +200,8 @@
         "lower" : "☳",
         "opposite_gua" : "18",
         "inverse_gua" : "18",
-        "mutual_gua" : "53"
+        "mutual_gua" : "53",
+        "binary" : "100110"
     },
     "18" : {
         "hexagram" : "䷑",
@@ -195,7 +212,8 @@
         "lower" : "☴",
         "opposite_gua" : "17",
         "inverse_gua" : "17",
-        "mutual_gua" : "54"
+        "mutual_gua" : "54",
+        "binary" : "011001"
     },
     "19" : {
         "hexagram" : "䷒",
@@ -206,7 +224,8 @@
         "lower" : "☱",
         "opposite_gua" : "33",
         "inverse_gua" : "20",
-        "mutual_gua" : "24"
+        "mutual_gua" : "24",
+        "binary" : "110000"
     },
     "20" : {
         "hexagram" : "䷓",
@@ -217,7 +236,8 @@
         "lower" : "☷",
         "opposite_gua" : "34",
         "inverse_gua" : "19",
-        "mutual_gua" : "23"
+        "mutual_gua" : "23",
+        "binary" : "000011"
     },
     "21" : {
         "hexagram" : "䷔",
@@ -228,7 +248,8 @@
         "lower" : "☳",
         "opposite_gua" : "48",
         "inverse_gua" : "22",
-        "mutual_gua" : "39"
+        "mutual_gua" : "39",
+        "binary" : "100101"
     },
     "22" : {
         "hexagram" : "䷕",
@@ -239,7 +260,8 @@
         "lower" : "☲",
         "opposite_gua" : "47",
         "inverse_gua" : "21",
-        "mutual_gua" : "40"
+        "mutual_gua" : "40",
+        "binary" : "101001"
     },
     "23" : {
         "hexagram" : "䷖",
@@ -250,7 +272,8 @@
         "lower" : "☷",
         "opposite_gua" : "43",
         "inverse_gua" : "24",
-        "mutual_gua" : "2"
+        "mutual_gua" : "2",
+        "binary" : "000001"
     },
     "24" : {
         "hexagram" : "䷗",
@@ -261,7 +284,8 @@
         "lower" : "☳",
         "opposite_gua" : "44",
         "inverse_gua" : "23",
-        "mutual_gua" : "2"
+        "mutual_gua" : "2",
+        "binary" : "100000"
     },
     "25" : {
         "hexagram" : "䷘",
@@ -272,7 +296,8 @@
         "lower" : "☳",
         "opposite_gua" : "46",
         "inverse_gua" : "26",
-        "mutual_gua" : "53"
+        "mutual_gua" : "53",
+        "binary" : "100111"
     },
     "26" : {
         "hexagram" : "䷙",
@@ -283,7 +308,8 @@
         "lower" : "☰",
         "opposite_gua" : "45",
         "inverse_gua" : "25",
-        "mutual_gua" : "54"
+        "mutual_gua" : "54",
+        "binary" : "111001"
     },
     "27" : {
         "hexagram" : "䷚",
@@ -294,7 +320,8 @@
         "lower" : "☳",
         "opposite_gua" : "28",
         "inverse_gua" : "27",
-        "mutual_gua" : "2"
+        "mutual_gua" : "2",
+        "binary" : "100001"
     },
     "28" : {
         "hexagram" : "䷛",
@@ -305,7 +332,8 @@
         "lower" : "☴",
         "opposite_gua" : "27",
         "inverse_gua" : "28",
-        "mutual_gua" : "1"
+        "mutual_gua" : "1",
+        "binary" : "011110"
     },
     "29" : {
         "hexagram" : "䷜",
@@ -316,7 +344,8 @@
         "lower" : "☵",
         "opposite_gua" : "30",
         "inverse_gua" : "29",
-        "mutual_gua" : "27"
+        "mutual_gua" : "27",
+        "binary" : "010010"
     },
     "30" : {
         "hexagram" : "䷝",
@@ -327,7 +356,8 @@
         "lower" : "☲",
         "opposite_gua" : "29",
         "inverse_gua" : "30",
-        "mutual_gua" : "28"
+        "mutual_gua" : "28",
+        "binary" : "101101"
     },
     "31" : {
         "hexagram" : "䷞",
@@ -338,7 +368,8 @@
         "lower" : "☶",
         "opposite_gua" : "41",
         "inverse_gua" : "32",
-        "mutual_gua" : "44"
+        "mutual_gua" : "44",
+        "binary" : "001110"
     },
     "32" : {
         "hexagram" : "䷟",
@@ -349,7 +380,8 @@
         "lower" : "☴",
         "opposite_gua" : "42",
         "inverse_gua" : "31",
-        "mutual_gua" : "43"
+        "mutual_gua" : "43",
+        "binary" : "011100"
     },
     "33" : {
         "hexagram" : "䷠",
@@ -360,7 +392,8 @@
         "lower" : "☶",
         "opposite_gua" : "19",
         "inverse_gua" : "34",
-        "mutual_gua" : "44"
+        "mutual_gua" : "44",
+        "binary" : "001111"
     },
     "34" : {
         "hexagram" : "䷡",
@@ -371,7 +404,8 @@
         "lower" : "☰",
         "opposite_gua" : "20",
         "inverse_gua" : "33",
-        "mutual_gua" : "43"
+        "mutual_gua" : "43",
+        "binary" : "111100"
     },
     "35" : {
         "hexagram" : "䷢",
@@ -382,7 +416,8 @@
         "lower" : "☷",
         "opposite_gua" : "5",
         "inverse_gua" : "36",
-        "mutual_gua" : "39"
+        "mutual_gua" : "39",
+        "binary" : "000101"
     },
     "36" : {
         "hexagram" : "䷣",
@@ -393,7 +428,8 @@
         "lower" : "☲",
         "opposite_gua" : "6",
         "inverse_gua" : "35",
-        "mutual_gua" : "40"
+        "mutual_gua" : "40",
+        "binary" : "101000"
     },
     "37" : {
         "hexagram" : "䷤",
@@ -404,7 +440,8 @@
         "lower" : "☲",
         "opposite_gua" : "40",
         "inverse_gua" : "38",
-        "mutual_gua" : "64"
+        "mutual_gua" : "64",
+        "binary" : "101011"
     },
     "38" : {
         "hexagram" : "䷥",
@@ -415,7 +452,8 @@
         "lower" : "☱",
         "opposite_gua" : "39",
         "inverse_gua" : "37",
-        "mutual_gua" : "63"
+        "mutual_gua" : "63",
+        "binary" : "110101"
     },
     "39" : {
         "hexagram" : "䷦",
@@ -426,7 +464,8 @@
         "lower" : "☶",
         "opposite_gua" : "38",
         "inverse_gua" : "40",
-        "mutual_gua" : "64"
+        "mutual_gua" : "64",
+        "binary" : "001010"
     },
     "40" : {
         "hexagram" : "䷧",
@@ -437,7 +476,8 @@
         "lower" : "☵",
         "opposite_gua" : "37",
         "inverse_gua" : "39",
-        "mutual_gua" : "63"
+        "mutual_gua" : "63",
+        "binary" : "010100"
     },
     "41" : {
         "hexagram" : "䷨",
@@ -448,7 +488,8 @@
         "lower" : "☱",
         "opposite_gua" : "31",
         "inverse_gua" : "42",
-        "mutual_gua" : "24"
+        "mutual_gua" : "24",
+        "binary" : "110001"
     },
     "42" : {
         "hexagram" : "䷩",
@@ -459,7 +500,8 @@
         "lower" : "☳",
         "opposite_gua" : "32",
         "inverse_gua" : "41",
-        "mutual_gua" : "23"
+        "mutual_gua" : "23",
+        "binary" : "100011"
     },
     "43" : {
         "hexagram" : "䷪",
@@ -470,7 +512,8 @@
         "lower" : "☰",
         "opposite_gua" : "23",
         "inverse_gua" : "44",
-        "mutual_gua" : "1"
+        "mutual_gua" : "1",
+        "binary" : "111110"
     },
     "44" : {
         "hexagram" : "䷫",
@@ -481,7 +524,8 @@
         "lower" : "☴",
         "opposite_gua" : "24",
         "inverse_gua" : "43",
-        "mutual_gua" : "1"
+        "mutual_gua" : "1",
+        "binary" : "011111"
     },
     "45" : {
         "hexagram" : "䷬",
@@ -492,7 +536,8 @@
         "lower" : "☷",
         "opposite_gua" : "26",
         "inverse_gua" : "46",
-        "mutual_gua" : "53"
+        "mutual_gua" : "53",
+        "binary" : "000110"
     },
     "46" : {
         "hexagram" : "䷭",
@@ -503,7 +548,8 @@
         "lower" : "☴",
         "opposite_gua" : "25",
         "inverse_gua" : "45",
-        "mutual_gua" : "54"
+        "mutual_gua" : "54",
+        "binary" : "011000"
     },
     "47" : {
         "hexagram" : "䷮",
@@ -514,7 +560,8 @@
         "lower" : "☵",
         "opposite_gua" : "22",
         "inverse_gua" : "48",
-        "mutual_gua" : "37"
+        "mutual_gua" : "37",
+        "binary" : "010110"
     },
     "48" : {
         "hexagram" : "䷯",
@@ -525,7 +572,8 @@
         "lower" : "☴",
         "opposite_gua" : "21",
         "inverse_gua" : "47",
-        "mutual_gua" : "38"
+        "mutual_gua" : "38",
+        "binary" : "011010"
     },
     "49" : {
         "hexagram" : "䷰",
@@ -536,7 +584,8 @@
         "lower" : "☲",
         "opposite_gua" : "4",
         "inverse_gua" : "50",
-        "mutual_gua" : "44"
+        "mutual_gua" : "44",
+        "binary" : "101110"
     },
     "50" : {
         "hexagram" : "䷱",
@@ -547,7 +596,8 @@
         "lower" : "☴",
         "opposite_gua" : "3",
         "inverse_gua" : "49",
-        "mutual_gua" : "43"
+        "mutual_gua" : "43",
+        "binary" : "011101"
     },
     "51" : {
         "hexagram" : "䷲",
@@ -558,7 +608,8 @@
         "lower" : "☳",
         "opposite_gua" : "57",
         "inverse_gua" : "52",
-        "mutual_gua" : "39"
+        "mutual_gua" : "39",
+        "binary" : "100100"
     },
     "52" : {
         "hexagram" : "䷳",
@@ -569,7 +620,8 @@
         "lower" : "☶",
         "opposite_gua" : "58",
         "inverse_gua" : "51",
-        "mutual_gua" : "40"
+        "mutual_gua" : "40",
+        "binary" : "001001"
     },
     "53" : {
         "hexagram" : "䷴",
@@ -580,7 +632,8 @@
         "lower" : "☶",
         "opposite_gua" : "54",
         "inverse_gua" : "54",
-        "mutual_gua" : "64"
+        "mutual_gua" : "64",
+        "binary" : "001011"
     },
     "54" : {
         "hexagram" : "䷵",
@@ -591,7 +644,8 @@
         "lower" : "☱",
         "opposite_gua" : "53",
         "inverse_gua" : "53",
-        "mutual_gua" : "63"
+        "mutual_gua" : "63",
+        "binary" : "110100"
     },
     "55" : {
         "hexagram" : "䷶",
@@ -602,7 +656,8 @@
         "lower" : "☲",
         "opposite_gua" : "59",
         "inverse_gua" : "56",
-        "mutual_gua" : "28"
+        "mutual_gua" : "28",
+        "binary" : "101100"
     },
     "56" : {
         "hexagram" : "䷷",
@@ -613,7 +668,8 @@
         "lower" : "☶",
         "opposite_gua" : "60",
         "inverse_gua" : "55",
-        "mutual_gua" : "28"
+        "mutual_gua" : "28",
+        "binary" : "001101"
     },
     "57" : {
         "hexagram" : "䷸",
@@ -624,7 +680,8 @@
         "lower" : "☴",
         "opposite_gua" : "51",
         "inverse_gua" : "58",
-        "mutual_gua" : "38"
+        "mutual_gua" : "38",
+        "binary" : "011011"
     },
     "58" : {
         "hexagram" : "䷹",
@@ -635,7 +692,8 @@
         "lower" : "☱",
         "opposite_gua" : "52",
         "inverse_gua" : "57",
-        "mutual_gua" : "37"
+        "mutual_gua" : "37",
+        "binary" : "110110"
     },
     "59" : {
         "hexagram" : "䷺",
@@ -646,7 +704,8 @@
         "lower" : "☵",
         "opposite_gua" : "55",
         "inverse_gua" : "60",
-        "mutual_gua" : "27"
+        "mutual_gua" : "27",
+        "binary" : "010011"
     },
     "60" : {
         "hexagram" : "䷻",
@@ -657,7 +716,8 @@
         "lower" : "☱",
         "opposite_gua" : "56",
         "inverse_gua" : "59",
-        "mutual_gua" : "27"
+        "mutual_gua" : "27",
+        "binary" : "110010"
     },
     "61" : {
         "hexagram" : "䷼",
@@ -668,7 +728,8 @@
         "lower" : "☱",
         "opposite_gua" : "62",
         "inverse_gua" : "61",
-        "mutual_gua" : "27"
+        "mutual_gua" : "27",
+        "binary" : "110011"
     },
     "62" : {
         "hexagram" : "䷽",
@@ -679,7 +740,8 @@
         "lower" : "☶",
         "opposite_gua" : "61",
         "inverse_gua" : "62",
-        "mutual_gua" : "28"
+        "mutual_gua" : "28",
+        "binary" : "001100"
     },
     "63" : {
         "hexagram" : "䷾",
@@ -690,7 +752,8 @@
         "lower" : "☲",
         "opposite_gua" : "64",
         "inverse_gua" : "64",
-        "mutual_gua" : "64"
+        "mutual_gua" : "64",
+        "binary" : "101010"
     },
     "64" : {
         "hexagram" : "䷿",
@@ -701,54 +764,63 @@
         "lower" : "☵",
         "opposite_gua" : "63",
         "inverse_gua" : "63",
-        "mutual_gua" : "63"
+        "mutual_gua" : "63",
+        "binary" : "010101"
     },
     "heaven" : {
         "trigram" : "☰",
         "gua" : "乾",
         "pronunciation" : "qián",
-        "translation" : "\"Heaven.\""
+        "translation" : "\"Heaven.\"",
+        "binary" : ""
     },
     "lake" : {
         "trigram" : "☱",
         "gua" : "兌",
         "pronunciation" : "duì",
-        "translation" : "\"Lake.\""
+        "translation" : "\"Lake.\"",
+        "binary" : "110"
     },
     "flame" : {
         "trigram" : "☲",
         "gua" : "離",
         "pronunciation" : "lí",
-        "translation" : "\"Flame.\""
+        "translation" : "\"Flame.\"",
+        "binary" : "101"
     },
     "thunder" : {
         "trigram" : "☳",
         "gua" : "震",
         "pronunciation" : "zhèn",
-        "translation" : "\"Thunder.\""
+        "translation" : "\"Thunder.\"",
+        "binary" : "100"
     },
     "wind" : {
         "trigram" : "☴",
         "gua" : "巽",
         "pronunciation" : "xùn",
-        "translation" : "\"Wind.\""
+        "translation" : "\"Wind.\"",
+        "binary" : "011"
     },
     "water" : {
         "trigram" : "☵",
         "gua" : "坎",
         "pronunciation" : "kǎn",
-        "translation" : "\"Water.\""
+        "translation" : "\"Water.\"",
+        "binary" : "010"
     },
     "mountain" : {
         "trigram" : "☶",
         "gua" : "艮",
         "pronunciation" : "gèn",
-        "translation" : "\"Mountain.\""
+        "translation" : "\"Mountain.\"",
+        "binary" : "001"
     },
     "earth" : {
         "trigram" : "☷",
         "gua" : "坤",
         "pronunciation" : "kūn",
-        "translation" : "\"Earth.\""
+        "translation" : "\"Earth.\"",
+        "binary" : "000"
     }
 }
