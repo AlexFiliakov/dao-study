@@ -251,6 +251,7 @@ export default function HexagramGenerator({ hexagramDetails }: HexagramGenerator
             <div className="text-4xl mb-2">{selectedHexagram.hexagram}</div>
             <div className="text-xl mb-1">{selectedHexagram.gua}</div>
             <div className="text-lg text-gray-600">{selectedHexagram.pronunciation}</div>
+            <div className="text-lg text-gray-600">{selectedHexagram && Object.keys(hexagramDetails).find(key => hexagramDetails[key] === selectedHexagram)}</div>
             <div className="mt-4 text-gray-800">{selectedHexagram.translation}</div>
         </div>
         <hr className="w-full border-t border-gray-200" />
@@ -292,6 +293,7 @@ export default function HexagramGenerator({ hexagramDetails }: HexagramGenerator
             <div className="text-4xl mb-2">{approachedHexagram?.hexagram}</div>
             <div className="text-xl mb-1">{approachedHexagram?.gua}</div>
             <div className="text-lg text-gray-600">{approachedHexagram?.pronunciation}</div>
+            <div className="text-lg text-gray-600">{approachedHexagram && Object.keys(hexagramDetails).find(key => hexagramDetails[key] === approachedHexagram)}</div>
             <div className="mt-4 text-gray-800">{approachedHexagram?.translation}</div>
         </div>
         <hr className="w-full border-t border-gray-200" />
@@ -301,6 +303,7 @@ export default function HexagramGenerator({ hexagramDetails }: HexagramGenerator
                 <div className="text-4xl mb-2">{hexagramDetails[selectedHexagram.opposite_gua].hexagram}</div>
                 <div className="text-xl mb-1">{hexagramDetails[selectedHexagram.opposite_gua].gua}</div>
                 <div className="text-lg text-gray-600">{hexagramDetails[selectedHexagram.opposite_gua].pronunciation}</div>
+                <div className="text-lg text-gray-600">{selectedHexagram.opposite_gua}</div>
                 <div className="mt-4 text-gray-800">{hexagramDetails[selectedHexagram.opposite_gua].translation}</div>
             </div>
             <div className="text-center bg-gray-100 p-2 rounded-lg">
@@ -308,6 +311,7 @@ export default function HexagramGenerator({ hexagramDetails }: HexagramGenerator
                 <div className="text-4xl mb-2">{hexagramDetails[selectedHexagram.inverse_gua].hexagram}</div>
                 <div className="text-xl mb-1">{hexagramDetails[selectedHexagram.inverse_gua].gua}</div>
                 <div className="text-lg text-gray-600">{hexagramDetails[selectedHexagram.inverse_gua].pronunciation}</div>
+                <div className="text-lg text-gray-600">{selectedHexagram.inverse_gua}</div>
                 <div className="mt-4 text-gray-800">{hexagramDetails[selectedHexagram.inverse_gua].translation}</div>
             </div>
             <div className="text-center bg-gray-100 p-2 rounded-lg">
@@ -349,6 +353,7 @@ export default function HexagramGenerator({ hexagramDetails }: HexagramGenerator
                 <div className="text-4xl mb-2">{hexagramDetails[selectedHexagram.mutual_gua].hexagram}</div>
                 <div className="text-xl mb-1">{hexagramDetails[selectedHexagram.mutual_gua].gua}</div>
                 <div className="text-lg text-gray-600">{hexagramDetails[selectedHexagram.mutual_gua].pronunciation}</div>
+                <div className="text-lg text-gray-600">{selectedHexagram.mutual_gua}</div>
                 <div className="mt-4 text-gray-800">{hexagramDetails[selectedHexagram.mutual_gua].translation}</div>
             </div>
         </div>
