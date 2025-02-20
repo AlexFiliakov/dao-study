@@ -5,8 +5,8 @@ import HexagramGridNumeric, { HexagramGridConstructed } from '@/components/Hexag
 import { getHexagramData } from '@/utils/getHexagramData';
 
 export const metadata = {
-  title: 'I Ching: Hexagram Matrix | 道 Dao Study Group',
-  description: 'The 64 hexagrams of the I Ching displayed in a matrix format.',
+  title: 'Yi Jing: Hexagram Matrix | 道 Dao Study Group',
+  description: 'The 64 hexagrams of the Yi Jing displayed in a matrix format.',
 };
 
 export default async function IChingGrid() {
@@ -29,7 +29,7 @@ export default async function IChingGrid() {
         </div>
         <div className="w-full min-h-screen bg-neutral-50 pt-8 font-serif">
           <header className="bg-teal-700 text-neutral-50 p-6 rounded-lg shadow-lg">
-              <h1 className="text-5xl font-large mb-2 flex justify-between">I Ching</h1>
+              <h1 className="text-5xl font-large mb-2 flex justify-between">Yi Jing</h1>
               <h1 className="text-3xl font-medium mb-2">Hexagram Matrix</h1>
               <p className="text-teal-100">易经</p>
           </header>

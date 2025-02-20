@@ -36,7 +36,7 @@ export default function HexagramDisplay({
 
   return (
     <p>
-      Chapter {chapterNumber} relates to the I Ching hexagram {thisHexagramKey}, {thisHexagram.hexagram}, {thisHexagram.gua} ({thisHexagram.pronunciation}), which means {thisHexagram.translation}
+      Chapter {chapterNumber} relates to the Yi Jing hexagram {thisHexagramKey}, {thisHexagram.hexagram}, {thisHexagram.gua} ({thisHexagram.pronunciation}), which means {thisHexagram.translation}
     </p>
   );
 }
