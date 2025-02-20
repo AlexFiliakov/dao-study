@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { Undo2, CornerRightDown, CornerRightUp } from 'lucide-react';
 import { createPortal } from 'react-dom';
 import { HexagramDetails } from '@/types/HexagramTypes';
 
@@ -76,6 +77,21 @@ export default function MutualGuaTree({
     </div>
   ) : null;
 
+  const mutualRecurrence = (mutualGua : string) => {
+    switch(mutualGua) {
+      case "1":
+      case "2":
+        return <Undo2 className="text-amber-700" />
+      case "63":
+        return <CornerRightDown className="text-amber-700" />
+      case "64":
+        return <CornerRightUp className="text-amber-700" />
+      default:
+        console.error(`Gua ${mutualGua} is not a level-2 mutual gua.`);
+        return null;
+    }
+  }
+
   return (
     <div className="flex flex-col items-center gap-4">
       <h2 className="font-bold">Tree of Mutual Guas</h2>
@@ -84,7 +100,7 @@ export default function MutualGuaTree({
         These mutual guas themselves are grouped under their own mutual guas (dark amber background),
         showing how hexagrams converge through successive mutual relationships.
       </p>
-      <div className="flex flex-col text-center gap-8">
+      <div className="flex flex-col text-center gap-4">
         {Array.from(mutualStack2).map((keyMutual2, index, array) => (
           <>
           <div key={'mutual2-'+keyMutual2+"-parent"}>
@@ -93,12 +109,12 @@ export default function MutualGuaTree({
                 {Array.from(mutualStack1).map(keyMutual1 => {
                   if (hexagramDetails[keyMutual1].mutual_gua === keyMutual2) {
                     return (
-                      <div key={'mutual-'+keyMutual1+"-parent"} className="flex flex-row gap-4">
+                      <div key={'mutual-'+keyMutual1+"-parent"} className="flex flex-row rounded bg-amber-100 shadow-md p-2 gap-4">
                         {all_gua_keys.map(key => {
                           if (hexagramDetails[key.toString()].mutual_gua === keyMutual1) {
                             return (
                               <>
-                              <div key={'child'+key} className="p-2 border rounded"
+                              <div key={'child'+key} className="p-2 border rounded bg-neutral-50"
                                       onMouseEnter={() => setHoveredHexagram(key.toString())}
                                       onMouseLeave={() => setHoveredHexagram(null)}
                                   >
@@ -124,12 +140,15 @@ export default function MutualGuaTree({
                 })}
               </div>
               <div 
-                className="flex flex-col p-2 border rounded h-fit bg-amber-700"
+                className="flex flex-col p-2 border rounded h-fit bg-amber-700 shadow-md"
                 onMouseEnter={() => setHoveredHexagram(keyMutual2)}
                 onMouseLeave={() => setHoveredHexagram(null)}
               >
                 <div className="text-2xl text-amber-100">{hexagramDetails[keyMutual2].hexagram}</div>
                 <div className="text-sm text-amber-200">{keyMutual2}</div>
+              </div>
+              <div className="flex flex-col rounded h-fit">
+                {mutualRecurrence(keyMutual2)}
               </div>
             </div>
           </div>
