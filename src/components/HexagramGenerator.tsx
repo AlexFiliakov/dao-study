@@ -55,13 +55,29 @@ export default function HexagramGenerator({ hexagramDetails }: HexagramGenerator
   const diagramThrownLine = (line: number) => {
     switch (line) {
         case 0: // 0 = moving yin
-            return '⚊×⚊';
+            // return '⚊×⚊';
+            return `<svg width="48" height="12" viewBox="0 0 48 12">
+                <line x1="4" y1="6" x2="44" y2="6" stroke="black" stroke-width="2" />
+                <line x1="19" y1="1" x2="29" y2="11" stroke="black" stroke-width="2" />
+                <line x1="29" y1="1" x2="19" y2="11" stroke="black" stroke-width="2" />
+            </svg>`;
         case 1: // 1 = stable yang
-            return '⚊⚊⚊';
+            // return '⚊⚊⚊';
+            return `<svg width="48" height="12" viewBox="0 0 48 12">
+                <line x1="4" y1="6" x2="44" y2="6" stroke="black" stroke-width="2" />
+            </svg>`;
         case 2: // 2 = stable yin
-            return '⚊ ⚊';
+            // return '⚊ ⚊';
+            return `<svg width="48" height="12" viewBox="0 0 48 12">
+                <line x1="4" y1="6" x2="20" y2="6" stroke="black" stroke-width="2" />
+                <line x1="28" y1="6" x2="44" y2="6" stroke="black" stroke-width="2" />
+            </svg>`;
         case 3: // 3 = moving yang
-            return '⚊⊖⚊';
+            // return '⚊⊖⚊';
+            return `<svg width="48" height="12" viewBox="0 0 48 12">
+                <line x1="4" y1="6" x2="44" y2="6" stroke="black" stroke-width="2" />
+                <circle cx="24" cy="6" r="5" fill="none" stroke="black" stroke-width="2" />
+            </svg>`;
         default:
             console.error('Wrong line input, must be 0-3');
             return '';
@@ -101,11 +117,11 @@ export default function HexagramGenerator({ hexagramDetails }: HexagramGenerator
       return;
     }
 
-    const thrownHexagram = diagramThrownLine(sixthLine) + "<br />"
-                            + diagramThrownLine(fifthLine) + "<br />"
-                            + diagramThrownLine(fourthLine) + "<br />"
-                            + diagramThrownLine(thirdLine) + "<br />"
-                            + diagramThrownLine(secondLine) + "<br />"
+    const thrownHexagram = diagramThrownLine(sixthLine)
+                            + diagramThrownLine(fifthLine)
+                            + diagramThrownLine(fourthLine)
+                            + diagramThrownLine(thirdLine)
+                            + diagramThrownLine(secondLine)
                             + diagramThrownLine(firstLine);
     setThrownHexagram(thrownHexagram);
 
