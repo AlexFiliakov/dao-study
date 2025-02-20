@@ -3,17 +3,7 @@
 import React, { useState } from 'react';
 import { CircleHelp } from 'lucide-react';
 import TaoistButton from '@/components/TaoistButton';
-
-interface HexagramDetails {
-  hexagram: string;
-  gua: string;
-  pronunciation: string;
-  translation: string;
-  opposite_gua: string;
-  inverse_gua: string;
-  mutual_gua: string;
-  binary: string;
-}
+import { HexagramDetails } from '@/types/HexagramTypes';
 
 interface HexagramGeneratorProps {
   hexagramDetails: Record<string, HexagramDetails>;

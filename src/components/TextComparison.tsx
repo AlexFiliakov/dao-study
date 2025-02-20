@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import { ChevronUp } from 'lucide-react';
 import { Card, CardContent } from './ui/card';
 import HexagramDisplay from '@/components/HexagramDisplay';
+import { HexagramDetails } from '@/types/HexagramTypes';
 import Chapter1Notes from '@/components/chapter_meanings_diffs/ch1';
 import Chapter2Notes from '@/components/chapter_meanings_diffs/ch2';
 import Chapter3Notes from '@/components/chapter_meanings_diffs/ch3';
@@ -98,18 +99,6 @@ interface Chapter {
   segments: TextSegment[];
   standardSource: string;
   guodianSource: string;
-}
-
-interface HexagramDetails {
-  hexagram: string;
-  gua: string;
-  pronunciation: string;
-  translation: string;
-  upper: string;
-  lower: string;
-  opposite_gua: string
-  inverse_gua: string;
-  mutual_gua: string;
 }
 
 interface TextComparisonProps {

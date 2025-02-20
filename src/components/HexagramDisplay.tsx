@@ -1,16 +1,6 @@
 'use client';
 
-interface HexagramDetails {
-  hexagram: string;
-  gua: string;
-  pronunciation: string;
-  translation: string;
-  upper: string;
-  lower: string;
-  opposite_gua: string;
-  inverse_gua: string;
-  mutual_gua: string;
-}
+import { HexagramDetails } from '@/types/HexagramTypes';
 
 interface HexagramDisplayProps {
   chapterNumber: number;

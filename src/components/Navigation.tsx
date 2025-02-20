@@ -22,6 +22,7 @@ export const menuItems = [
     subItems: [
       { name: 'Hexagram Matrix', path: '/ic_grid' },
       { name: 'Hexagram Generator', path: '/ic_gen' },
+      { name: 'Mutual Gua Tree', path: '/ic_mutual_tree' },
     ]
   },
   { name: 'Recommended Reading', path: '/reading_list' },
