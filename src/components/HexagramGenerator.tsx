@@ -22,6 +22,7 @@ interface HexagramGeneratorProps {
 export default function HexagramGenerator({ hexagramDetails }: HexagramGeneratorProps) {
   const [selectedHexagram, setSelectedHexagram] = useState<HexagramDetails | null>(null);
   const [approachedHexagram, setApproachedHexagram] = useState<HexagramDetails | null>(null);
+  const [consultingLines, setConsultingLines] = useState('');
   const [thrownHexagram, setThrownHexagram] = useState('');
   const [showApproachedHelp, setShowApproachedHelp] = useState(false);
   const [showMutualHelp, setShowMutualHelp] = useState(false);
@@ -128,224 +129,110 @@ export default function HexagramGenerator({ hexagramDetails }: HexagramGenerator
     setApproachedHexagram(approachedHexagram);
 
     // Calculate the lines to consult
-    // const total_moving_lines = 6 - [firstLine, secondLine, thirdLine, fourthLine, fifthLine, sixthLine].filter(line => line < 3).filter(line => line > 0).length;
-    // switch (total_moving_lines) {
-    //   case 0:
-    //     setApproachedHexagram(null);
-    //     break;
-    //   case 1:
-    //     const approached_binary = (convertApproachedLine(firstLine) % 2).toString()
-    //                                 + (convertApproachedLine(secondLine) % 2).toString()
-    //                                 + (convertApproachedLine(thirdLine) % 2).toString()
-    //                                 + (convertApproachedLine(fourthLine) % 2).toString()
-    //                                 + (convertApproachedLine(fifthLine) % 2).toString()
-    //                                 + (convertApproachedLine(sixthLine) % 2).toString();
-    //     break;
-    //   case 2: // start by testing for moving Yin and Yang, and only shift the Yin line
-    //     if (firstLine == 0 && (secondLine == 3 || thirdLine == 3 || fourthLine == 3 || fifthLine == 3 || sixthLine == 3)) {
-    //         const approached_binary = (convertApproachedLine(firstLine) % 2).toString()
-    //                                     + (secondLine % 2).toString()
-    //                                     + (thirdLine % 2).toString()
-    //                                     + (fourthLine % 2).toString()
-    //                                     + (fifthLine % 2).toString()
-    //                                     + (sixthLine % 2).toString();
-    //     } else if (secondLine == 0 && (firstLine == 3 || thirdLine == 3 || fourthLine == 3 || fifthLine == 3 || sixthLine == 3)) {
-    //         const approached_binary = (firstLine % 2).toString()
-    //                                     + (convertApproachedLine(secondLine) % 2).toString()
-    //                                     + (thirdLine % 2).toString()
-    //                                     + (fourthLine % 2).toString()
-    //                                     + (fifthLine % 2).toString()
-    //                                     + (sixthLine % 2).toString();
-    //     } else if (thirdLine == 0 && (firstLine == 3 || secondLine == 3 || fourthLine == 3 || fifthLine == 3 || sixthLine == 3)) {
-    //         const approached_binary = (firstLine % 2).toString()
-    //                                     + (secondLine % 2).toString()
-    //                                     + (convertApproachedLine(thirdLine) % 2).toString()
-    //                                     + (fourthLine % 2).toString()
-    //                                     + (fifthLine % 2).toString()
-    //                                     + (sixthLine % 2).toString();
-    //     } else if (fourthLine == 0 && (firstLine == 3 || secondLine == 3 || thirdLine == 3 || fifthLine == 3 || sixthLine == 3)) {
-    //         const approached_binary = (firstLine % 2).toString()
-    //                                     + (secondLine % 2).toString()
-    //                                     + (thirdLine % 2).toString()
-    //                                     + (convertApproachedLine(fourthLine) % 2).toString()
-    //                                     + (fifthLine % 2).toString()
-    //                                     + (sixthLine % 2).toString();
-    //     } else if (fifthLine == 0 && (firstLine == 3 || secondLine == 3 || thirdLine == 3 || fourthLine == 3 || sixthLine == 3)) {
-    //         const approached_binary = (firstLine % 2).toString()
-    //                                     + (secondLine % 2).toString()
-    //                                     + (thirdLine % 2).toString()
-    //                                     + (fourthLine % 2).toString()
-    //                                     + (convertApproachedLine(fifthLine) % 2).toString()
-    //                                     + (sixthLine % 2).toString();
-    //     } else if (sixthLine == 0 && (firstLine == 3 || secondLine == 3 || thirdLine == 3 || fourthLine == 3 || fifthLine == 3)) {
-    //         const approached_binary = (firstLine % 2).toString()
-    //                                     + (secondLine % 2).toString()
-    //                                     + (thirdLine % 2).toString()
-    //                                     + (fourthLine % 2).toString()
-    //                                     + (fifthLine % 2).toString()
-    //                                     + (convertApproachedLine(sixthLine) % 2).toString();
-    //     } else if (sixthLine == 0) { // now we test for two Yin lines and shift the last Yin line
-    //         const approached_binary = (firstLine % 2).toString()
-    //                                     + (secondLine % 2).toString()
-    //                                     + (thirdLine % 2).toString()
-    //                                     + (fourthLine % 2).toString()
-    //                                     + (fifthLine % 2).toString()
-    //                                     + (convertApproachedLine(sixthLine) % 2).toString();
-    //     } else if (fifthLine == 0) {
-    //         const approached_binary = (firstLine % 2).toString()
-    //                                     + (secondLine % 2).toString()
-    //                                     + (thirdLine % 2).toString()
-    //                                     + (fourthLine % 2).toString()
-    //                                     + (convertApproachedLine(fifthLine) % 2).toString()
-    //                                     + (sixthLine % 2).toString();
-    //     } else if (fourthLine == 0) {
-    //         const approached_binary = (firstLine % 2).toString()
-    //                                     + (secondLine % 2).toString()
-    //                                     + (thirdLine % 2).toString()
-    //                                     + (convertApproachedLine(fourthLine) % 2).toString()
-    //                                     + (fifthLine % 2).toString()
-    //                                     + (sixthLine % 2).toString();
-    //     } else if (thirdLine == 0) {
-    //         const approached_binary = (firstLine % 2).toString()
-    //                                     + (secondLine % 2).toString()
-    //                                     + (convertApproachedLine(thirdLine) % 2).toString()
-    //                                     + (fourthLine % 2).toString()
-    //                                     + (fifthLine % 2).toString()
-    //                                     + (sixthLine % 2).toString();
-    //     } else if (secondLine == 0) {
-    //         const approached_binary = (firstLine % 2).toString()
-    //                                     + (convertApproachedLine(secondLine) % 2).toString()
-    //                                     + (thirdLine % 2).toString()
-    //                                     + (fourthLine % 2).toString()
-    //                                     + (fifthLine % 2).toString()
-    //                                     + (sixthLine % 2).toString();
-    //     } else if (sixthLine == 3) { // now we test for two Yang lines and shift the last Yang line
-    //         const approached_binary = (firstLine % 2).toString()
-    //                                     + (secondLine % 2).toString()
-    //                                     + (thirdLine % 2).toString()
-    //                                     + (fourthLine % 2).toString()
-    //                                     + (fifthLine % 2).toString()
-    //                                     + (convertApproachedLine(sixthLine) % 2).toString();
-    //     } else if (fifthLine == 3) {
-    //         const approached_binary = (firstLine % 2).toString()
-    //                                     + (secondLine % 2).toString()
-    //                                     + (thirdLine % 2).toString()
-    //                                     + (fourthLine % 2).toString()
-    //                                     + (convertApproachedLine(fifthLine) % 2).toString()
-    //                                     + (sixthLine % 2).toString();
-    //     } else if (fourthLine == 3) {
-    //         const approached_binary = (firstLine % 2).toString()
-    //                                     + (secondLine % 2).toString()
-    //                                     + (thirdLine % 2).toString()
-    //                                     + (convertApproachedLine(fourthLine) % 2).toString()
-    //                                     + (fifthLine % 2).toString()
-    //                                     + (sixthLine % 2).toString();
-    //     } else if (thirdLine == 3) {
-    //         const approached_binary = (firstLine % 2).toString()
-    //                                     + (secondLine % 2).toString()
-    //                                     + (convertApproachedLine(thirdLine) % 2).toString()
-    //                                     + (fourthLine % 2).toString()
-    //                                     + (fifthLine % 2).toString()
-    //                                     + (sixthLine % 2).toString();
-    //     } else if (secondLine == 3) {
-    //         const approached_binary = (firstLine % 2).toString()
-    //                                     + (convertApproachedLine(secondLine) % 2).toString()
-    //                                     + (thirdLine % 2).toString()
-    //                                     + (fourthLine % 2).toString()
-    //                                     + (fifthLine % 2).toString()
-    //                                     + (sixthLine % 2).toString();
-    //     } else {
-    //         console.error('Moving lines miscalculated for 2 moving lines');
-    //     }
-    //     break;
-    //   case 3: // now we pull the middle moving line only
-    //     if (firstLine == 0 || firstLine == 3) {
-    //         if (secondLine == 0 || secondLine == 3) { // second line is then the middle line
-    //             const approached_binary = (firstLine % 2).toString()
-    //             + (convertApproachedLine(secondLine) % 2).toString()
-    //             + (thirdLine % 2).toString()
-    //             + (fourthLine % 2).toString()
-    //             + (fifthLine % 2).toString()
-    //             + (sixthLine % 2).toString();
-    //         } else if (thirdLine == 0 || thirdLine == 3) { // third line is then the middle line
-    //             const approached_binary = (firstLine % 2).toString()
-    //             + (secondLine % 2).toString()
-    //             + (convertApproachedLine(thirdLine) % 2).toString()
-    //             + (fourthLine % 2).toString()
-    //             + (fifthLine % 2).toString()
-    //             + (sixthLine % 2).toString();
-    //         } else if (fourthLine == 0 || fourthLine == 3) { // fourth line must be the middle then
-    //             const approached_binary = (firstLine % 2).toString()
-    //             + (secondLine % 2).toString()
-    //             + (thirdLine % 2).toString()
-    //             + (convertApproachedLine(fourthLine) % 2).toString()
-    //             + (fifthLine % 2).toString()
-    //             + (sixthLine % 2).toString();
-    //         } else { // otherwise the fifth line is the middle
-    //             const approached_binary = (firstLine % 2).toString()
-    //             + (secondLine % 2).toString()
-    //             + (thirdLine % 2).toString()
-    //             + (fourthLine % 2).toString()
-    //             + (convertApproachedLine(fifthLine) % 2).toString()
-    //             + (sixthLine % 2).toString();
-    //         }
-    //     } else if (secondLine == 0 || secondLine == 3) {
-    //         if (thirdLine == 0 || thirdLine == 3) { // third line is then the middle line
-    //             const approached_binary = (firstLine % 2).toString()
-    //             + (secondLine % 2).toString()
-    //             + (convertApproachedLine(thirdLine) % 2).toString()
-    //             + (fourthLine % 2).toString()
-    //             + (fifthLine % 2).toString()
-    //             + (sixthLine % 2).toString();
-    //         } else if (fourthLine == 0 || fourthLine == 3) { // fourth line must be the middle then
-    //             const approached_binary = (firstLine % 2).toString()
-    //             + (secondLine % 2).toString()
-    //             + (thirdLine % 2).toString()
-    //             + (convertApproachedLine(fourthLine) % 2).toString()
-    //             + (fifthLine % 2).toString()
-    //             + (sixthLine % 2).toString();
-    //         } else { // otherwise the fifth line is the middle
-    //             const approached_binary = (firstLine % 2).toString()
-    //             + (secondLine % 2).toString()
-    //             + (thirdLine % 2).toString()
-    //             + (fourthLine % 2).toString()
-    //             + (convertApproachedLine(fifthLine) % 2).toString()
-    //             + (sixthLine % 2).toString();
-    //         }
-    //     } else if (thirdLine == 0 || thirdLine == 3) {
-    //         if (fourthLine == 0 || fourthLine == 3) { // fourth line must be the middle then
-    //             const approached_binary = (firstLine % 2).toString()
-    //             + (secondLine % 2).toString()
-    //             + (thirdLine % 2).toString()
-    //             + (convertApproachedLine(fourthLine) % 2).toString()
-    //             + (fifthLine % 2).toString()
-    //             + (sixthLine % 2).toString();
-    //         } else { // otherwise the fifth line is the middle
-    //             const approached_binary = (firstLine % 2).toString()
-    //             + (secondLine % 2).toString()
-    //             + (thirdLine % 2).toString()
-    //             + (fourthLine % 2).toString()
-    //             + (convertApproachedLine(fifthLine) % 2).toString()
-    //             + (sixthLine % 2).toString();
-    //         }
-    //     } else if (fourthLine == 0 || fourthLine == 3) { // that means the last 3 lines are moving
-    //         const approached_binary = (firstLine % 2).toString()
-    //                                     + (secondLine % 2).toString()
-    //                                     + (thirdLine % 2).toString()
-    //                                     + (fourthLine % 2).toString()
-    //                                     + (convertApproachedLine(fifthLine) % 2).toString()
-    //                                     + (sixthLine % 2).toString();
-    //     }
-    //     break;
-    //   case 4:
-    //     break;
-    //   case 5:
-    //     break;
-    //   case 6:
-    //     break;
-    //   default:
-    //     console.error('Moving lines miscalculated');
-    // }
+    const total_moving_lines = [firstLine, secondLine, thirdLine, fourthLine, fifthLine, sixthLine]
+        .filter(line => line === 0 || line === 3)
+        .length;
+
+    switch (total_moving_lines) {
+      case 0:
+        setConsultingLines('No moving line, only consult the main gua.');
+        break;
+      case 1:
+        if (firstLine == 0 || firstLine == 3) {
+            setConsultingLines('Pay special attention to the Yao Text for the first line from the bottom, and then consult the approached gua.');
+        } else if (secondLine == 0 || secondLine == 3) {
+            setConsultingLines('Pay special attention to the Yao Text for the second line third line from the bottom, and then consult the approached gua.');
+        } else if (thirdLine == 0 || thirdLine == 3) {
+            setConsultingLines('Pay special attention to the Yao Text for the third line from the bottom, and then consult the approached gua.');
+        } else if (fourthLine == 0 || fourthLine == 3) {
+            setConsultingLines('Pay special attention to the Yao Text for the fourth line from the bottom, and then consult the approached gua.');
+        } else if (fifthLine == 0 || fifthLine == 3) {
+            setConsultingLines('Pay special attention to the Yao Text for the fifth line from the bottom, and then consult the approached gua.');
+        } else if (sixthLine == 0 || sixthLine == 3) {
+            setConsultingLines('Pay special attention to the Yao Text for the sixth line from the bottom, and then consult the approached gua.');
+        } else {
+            console.error('Moving lines miscalculated for 1 moving line');
+        }
+        break;
+      case 2: // start by testing for moving Yin and Yang, and only shift the Yin line
+        if (firstLine == 0 && (secondLine == 3 || thirdLine == 3 || fourthLine == 3 || fifthLine == 3 || sixthLine == 3)) {
+            setConsultingLines('Consult only the moving Yin line, which is the first line from the bottom.');
+        } else if (secondLine == 0 && (firstLine == 3 || thirdLine == 3 || fourthLine == 3 || fifthLine == 3 || sixthLine == 3)) {
+            setConsultingLines('Consult only the moving Yin line, which is the second line from the bottom.');
+        } else if (thirdLine == 0 && (firstLine == 3 || secondLine == 3 || fourthLine == 3 || fifthLine == 3 || sixthLine == 3)) {
+            setConsultingLines('Consult only the moving Yin line, which is the third line from the bottom.');
+        } else if (fourthLine == 0 && (firstLine == 3 || secondLine == 3 || thirdLine == 3 || fifthLine == 3 || sixthLine == 3)) {
+            setConsultingLines('Consult only the moving Yin line, which is the fourth line from the bottom.');
+        } else if (fifthLine == 0 && (firstLine == 3 || secondLine == 3 || thirdLine == 3 || fourthLine == 3 || sixthLine == 3)) {
+            setConsultingLines('Consult only the moving Yin line, which is the fifth line from the bottom.');
+        } else if (sixthLine == 0 && (firstLine == 3 || secondLine == 3 || thirdLine == 3 || fourthLine == 3 || fifthLine == 3)) {
+            setConsultingLines('Consult only the moving Yin line, which is the sixth line from the bottom.');
+        } else if (firstLine == 0) { // now we test for two Yin lines and shift the last Yin line
+            setConsultingLines('Consult only the moving Yin line, which is the first line from the bottom.');
+        } else if (secondLine == 0) {
+            setConsultingLines('Consult only the lower moving Yin line, which is the second line from the bottom.');
+        } else if (thirdLine == 0) {
+            setConsultingLines('Consult only the lower moving Yin line, which is the third line from the bottom.');
+        } else if (fourthLine == 0) {
+            setConsultingLines('Consult only the lower moving Yin line, which is the fourth line from the bottom.');
+        } else if (fifthLine == 0) {
+            setConsultingLines('Consult only the lower moving Yin line, which is the fifth line from the bottom.');
+        } else if (firstLine == 3) { // now we test for two Yang lines and shift the last Yang line
+            setConsultingLines('Consult only the lower moving Yang line, which is the first line from the bottom.');
+        } else if (secondLine == 3) {
+            setConsultingLines('Consult only the lower moving Yang line, which is the second line from the bottom.');
+        } else if (thirdLine == 3) {
+            setConsultingLines('Consult only the lower moving Yang line, which is the third line from the bottom.');
+        } else if (fourthLine == 3) {
+            setConsultingLines('Consult only the lower moving Yang line, which is the fourth line from the bottom.');
+        } else if (fifthLine == 3) {
+            setConsultingLines('Consult only the lower moving Yang line, which is the fifth line from the bottom.');
+        } else {
+            console.error('Moving lines miscalculated for 2 moving lines');
+        }
+        break;
+      case 3: // now we pull the middle moving line only
+        if (firstLine == 0 || firstLine == 3) {
+            if (secondLine == 0 || secondLine == 3) { // second line is then the middle line
+                setConsultingLines('Consult only the middle line, which is the second line from the bottom.');
+            } else if (thirdLine == 0 || thirdLine == 3) { // third line is then the middle line
+                setConsultingLines('Consult only the middle line, which is the third line from the bottom.');
+            } else if (fourthLine == 0 || fourthLine == 3) { // fourth line must be the middle then
+                setConsultingLines('Consult only the middle line, which is the fourth line from the bottom.');
+            } else { // otherwise the fifth line is the middle
+                setConsultingLines('Consult only the middle line, which is the fifth line from the bottom.');
+            }
+        } else if (secondLine == 0 || secondLine == 3) {
+            if (thirdLine == 0 || thirdLine == 3) { // third line is then the middle line
+                setConsultingLines('Consult only the middle line, which is the third line from the bottom.');
+            } else if (fourthLine == 0 || fourthLine == 3) { // fourth line must be the middle then
+                setConsultingLines('Consult only the middle line, which is the fourth line from the bottom.');
+            } else { // otherwise the fifth line is the middle
+                setConsultingLines('Consult only the middle line, which is the fifth line from the bottom.');
+            }
+        } else if (thirdLine == 0 || thirdLine == 3) {
+            if (fourthLine == 0 || fourthLine == 3) { // fourth line must be the middle then
+                setConsultingLines('Consult only the middle line, which is the fourth line from the bottom.');
+            } else { // otherwise the fifth line is the middle
+                setConsultingLines('Consult only the middle line, which is the fifth line from the bottom.');
+            }
+        } else if (fourthLine == 0 || fourthLine == 3) { // that means the last 3 lines are moving
+            setConsultingLines('Consult only the middle line, which is the fifth line from the bottom.');
+        }
+        break;
+      case 4:
+        setConsultingLines('Four moving lines: Consult only the upper of the two nonmoving lines.');
+        break;
+      case 5:
+        setConsultingLines('Five moving lines: Consult only the nonmoving line.');
+        break;
+      case 6:
+          setConsultingLines('All six lines are moving: Consult the Decision of the approached gua.');
+        break;
+      default:
+        setConsultingLines('Moving lines are calculated as ' + total_moving_lines);
+        console.error('Moving lines miscalculated');
+    }
   };
 
   return (
@@ -367,6 +254,7 @@ export default function HexagramGenerator({ hexagramDetails }: HexagramGenerator
             <div className="mt-4 text-gray-800">{selectedHexagram.translation}</div>
         </div>
         <hr className="w-full border-t border-gray-200" />
+        <div className="text-gray-800">{consultingLines}</div>
         <div className="text-center bg-gray-100 p-2 rounded-lg">
             <div className="flex flex-row justify-center relative">
                 <CircleHelp 
@@ -384,7 +272,7 @@ export default function HexagramGenerator({ hexagramDetails }: HexagramGenerator
                     onMouseEnter={() => setShowApproachedHelp(true)}
                     onMouseLeave={() => setShowApproachedHelp(false)}
                 >
-                    <h2 className="font-bold">Approached Gua</h2>
+                    <h2 className="font-bold text-xl mb-4">Approached Gua</h2>
                     <p>This is a gua formed after moving lines alternate between yin and yang. It indicates one's future tendency or potential.</p>
                     <ol style={{ listStyleType: 'decimal', paddingLeft: '1rem' }}>
                         <li>If there is no moving line, only consult the main gua.</li>
@@ -432,8 +320,8 @@ export default function HexagramGenerator({ hexagramDetails }: HexagramGenerator
                     <h2 className="font-bold">Mutual Gua</h2>
                     <div 
                     id="mutual-gua" 
-                    className={`fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-left bg-gray-100 p-6 rounded-lg shadow-lg 
-                        transition-opacity duration-200 w-[800px] max-w-[90vw] z-50 ${
+                    className={`fixed top-1/2 left-1/2 -translate-x-1/2 text-left bg-gray-100 p-6 rounded-lg shadow-lg 
+                        transition-opacity duration-200 w-[600px] max-w-[90vw] z-50 ${
                         showMutualHelp ? 'opacity-100 visible' : 'opacity-0 invisible'
                     }`}
                     onMouseEnter={() => setShowMutualHelp(true)}
