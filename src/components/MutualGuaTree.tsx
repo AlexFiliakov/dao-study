@@ -11,6 +11,7 @@ export default function MutualGuaTree({
     const all_gua_keys = Array.from({ length: 64 }, (_, i) => i + 1);
     const [mutualStack1, setMutualStack1] = useState<Set<string>>(new Set());
     const [mutualStack2, setMutualStack2] = useState<Set<string>>(new Set());
+    const [hoveredHexagram, setHoveredHexagram] = useState<string | null>(null);
 
     useEffect(() => {
         const uniqueMutual1Guas = new Set<string>();
@@ -33,7 +34,11 @@ export default function MutualGuaTree({
     return (
         <div className="flex flex-col items-center gap-4">
             <h2 className="font-bold">Tree of Mutual Guas</h2>
-            <p>Darker guas are mutuals of their children on the left.</p>
+            <p className="text-center max-w-2xl">
+                Each hexagram (white background) is grouped under its mutual gua (amber background). 
+                These mutual guas themselves are grouped under their own mutual guas (dark amber background), 
+                showing how hexagrams converge through successive mutual relationships.
+            </p>
             <div className="flex flex-col text-center gap-8">
                 {Array.from(mutualStack2).map((keyMutual2, index, array) => (
                     <>
@@ -47,7 +52,9 @@ export default function MutualGuaTree({
                                                 if (hexagramDetails[key.toString()].mutual_gua === keyMutual1) {
                                                     return (
                                                         <>
-                                                        <div key={'child'+key} className="p-2 border rounded">
+                                                        <div key={'child'+key} className="p-2 border rounded"
+                                                                onMouseEnter={() => setHoveredHexagram(key.toString())}
+                                                                onMouseLeave={() => setHoveredHexagram(null)}>
                                                             <div className="text-2xl">{hexagramDetails[key.toString()].hexagram}</div>
                                                             <div className="text-sm text-gray-600">{key}</div>
                                                         </div>
@@ -56,7 +63,9 @@ export default function MutualGuaTree({
                                                 }
                                                 return null;
                                             })}
-                                            <div key={'mutual-'+keyMutual1} className="flex flex-col p-2 border rounded bg-amber-400">
+                                            <div key={'mutual-'+keyMutual1} className="flex flex-col p-2 border rounded bg-amber-400"
+                                                    onMouseEnter={() => setHoveredHexagram(keyMutual1)}
+                                                    onMouseLeave={() => setHoveredHexagram(null)}>
                                                 <div className="text-2xl">{hexagramDetails[keyMutual1].hexagram}</div>
                                                 <div className="text-sm text-gray-700">{keyMutual1}</div>
                                             </div>
@@ -66,7 +75,9 @@ export default function MutualGuaTree({
                                 return null;
                             })}
                         </div>
-                        <div key={'mutual2-'+keyMutual2} className="flex flex-col p-2 border rounded h-fit bg-amber-700">
+                        <div key={'mutual2-'+keyMutual2} className="flex flex-col p-2 border rounded h-fit bg-amber-700"
+                                onMouseEnter={() => setHoveredHexagram(keyMutual2)}
+                                onMouseLeave={() => setHoveredHexagram(null)}>
                             <div className="text-2xl text-amber-100">{hexagramDetails[keyMutual2].hexagram}</div>
                             <div className="text-sm text-amber-200">{keyMutual2}</div>
                         </div>
@@ -74,8 +85,50 @@ export default function MutualGuaTree({
                     {index !== array.length - 1 && (
                         <hr className="w-full border-t border-gray-200" />
                     )}
-                    </>
-                ))}
+                    {hoveredHexagram && hexagramDetails[hoveredHexagram] && (
+                        <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 mb-2 px-3 py-2 bg-black/80 text-white text-sm rounded-lg whitespace-nowrap z-50"
+                            onMouseEnter={() => setHoveredHexagram(hoveredHexagram)}
+                            onMouseLeave={() => setHoveredHexagram(null)}
+                        >
+                            <div className="text-center mb-2">{hexagramDetails[hoveredHexagram]?.pronunciation}</div>
+                            <div className="text-center">{hexagramDetails[hoveredHexagram]?.translation}</div>
+                            <hr className="w-full border-t border-gray-200 my-4" />
+                            <div className="flex flex-row justify-center gap-4">
+                                {hexagramDetails[hoveredHexagram]?.opposite_gua && (
+                                    <div className="text-center bg-gray-800/80 p-2 rounded-lg">
+                                        <h2>Opposite Gua</h2>
+                                        <div className="text-4xl mb-2">{hexagramDetails[hexagramDetails[hoveredHexagram].opposite_gua]?.hexagram}</div>
+                                        <div className="text-xl mb-1">{hexagramDetails[hexagramDetails[hoveredHexagram].opposite_gua]?.gua}</div>
+                                        <div className="text-lg">{hexagramDetails[hexagramDetails[hoveredHexagram].opposite_gua]?.pronunciation}</div>
+                                        <div className="text-lg">{hexagramDetails[hoveredHexagram].opposite_gua}</div>
+                                        <div className="mt-4">{hexagramDetails[hexagramDetails[hoveredHexagram].opposite_gua]?.translation}</div>
+                                    </div>
+                                )}
+                                {hexagramDetails[hoveredHexagram]?.inverse_gua && (
+                                    <div className="text-center bg-gray-800/80 p-2 rounded-lg">
+                                        <h2>Inverse Gua</h2>
+                                        <div className="text-4xl mb-2">{hexagramDetails[hexagramDetails[hoveredHexagram].inverse_gua]?.hexagram}</div>
+                                        <div className="text-xl mb-1">{hexagramDetails[hexagramDetails[hoveredHexagram].inverse_gua]?.gua}</div>
+                                        <div className="text-lg">{hexagramDetails[hexagramDetails[hoveredHexagram].inverse_gua]?.pronunciation}</div>
+                                        <div className="text-lg">{hexagramDetails[hoveredHexagram].inverse_gua}</div>
+                                        <div className="mt-4">{hexagramDetails[hexagramDetails[hoveredHexagram].inverse_gua]?.translation}</div>
+                                    </div>
+                                )}
+                                {hexagramDetails[hoveredHexagram]?.mutual_gua && (
+                                    <div className="text-center bg-gray-800/80 p-2 rounded-lg">
+                                        <h2>Mutual Gua</h2>
+                                        <div className="text-4xl mb-2">{hexagramDetails[hexagramDetails[hoveredHexagram].mutual_gua]?.hexagram}</div>
+                                        <div className="text-xl mb-1">{hexagramDetails[hexagramDetails[hoveredHexagram].mutual_gua]?.gua}</div>
+                                        <div className="text-lg">{hexagramDetails[hexagramDetails[hoveredHexagram].mutual_gua]?.pronunciation}</div>
+                                        <div className="text-lg">{hexagramDetails[hoveredHexagram].mutual_gua}</div>
+                                        <div className="mt-4">{hexagramDetails[hexagramDetails[hoveredHexagram].mutual_gua]?.translation}</div>
+                                    </div>
+                                )}
+                            </div>
+                        </div>
+                    )}
+                </>
+            ))}
             </div>
         </div>
     );
