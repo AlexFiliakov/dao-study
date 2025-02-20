@@ -32,7 +32,7 @@ export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 px-6 py-4 z-[1000] bg-white/75 border-b-1 border-gray-500/50 shadow-lg">
+    <nav className="fixed top-0 left-0 right-0 px-6 py-4 z-[99998] bg-white/75 border-b-1 border-gray-500/50 shadow-lg">
       <div className="flex justify-between items-center w-full">
         <div className="w-fit">
           <button 
@@ -58,7 +58,7 @@ export default function Navigation() {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="absolute left-0 top-16 w-fit min-w-[200px] bg-white shadow-lg rounded-lg z-[1001]">
+        <div className="absolute left-0 top-16 w-fit min-w-[200px] bg-white shadow-lg rounded-lg z-[99999]">
           <div className="p-4">
             {menuItems.map((item, index) => (
               <div key={index} className="py-2 whitespace-nowrap">
@@ -78,6 +78,7 @@ export default function Navigation() {
                       href={item.path}
                       className="cursor-pointer hover:opacity-80"
                       style={{ color: colors.tealPrimary }}
+                      // onClick={() => setIsMenuOpen(false)} // Close menu after navigation
                     >
                       {item.name}
                     </Link>
@@ -90,7 +91,7 @@ export default function Navigation() {
                     {item.name}
                   </div>
                 )}
-              {item.subItems && (
+                {item.subItems && (
                   <div className="pl-4 mt-2 space-y-2">
                     {item.subItems.map((subItem, subIndex) => (
                       <div 
@@ -112,6 +113,7 @@ export default function Navigation() {
                             href={subItem.path}
                             className="cursor-pointer hover:opacity-80"
                             style={{ color: colors.redAccent }}
+                            // onClick={() => setIsMenuOpen(false)} // Close menu after navigation
                           >
                             {subItem.name}
                           </Link>

@@ -35,7 +35,7 @@ export default function HexagramGridNumeric({
                     <div className="text-center">{hexagram?.translation}</div>
                     <hr className="w-full border-t border-gray-200 my-4" />
                     <div className="flex flex-row justify-center gap-4">
-                        <div className="text-center bg-gray-800/80 p-2 rounded-lg">
+                        <div className="text-center bg-gray-800/80 border border-gray-200 p-2 rounded-lg">
                             <h2>Opposite Gua</h2>
                             <div className="text-4xl mb-2">{hexagramDetails[hexagram?.opposite_gua].hexagram}</div>
                             <div className="text-xl mb-1">{hexagramDetails[hexagram?.opposite_gua].gua}</div>
@@ -43,7 +43,7 @@ export default function HexagramGridNumeric({
                             <div className="text-lg">{hexagram?.opposite_gua}</div>
                             <div className="mt-4">{hexagramDetails[hexagram?.opposite_gua].translation}</div>
                         </div>
-                        <div className="text-center bg-gray-800/80 p-2 rounded-lg">
+                        <div className="text-center bg-gray-800/80 border border-gray-200 p-2 rounded-lg">
                             <h2>Inverse Gua</h2>
                             <div className="text-4xl mb-2">{hexagramDetails[hexagram?.inverse_gua].hexagram}</div>
                             <div className="text-xl mb-1">{hexagramDetails[hexagram?.inverse_gua].gua}</div>
@@ -51,7 +51,7 @@ export default function HexagramGridNumeric({
                             <div className="text-lg">{hexagram?.inverse_gua}</div>
                             <div className="mt-4">{hexagramDetails[hexagram?.inverse_gua].translation}</div>
                         </div>
-                        <div className="text-center bg-gray-800/80 p-2 rounded-lg">
+                        <div className="text-center bg-gray-800/80 border border-gray-200 p-2 rounded-lg">
                             <h2>Mutual Gua</h2>
                             <div className="text-4xl mb-2">{hexagramDetails[hexagram?.mutual_gua].hexagram}</div>
                             <div className="text-xl mb-1">{hexagramDetails[hexagram?.mutual_gua].gua}</div>
@@ -109,7 +109,7 @@ export function HexagramGridConstructed({
                         <div className="text-center">{matchingHexagram?.translation}</div>
                         <hr className="w-full border-t border-gray-200 my-4" />
                         <div className="flex flex-row justify-center gap-4">
-                            <div className="text-center bg-gray-800/80 p-2 rounded-lg">
+                            <div className="text-center bg-gray-800/80 border border-gray-200 p-2 rounded-lg">
                                 <h2>Opposite Gua</h2>
                                 <div className="text-4xl mb-2">{hexagramDetails[matchingHexagram?.opposite_gua].hexagram}</div>
                                 <div className="text-xl mb-1">{hexagramDetails[matchingHexagram?.opposite_gua].gua}</div>
@@ -117,7 +117,7 @@ export function HexagramGridConstructed({
                                 <div className="text-lg">{matchingHexagram?.opposite_gua}</div>
                                 <div className="mt-4">{hexagramDetails[matchingHexagram?.opposite_gua].translation}</div>
                             </div>
-                            <div className="text-center bg-gray-800/80 p-2 rounded-lg">
+                            <div className="text-center bg-gray-800/80 border border-gray-200 p-2 rounded-lg">
                                 <h2>Inverse Gua</h2>
                                 <div className="text-4xl mb-2">{hexagramDetails[matchingHexagram?.inverse_gua].hexagram}</div>
                                 <div className="text-xl mb-1">{hexagramDetails[matchingHexagram?.inverse_gua].gua}</div>
@@ -125,7 +125,7 @@ export function HexagramGridConstructed({
                                 <div className="text-lg">{matchingHexagram?.inverse_gua}</div>
                                 <div className="mt-4">{hexagramDetails[matchingHexagram?.inverse_gua].translation}</div>
                             </div>
-                            <div className="text-center bg-gray-800/80 p-2 rounded-lg">
+                            <div className="text-center bg-gray-800/80 border border-gray-200 p-2 rounded-lg">
                                 <h2>Mutual Gua</h2>
                                 <div className="text-4xl mb-2">{hexagramDetails[matchingHexagram?.mutual_gua].hexagram}</div>
                                 <div className="text-xl mb-1">{hexagramDetails[matchingHexagram?.mutual_gua].gua}</div>
