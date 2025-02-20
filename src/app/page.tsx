@@ -63,7 +63,7 @@ export default function HomePage () {
               rel="noopener noreferrer"
               className="text-red-800 hover:underline"
             >
-              Contact @小红薯67AEE06F on Red Note for more information.
+              Contact @Bella.Dao on Red Note for more information.
             </a>
             </p>
           </div>
