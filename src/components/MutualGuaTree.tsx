@@ -103,15 +103,14 @@ export default function MutualGuaTree({
         while guas 63 and 64 are each other's mutual guas).
       </p>
       <div className="flex flex-col text-center gap-4">
-        {Array.from(mutualStack2).map((keyMutual2, index, array) => (
-          <>
+        {Array.from(mutualStack2).map(keyMutual2 => (
           <div key={'mutual2-'+keyMutual2+"-parent"}>
-            <div className="flex flex-row gap-4 items-center">
+            <div className="flex flex-row gap-4 items-center rounded-xl border border-gray-200 bg-white shadow-md p-4">
               <div key={'mutual2-'+keyMutual2+"-child-container"} className="flex flex-col gap-4">
                 {Array.from(mutualStack1).map(keyMutual1 => {
                   if (hexagramDetails[keyMutual1].mutual_gua === keyMutual2) {
                     return (
-                      <div key={'mutual-'+keyMutual1+"-parent"} className="flex flex-row rounded border border-amber-200 bg-amber-100 shadow-md p-2 gap-4">
+                      <div key={'mutual-'+keyMutual1+"-parent"} className="flex flex-row rounded-lg border border-amber-200 bg-amber-100 shadow-md p-2 gap-4">
                         {all_gua_keys.map(key => {
                           if (hexagramDetails[key.toString()].mutual_gua === keyMutual1) {
                             return (
@@ -142,7 +141,7 @@ export default function MutualGuaTree({
                 })}
               </div>
               <div 
-                className="flex flex-col p-2 border border-amber-800 rounded h-fit bg-amber-700 shadow-md"
+                className="flex flex-col p-2 border border-amber-800 rounded h-fit bg-amber-700"
                 onMouseEnter={() => setHoveredHexagram(keyMutual2)}
                 onMouseLeave={() => setHoveredHexagram(null)}
               >
@@ -154,10 +153,6 @@ export default function MutualGuaTree({
               </div>
             </div>
           </div>
-          {index !== array.length - 1 && (
-            <hr className="w-full border-t border-gray-200" />
-          )}
-          </>
         ))}
       </div>
 
