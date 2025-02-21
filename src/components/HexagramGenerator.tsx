@@ -75,6 +75,16 @@ export default function HexagramGenerator({ hexagramDetails }: HexagramGenerator
     }
   }
 
+  const getTrigramRecitation = (hexagram : HexagramDetails) => {
+    const upperTrigram = Object.keys(hexagramDetails).find(key => hexagramDetails[key].trigram === hexagram.upper);
+    const lowerTrigram = Object.keys(hexagramDetails).find(key => hexagramDetails[key].trigram === hexagram.lower);
+    if (!upperTrigram || !lowerTrigram) {
+      console.error('No matching trigram found for ' + hexagram.hexagram);
+      return '';
+    }
+    return upperTrigram + ' above ' + lowerTrigram;
+  }
+
   const generateHexagram = () => {
     const rng = () => {
         // Use current timestamp as seed
@@ -262,6 +272,7 @@ export default function HexagramGenerator({ hexagramDetails }: HexagramGenerator
                 <span>({selectedHexagram.pronunciation})</span>
             </div>
             <div className="mt-4 text-gray-800">{selectedHexagram.translation}</div>
+            <div className="mt-4 text-gray-800">{getTrigramRecitation(selectedHexagram)}</div>
         </div>
         <hr className="w-full border-t border-gray-200" />
         <div className="text-gray-800">{consultingLines}</div>
@@ -306,6 +317,7 @@ export default function HexagramGenerator({ hexagramDetails }: HexagramGenerator
                 <span>({approachedHexagram?.pronunciation})</span>
             </div>
             <div className="mt-4 text-gray-800">{approachedHexagram?.translation}</div>
+            <div className="mt-4 text-gray-800">{approachedHexagram && getTrigramRecitation(approachedHexagram)}</div>
         </div>
         <hr className="w-full border-t border-gray-200" />
         <div className="flex flex-row justify-center gap-4">
@@ -318,6 +330,7 @@ export default function HexagramGenerator({ hexagramDetails }: HexagramGenerator
                     <span>({selectedHexagram.opposite_gua && hexagramDetails[selectedHexagram.opposite_gua].pronunciation})</span>
                 </div>
                 <div className="mt-4 text-gray-800">{selectedHexagram.opposite_gua && hexagramDetails[selectedHexagram.opposite_gua].translation}</div>
+                <div className="mt-4 text-gray-800">{selectedHexagram.opposite_gua && getTrigramRecitation(hexagramDetails[selectedHexagram.opposite_gua])}</div>
             </div>
             <div className="text-center bg-gray-100 p-2 rounded-lg">
                 <h2 className="font-bold">Inverse Gua</h2>
@@ -328,6 +341,7 @@ export default function HexagramGenerator({ hexagramDetails }: HexagramGenerator
                     <span>({selectedHexagram.inverse_gua && hexagramDetails[selectedHexagram.inverse_gua].pronunciation})</span>
                 </div>
                 <div className="mt-4 text-gray-800">{selectedHexagram.inverse_gua && hexagramDetails[selectedHexagram.inverse_gua].translation}</div>
+                <div className="mt-4 text-gray-800">{selectedHexagram.inverse_gua && getTrigramRecitation(hexagramDetails[selectedHexagram.inverse_gua])}</div>
             </div>
             <div className="text-center bg-gray-100 p-2 rounded-lg">
                 <div className="flex flex-row justify-center relative">
@@ -372,6 +386,7 @@ export default function HexagramGenerator({ hexagramDetails }: HexagramGenerator
                     <span>({selectedHexagram.mutual_gua && hexagramDetails[selectedHexagram.mutual_gua].pronunciation})</span>
                 </div>
                 <div className="mt-4 text-gray-800">{selectedHexagram.mutual_gua && hexagramDetails[selectedHexagram.mutual_gua].translation}</div>
+                <div className="mt-4 text-gray-800">{selectedHexagram.mutual_gua && getTrigramRecitation(hexagramDetails[selectedHexagram.mutual_gua])}</div>
             </div>
         </div>
         </>
