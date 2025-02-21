@@ -98,7 +98,9 @@ export default function MutualGuaTree({
       <p className="text-center max-w-2xl">
         Each hexagram (white background) is grouped under its mutual gua (amber background).
         These mutual guas themselves are grouped under their own mutual guas (dark amber background),
-        showing how hexagrams converge through successive mutual relationships.
+        showing how hexagrams converge through successive mutual relationships. 
+        Arrows indicate final recursive relationships (guas 1 and 2 are their own mutual guas, 
+        while guas 63 and 64 are each other's mutual guas).
       </p>
       <div className="flex flex-col text-center gap-4">
         {Array.from(mutualStack2).map((keyMutual2, index, array) => (
@@ -109,7 +111,7 @@ export default function MutualGuaTree({
                 {Array.from(mutualStack1).map(keyMutual1 => {
                   if (hexagramDetails[keyMutual1].mutual_gua === keyMutual2) {
                     return (
-                      <div key={'mutual-'+keyMutual1+"-parent"} className="flex flex-row rounded bg-amber-100 shadow-md p-2 gap-4">
+                      <div key={'mutual-'+keyMutual1+"-parent"} className="flex flex-row rounded border border-amber-200 bg-amber-100 shadow-md p-2 gap-4">
                         {all_gua_keys.map(key => {
                           if (hexagramDetails[key.toString()].mutual_gua === keyMutual1) {
                             return (
@@ -126,12 +128,12 @@ export default function MutualGuaTree({
                           }
                           return null;
                         })}
-                        <div key={'mutual-'+keyMutual1} className="flex flex-col p-2 border rounded bg-amber-400"
+                        <div key={'mutual-'+keyMutual1} className="flex flex-col p-2 border border-amber-500 rounded bg-amber-400"
                                 onMouseEnter={() => setHoveredHexagram(keyMutual1)}
                                 onMouseLeave={() => setHoveredHexagram(null)}
                             >
-                            <div className="text-2xl">{hexagramDetails[keyMutual1].hexagram}</div>
-                            <div className="text-sm text-gray-700">{keyMutual1}</div>
+                            <div className="text-2xl text-amber-950">{hexagramDetails[keyMutual1].hexagram}</div>
+                            <div className="text-sm text-amber-800">{keyMutual1}</div>
                         </div>
                       </div>
                     );
@@ -140,7 +142,7 @@ export default function MutualGuaTree({
                 })}
               </div>
               <div 
-                className="flex flex-col p-2 border rounded h-fit bg-amber-700 shadow-md"
+                className="flex flex-col p-2 border border-amber-800 rounded h-fit bg-amber-700 shadow-md"
                 onMouseEnter={() => setHoveredHexagram(keyMutual2)}
                 onMouseLeave={() => setHoveredHexagram(null)}
               >
