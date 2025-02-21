@@ -29,9 +29,17 @@ export default async function IChingGrid() {
         </div>
         <div className="w-full min-h-screen bg-neutral-50 pt-8 font-serif">
           <header className="bg-teal-700 text-neutral-50 p-6 rounded-lg shadow-lg">
-              <h1 className="text-5xl font-large mb-2 flex justify-between">Yi Jing</h1>
-              <h1 className="text-3xl font-medium mb-2">Hexagram Matrix</h1>
-              <p className="text-teal-100">易经</p>
+            <div className="flex flex-row">
+              <div className="flex flex-col items-left">
+                <h1 className="text-5xl font-large mb-2 flex justify-between">Yi Jing</h1>
+                <h1 className="text-3xl font-medium mb-2">Hexagram Matrix</h1>
+                <p className="text-teal-100">易经</p>
+              </div>
+              <div id="terminal-gua" className="flex flex-col items-right ml-auto justify-center">
+                <div className="text-teal-100/10 text-4xl font-large">☰☱☲☳</div>
+                <div className="text-teal-100/10 text-4xl font-large">☴☵☶☷</div>
+              </div>
+            </div>
           </header>
 
           <div className="bg-white mt-8 p-6 rounded-lg shadow-md border-l-4 border-teal-700">

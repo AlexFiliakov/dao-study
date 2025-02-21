@@ -21,7 +21,7 @@ export default async function DDJCh1() {
         <div className="w-full min-h-screen bg-neutral-50 pt-8 font-serif">
             {/* Header Section */}
             <header className="bg-teal-700 text-neutral-50 p-6 rounded-lg shadow-lg">
-            <h1 className="text-5xl font-large mb-2 flex justify-between">Dao De Jing<span style={{ textAlign:'right'}}>屯</span></h1>
+            <h1 className="text-5xl font-large mb-2 flex justify-between">Dao De Jing<span style={{ textAlign:'right'}} className="text-neutral-50/30">屯</span></h1>
                 <h1 className="text-3xl font-medium mb-2">The Silk Manuscript Version Chapter 1</h1>
                 <p className="text-teal-100">帛书版 第一章</p>
             </header>
