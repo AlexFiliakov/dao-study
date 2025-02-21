@@ -30,7 +30,7 @@ export default function HexagramGridNumeric({
               <div className="text-sm font-medium">{hexagram?.gua}</div>
               <div className="text-xs text-gray-500">{hexagramNumber}</div>
               {hoveredHexagram === hexagramNumber && hexagram?.translation && (
-                <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-2 bg-black/80 text-white text-sm rounded-lg whitespace-nowrap z-10">
+                <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 mb-2 px-3 py-2 bg-black/80 text-white text-sm rounded-lg whitespace-nowrap z-50">
                   <div className="text-center mb-2">{hexagram?.pronunciation}</div>
                   <div className="text-center">{hexagram?.translation}</div>
                   <hr className="w-full border-t border-gray-200 my-4" />
@@ -143,7 +143,7 @@ export function HexagramGridConstructed({
                   <div className="text-sm font-medium">{matchingHexagram.gua}</div>
                   <div className="text-xs text-gray-500">{matchingHexagram && Object.keys(hexagramDetails).find(key => hexagramDetails[key] === matchingHexagram)}</div>
                   {hoveredHexagram === key && matchingHexagram.translation && (
-                    <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-2 bg-black/80 text-white text-sm rounded-lg whitespace-nowrap z-10">
+                    <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 mb-2 px-3 py-2 bg-black/80 text-white text-sm rounded-lg whitespace-nowrap z-50">
                         <div className="text-center mb-2">{matchingHexagram?.pronunciation}</div>
                         <div className="text-center">{matchingHexagram?.translation}</div>
                         <hr className="w-full border-t border-gray-200 my-4" />
