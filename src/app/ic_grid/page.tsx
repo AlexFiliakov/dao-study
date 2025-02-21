@@ -48,7 +48,7 @@ export default async function IChingGrid() {
           </div>
           
           <div className="bg-white mt-8 p-6 rounded-lg shadow-md border-l-4 border-teal-700">
-            <h2 className="text-xl text-neutral-800 mb-4">Construction from Trigrams (☰ ☱ ☲ ☳ ☴ ☵ ☶ ☷)</h2>
+            <h2 className="text-xl text-neutral-800 mb-4">Construction from Trigrams</h2>
             <HexagramGridConstructed hexagramDetails={hexagramDetails} />
           </div>
         </div>

@@ -19,7 +19,9 @@ export default function MutualGuaTree({
     const uniqueMutual1Guas = new Set<string>();
     all_gua_keys.forEach(key => {
       const mutualGua = hexagramDetails[key.toString()].mutual_gua;
-      uniqueMutual1Guas.add(mutualGua);
+      if (mutualGua) {
+        uniqueMutual1Guas.add(mutualGua);
+      }
     });
     setMutualStack1(uniqueMutual1Guas);
   }, [hexagramDetails, all_gua_keys]);
@@ -28,7 +30,9 @@ export default function MutualGuaTree({
     const uniqueMutual2Guas = new Set<string>();
     mutualStack1.forEach(key => {
       const mutualGua = hexagramDetails[key.toString()].mutual_gua;
-      uniqueMutual2Guas.add(mutualGua);
+      if (mutualGua) {
+        uniqueMutual2Guas.add(mutualGua);
+      }
     });
     setMutualStack2(uniqueMutual2Guas);
   }, [hexagramDetails, mutualStack1]);

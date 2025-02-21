@@ -311,23 +311,23 @@ export default function HexagramGenerator({ hexagramDetails }: HexagramGenerator
         <div className="flex flex-row justify-center gap-4">
             <div className="text-center bg-gray-100 p-2 rounded-lg">
                 <h2 className="font-bold">Opposite Gua</h2>
-                <div className="text-4xl mb-2">{hexagramDetails[selectedHexagram.opposite_gua].hexagram}</div>
-                <div className="text-xl mb-1">{hexagramDetails[selectedHexagram.opposite_gua].gua}</div>
+                <div className="text-4xl mb-2">{selectedHexagram.opposite_gua && hexagramDetails[selectedHexagram.opposite_gua]?.hexagram}</div>
+                <div className="text-xl mb-1">{selectedHexagram.opposite_gua && hexagramDetails[selectedHexagram.opposite_gua].gua}</div>
                 <div className="text-lg text-gray-600 gap-2">
                     <span className="mr-2">{selectedHexagram.opposite_gua}</span>
-                    <span>({hexagramDetails[selectedHexagram.opposite_gua].pronunciation})</span>
+                    <span>({selectedHexagram.opposite_gua && hexagramDetails[selectedHexagram.opposite_gua].pronunciation})</span>
                 </div>
-                <div className="mt-4 text-gray-800">{hexagramDetails[selectedHexagram.opposite_gua].translation}</div>
+                <div className="mt-4 text-gray-800">{selectedHexagram.opposite_gua && hexagramDetails[selectedHexagram.opposite_gua].translation}</div>
             </div>
             <div className="text-center bg-gray-100 p-2 rounded-lg">
                 <h2 className="font-bold">Inverse Gua</h2>
-                <div className="text-4xl mb-2">{hexagramDetails[selectedHexagram.inverse_gua].hexagram}</div>
-                <div className="text-xl mb-1">{hexagramDetails[selectedHexagram.inverse_gua].gua}</div>
+                <div className="text-4xl mb-2">{selectedHexagram.inverse_gua && hexagramDetails[selectedHexagram.inverse_gua].hexagram}</div>
+                <div className="text-xl mb-1">{selectedHexagram.inverse_gua && hexagramDetails[selectedHexagram.inverse_gua].gua}</div>
                 <div className="text-lg text-gray-600 gap-2">
                     <span className="mr-2">{selectedHexagram.inverse_gua}</span>
-                    <span>({hexagramDetails[selectedHexagram.inverse_gua].pronunciation})</span>
+                    <span>({selectedHexagram.inverse_gua && hexagramDetails[selectedHexagram.inverse_gua].pronunciation})</span>
                 </div>
-                <div className="mt-4 text-gray-800">{hexagramDetails[selectedHexagram.inverse_gua].translation}</div>
+                <div className="mt-4 text-gray-800">{selectedHexagram.inverse_gua && hexagramDetails[selectedHexagram.inverse_gua].translation}</div>
             </div>
             <div className="text-center bg-gray-100 p-2 rounded-lg">
                 <div className="flex flex-row justify-center relative">
@@ -365,13 +365,13 @@ export default function HexagramGenerator({ hexagramDetails }: HexagramGenerator
                         </div>
                     </div>
                 </div>
-                <div className="text-4xl mb-2">{hexagramDetails[selectedHexagram.mutual_gua].hexagram}</div>
-                <div className="text-xl mb-1">{hexagramDetails[selectedHexagram.mutual_gua].gua}</div>
+                <div className="text-4xl mb-2">{selectedHexagram.mutual_gua && hexagramDetails[selectedHexagram.mutual_gua].hexagram}</div>
+                <div className="text-xl mb-1">{selectedHexagram.mutual_gua && hexagramDetails[selectedHexagram.mutual_gua].gua}</div>
                 <div className="text-lg text-gray-600 gap-2">
                     <span className="mr-2">{selectedHexagram.mutual_gua}</span>
-                    <span>({hexagramDetails[selectedHexagram.mutual_gua].pronunciation})</span>
+                    <span>({selectedHexagram.mutual_gua && hexagramDetails[selectedHexagram.mutual_gua].pronunciation})</span>
                 </div>
-                <div className="mt-4 text-gray-800">{hexagramDetails[selectedHexagram.mutual_gua].translation}</div>
+                <div className="mt-4 text-gray-800">{selectedHexagram.mutual_gua && hexagramDetails[selectedHexagram.mutual_gua].translation}</div>
             </div>
         </div>
         </>
