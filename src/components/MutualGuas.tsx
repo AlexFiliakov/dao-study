@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect, createRef } from 'react';
-import { Undo2, CornerRightDown, CornerRightUp } from 'lucide-react';
+import { Undo2, CornerRightDown, CornerRightUp, Save } from 'lucide-react';
 import { createPortal } from 'react-dom';
 import { HexagramDetails } from '@/types/HexagramTypes';
 // html-to-image
@@ -249,9 +249,9 @@ export default function MutualGuas({
             </div>
             <button 
               onClick={() => saveAsPng(keyMutual2, `mutual_gua_${keyMutual2}.png`)}
-              className="mt-2 mb-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded hidden"
+              className="mt-2 mb-4 text-teal-100 hover:text-teal-50 bg-teal-700 hover:bg-teal-500 py-2 px-4 flex rounded items-center leading-none"
             >
-              Save Gua {keyMutual2} Group as PNG
+              <Save className="inline mr-2" />Save Gua {keyMutual2} Group as PNG
             </button>
           </div>
         ))}
@@ -353,9 +353,9 @@ export default function MutualGuas({
         </div>
       </div>
       <button onClick={() => saveAsPng("gua_circle", "mutual_gua_circle.png")}
-        className="mt-2 mb-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded hidden"
+        className="mt-2 mb-4 text-teal-100 hover:text-teal-50 bg-teal-700 hover:bg-teal-500 py-2 px-4 rounded flex items-center leading-none"
       >
-        Save Gua Circle as PNG
+        <Save className="inline mr-2" />Save Diagram as PNG
       </button>
 
       {/* Render tooltip in a portal */}
