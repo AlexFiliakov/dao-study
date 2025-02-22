@@ -13,6 +13,8 @@ export default function MutualGuaTree({
   hexagramDetails: Record<string, HexagramDetails> 
 }) {
   const all_gua_keys = Array.from({ length: 64 }, (_, i) => i + 1);
+  const all_gua_in_mutual_order = Array.from('"34", "50", "30", "55", "56", "62", "2", "23", "24", "27", "3", "8", "20", "42", "4", "7", "19", "41", "29", "59", "60", "61", "5", "9", "48", "57", "11", "18", "26", "46", "15", "22", "36", "52", "37", "39", "53", "63", "6", "10", "47", "58", "12", "17", "25", "45", "16", "21", "35", "51", "38", "40", "54", "64", "1", "28", "43", "44", "13", "31", "33", "49", "14", "32"'.replaceAll("\"", "").split(", "));
+  const all_mutual_gua_in_second_order = Array.from('"43", "28", "2", "23", "24", "27", "38", "54", "40", "64", "37", "53", "39", "63", "1", "44"'.replaceAll("\"", "").split(", "));
   const [mutualStack1, setMutualStack1] = useState<Set<string>>(new Set());
   const [mutualStack2, setMutualStack2] = useState<Set<string>>(new Set());
   const [hoveredHexagram, setHoveredHexagram] = useState<string | null>(null);
@@ -175,7 +177,7 @@ export default function MutualGuaTree({
         As shown above, the mutual gua for Hexagram 39 is Hexagram 64 (Wei Ji or "before completion").
       </p>
       <button onClick={() => saveAsPng('mutualGuaRef', 'mutual_gua_example.png')} 
-          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded hidden">
         Save Mutual Gua Example as PNG
       </button>
       <hr className="w-full border-t border-gray-200" />
@@ -248,13 +250,107 @@ export default function MutualGuaTree({
             </div>
             <button 
               onClick={() => saveAsPng(keyMutual2, `mutual_gua_${keyMutual2}.png`)}
-              className="mt-2 mb-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+              className="mt-2 mb-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded hidden"
             >
               Save Gua {keyMutual2} Group as PNG
             </button>
           </div>
         ))}
       </div>
+
+      <hr className="w-full border-t border-gray-200" />
+      <h2 className="font-bold">Gua Circle</h2>
+      <p className="text-center max-w-2xl">
+        The Gua Circle shows the mutual relationships between the 64 hexagrams. 
+        Each hexagram is connected to its mutual gua. 
+        The mutual guas are then connected to their mutual guas, 
+        forming a circular structure that demonstrates the recursive nature of the mutual guas.
+      </p>
+      <div id="gua-circle-container" className="w-full flex justify-center" ref={mutualRefs["gua_circle"]}>
+        <div className="relative w-[900px] h-[900px] mx-auto">
+          {all_gua_in_mutual_order.map((key, i) => {
+            const angle = (2 * Math.PI * (i + 0.5)) / 64 + Math.PI / mutualStack1.size - Math.PI * 3 / 4;
+            const radius = 425;
+            const x = radius * Math.cos(angle);
+            const y = radius * Math.sin(angle);
+
+            return (
+              <div
+                key={key}
+                className="absolute text-xs text-center"
+                style={{
+                  left: `calc(50% + ${x}px)`,
+                  top:  `calc(50% + ${y}px)`,
+                  transform: 'translate(-50%, -50%)'
+                }}
+                onMouseEnter={() => setHoveredHexagram(key)}
+                onMouseLeave={() => setHoveredHexagram(null)}
+              >
+                <div id={"gua"+{key}} className="leading-tight">
+                  <div className="text-lg leading-none mb-0.5">{hexagramDetails[key].hexagram}</div>
+                  <div className="text-gray-500 leading-none">{key}</div>
+                </div>
+              </div>
+            );
+          })}
+          {all_mutual_gua_in_second_order.map((key, i) => {
+            const angle = (2 * Math.PI * (i + 0.5)) / mutualStack1.size - Math.PI * 3 / 4;
+            const radius = 300;
+            const x = radius * Math.cos(angle);
+            const y = radius * Math.sin(angle);
+
+            return (
+              <div
+                key={key}
+                className="absolute text-xs text-center"
+                style={{
+                  left: `calc(50% + ${x}px)`,
+                  top:  `calc(50% + ${y}px)`,
+                  transform: 'translate(-50%, -50%)'
+                }}
+                onMouseEnter={() => setHoveredHexagram(key)}
+                onMouseLeave={() => setHoveredHexagram(null)}
+              >
+                <div className="flex flex-col p-2 border border-amber-500 rounded bg-amber-400">
+                  <div className="text-2xl text-amber-950 leading-none">{hexagramDetails[key].hexagram}</div>
+                  <div className="text-xl text-amber-800">{key}</div>
+                </div>
+              </div>
+            );
+          })}
+          {Array.from(mutualStack2).map((key, i) => {
+            const angle = (2 * Math.PI * i) / mutualStack2.size - Math.PI * 3 / 4;
+            const radius = 125;
+            const x = radius * Math.cos(angle);
+            const y = radius * Math.sin(angle);
+
+            return (
+              <div
+                key={key}
+                className="absolute text-xs text-center"
+                style={{
+                  left: `calc(50% + ${x}px)`,
+                  top:  `calc(50% + ${y}px)`,
+                  transform: 'translate(-50%, -50%)'
+                }}
+                onMouseEnter={() => setHoveredHexagram(key)}
+                onMouseLeave={() => setHoveredHexagram(null)}
+              >
+                <div className="flex flex-col p-2 border border-amber-800 rounded h-fit bg-amber-700">
+                  <div className="text-6xl text-amber-100">{hexagramDetails[key].hexagram}</div>
+                  <div className="text-4xl text-amber-200">{key}</div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+      <button 
+        onClick={() => saveAsPng("gua_circle", `mutual_gua_circle.png`)}
+        className="mt-2 mb-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+      >
+        Save Gua Circle as PNG
+      </button>
 
       {/* Render tooltip in a portal */}
       {typeof document !== 'undefined' && createPortal(tooltipContent, document.body)}
