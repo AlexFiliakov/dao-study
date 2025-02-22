@@ -270,7 +270,7 @@ export default function MutualGuaTree({
         <div className="relative w-[900px] h-[900px] mx-auto">
           {all_gua_in_mutual_order.map((key, i) => {
             const angle = (2 * Math.PI * (i + 0.5)) / 64 + Math.PI / mutualStack1.size - Math.PI * 3 / 4;
-            const radius = 425;
+            const radius = 430;
             const x = radius * Math.cos(angle);
             const y = radius * Math.sin(angle);
 
@@ -343,6 +343,8 @@ export default function MutualGuaTree({
               </div>
             );
           })}
+          <div className="absolute top-1/2 left-0 w-full h-[1px] bg-gray-300 z-10"></div>
+          <div className="absolute top-0 left-1/2 w-[1px] h-full bg-gray-300 z-10"></div>
         </div>
       </div>
       <button 
