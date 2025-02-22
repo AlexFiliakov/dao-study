@@ -188,7 +188,7 @@ export default function MutualGuas({
         Each hexagram (white background) is grouped under its mutual gua (amber background).
         These mutual guas themselves are grouped under their own mutual guas (dark amber background),
         showing how hexagrams converge through successive mutual relationships. 
-        Arrows indicate final recursive relationships (guas 1 and 2 are their own mutual guas, 
+        Arrows on the right indicate final recursive relationships (guas 1 and 2 are their own mutual guas, 
         while guas 63 and 64 are each other's mutual guas).
       </p>
       <div className="flex flex-col text-center gap-4">
