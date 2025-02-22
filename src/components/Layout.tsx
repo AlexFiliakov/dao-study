@@ -47,7 +47,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         {children}
       </main>
       {lastUpdated && (
-        <footer className="w-full py-4 text-center text-sm text-neutral-500">
+        <footer className="w-full py-4 text-center text-xs text-neutral-500">
           Website last updated {lastUpdated} EST
         </footer>
       )}
