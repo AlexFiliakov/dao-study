@@ -198,7 +198,7 @@ export default function MutualGuas({
               ref={mutualRefs[keyMutual2]}
               className="flex flex-row gap-4 items-center rounded-xl border border-gray-200 bg-white shadow-md p-4"
             >
-              <div key={'mutual2-'+keyMutual2+"-child-container"} className="flex flex-col gap-4">
+              <div key={'mutual2-'+keyMutual2+"-child-container"} className="flex flex-col gap-4 w-full">
                 {Array.from(mutualStack1).map(keyMutual1 => {
                   if (hexagramDetails[keyMutual1].mutual_gua === keyMutual2) {
                     return (
@@ -207,22 +207,20 @@ export default function MutualGuas({
                           if (hexagramDetails[key.toString()].mutual_gua === keyMutual1) {
                             return (
                               <>
-                              <div key={'child'+key} className="p-2 border rounded bg-neutral-50"
-                                      style={{ width: '130px' }}
-                                      onMouseEnter={() => setHoveredHexagram(key.toString())}
-                                      onMouseLeave={() => setHoveredHexagram(null)}
-                                  >
+                                <div key={'child'+key} className="p-2 border rounded bg-neutral-50 w-full"
+                                  onMouseEnter={() => setHoveredHexagram(key.toString())}
+                                  onMouseLeave={() => setHoveredHexagram(null)}
+                                >
                                   <div className="text-6xl">{hexagramDetails[key.toString()].hexagram}</div>
                                   <div className="text-sm text-gray-600">{key}</div>
                                   <div className="text-xs text-gray-600">{parseMeaning(hexagramDetails[key.toString()].translation)}</div>
-                              </div>
+                                </div>
                               </>
                             );
                           }
                           return null;
                         })}
-                        <div key={'mutual-'+keyMutual1} className="flex flex-col p-2 border border-amber-500 rounded bg-amber-400"
-                                style={{ width: '130px' }}
+                        <div key={'mutual-'+keyMutual1} className="flex flex-col p-2 border border-amber-500 rounded bg-amber-400 w-full"
                                 onMouseEnter={() => setHoveredHexagram(keyMutual1)}
                                 onMouseLeave={() => setHoveredHexagram(null)}
                             >
@@ -237,8 +235,7 @@ export default function MutualGuas({
                 })}
               </div>
               <div 
-                className="flex flex-col p-2 border border-amber-800 rounded h-fit bg-amber-700 width[80px]"
-                style={{ width: '130px' }}
+                className="flex flex-col p-2 border border-amber-800 rounded h-fit bg-amber-700 max-w[130px]"
                 onMouseEnter={() => setHoveredHexagram(keyMutual2)}
                 onMouseLeave={() => setHoveredHexagram(null)}
               >
@@ -269,21 +266,25 @@ export default function MutualGuas({
         forming a circular structure that demonstrates the recursive nature of the mutual guas.
       </p>
       <div id="gua-circle-container" className="w-full flex justify-center bg-white" ref={mutualRefs["gua_circle"]}>
-        <div className="relative w-[900px] h-[900px] mx-auto">
+        <div className="relative w-[min(900px,95vw)] h-[min(900px,95vw)] mx-auto origin-center">
+          {/* Cross lines */}
+          <div className="absolute top-1/2 left-0 w-full h-[1px] bg-gray-300 z-10 shadow-none"></div>
+          <div className="absolute top-0 left-1/2 w-[1px] h-full bg-gray-300 z-10 shadow-none"></div>
+
+          {/* All Hexagrams */}
           {all_gua_in_mutual_order.map((key, i) => {
             const angle = (2 * Math.PI * (i + 0.5)) / 64 + Math.PI / mutualStack1.size - Math.PI * 3 / 4;
-            const radius = 430;
-            const x = radius * Math.cos(angle);
-            const y = radius * Math.sin(angle);
-
+            const radiusPercent = 430.0 / 900.0 * 100;
+            const x = `${radiusPercent * Math.cos(angle) - 8.0/9.0}%`; // added an offset correction of 8/9
+            const y = `${radiusPercent * Math.sin(angle) - 16.0/9.0}%`;
             return (
               <div
                 key={key}
                 className="absolute text-xs text-center"
                 style={{
-                  left: `calc(50% + ${x}px)`,
-                  top:  `calc(50% + ${y}px)`,
-                  transform: 'translate(-50%, -50%)'
+                  left: `calc(50% + ${x})`,
+                  top: `calc(50% + ${y})`,
+                  transform: 'translate(-50%, -50%) scale(min(1, calc(95vw/900px)))'
                 }}
                 onMouseEnter={() => setHoveredHexagram(key)}
                 onMouseLeave={() => setHoveredHexagram(null)}
@@ -295,20 +296,22 @@ export default function MutualGuas({
               </div>
             );
           })}
+
+          {/* Mutual Guas */}
           {all_mutual_gua_in_second_order.map((key, i) => {
             const angle = (2 * Math.PI * (i + 0.5)) / mutualStack1.size - Math.PI * 3 / 4;
-            const radius = 300;
-            const x = radius * Math.cos(angle);
-            const y = radius * Math.sin(angle);
+            const radiusPercent = 300.0 / 900.0 * 100;
+            const x = `${radiusPercent * Math.cos(angle) - 20.0/9.0}%`;
+            const y = `${radiusPercent * Math.sin(angle) - 35.0/9.0}%`;
 
             return (
               <div
                 key={key}
                 className="absolute text-xs text-center"
                 style={{
-                  left: `calc(50% + ${x}px)`,
-                  top:  `calc(50% + ${y}px)`,
-                  transform: 'translate(-50%, -50%)'
+                  left: `calc(50% + ${x})`,
+                  top: `calc(50% + ${y})`,
+                  transform: 'translate(-50%, -50%) scale(min(1, calc(95vw/900px)))'
                 }}
                 onMouseEnter={() => setHoveredHexagram(key)}
                 onMouseLeave={() => setHoveredHexagram(null)}
@@ -320,20 +323,22 @@ export default function MutualGuas({
               </div>
             );
           })}
+
+          {/* Second Mutual Guas */}
           {Array.from(mutualStack2).map((key, i) => {
             const angle = (2 * Math.PI * i) / mutualStack2.size - Math.PI * 3 / 4;
-            const radius = 125;
-            const x = radius * Math.cos(angle);
-            const y = radius * Math.sin(angle);
+            const radiusPercent = 125.0 / 900.0 * 100;
+            const x = `${radiusPercent * Math.cos(angle) - 36.0/9.0}%`;
+            const y = `${radiusPercent * Math.sin(angle) - 59.0/9.0}%`;
 
             return (
               <div
                 key={key}
                 className="absolute text-xs text-center"
                 style={{
-                  left: `calc(50% + ${x}px)`,
-                  top:  `calc(50% + ${y}px)`,
-                  transform: 'translate(-50%, -50%)'
+                  left: `calc(50% + ${x})`,
+                  top: `calc(50% + ${y})`,
+                  transform: 'translate(-50%, -50%) scale(min(1, calc(95vw/900px)))'
                 }}
                 onMouseEnter={() => setHoveredHexagram(key)}
                 onMouseLeave={() => setHoveredHexagram(null)}
@@ -345,8 +350,6 @@ export default function MutualGuas({
               </div>
             );
           })}
-          <div className="absolute top-1/2 left-0 w-full h-[1px] bg-gray-300 z-10"></div>
-          <div className="absolute top-0 left-1/2 w-[1px] h-full bg-gray-300 z-10"></div>
         </div>
       </div>
       <button onClick={() => saveAsPng("gua_circle", "mutual_gua_circle.png")}
