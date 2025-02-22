@@ -1,9 +1,11 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, createRef } from 'react';
 import { Undo2, CornerRightDown, CornerRightUp } from 'lucide-react';
 import { createPortal } from 'react-dom';
 import { HexagramDetails } from '@/types/HexagramTypes';
+// html-to-image
+import { toPng } from 'html-to-image';
 
 export default function MutualGuaTree({ 
   hexagramDetails 
@@ -14,6 +16,15 @@ export default function MutualGuaTree({
   const [mutualStack1, setMutualStack1] = useState<Set<string>>(new Set());
   const [mutualStack2, setMutualStack2] = useState<Set<string>>(new Set());
   const [hoveredHexagram, setHoveredHexagram] = useState<string | null>(null);
+  const [mutualRefs, setMutualRefs] = useState<Record<string, React.RefObject<HTMLDivElement | null>>>({});
+
+  useEffect(() => {
+    const newRefs: Record<string, React.RefObject<HTMLDivElement | null>> = {};
+    mutualStack2.forEach((key) => {
+      newRefs[key] = createRef<HTMLDivElement>();
+    });
+    setMutualRefs(newRefs);
+  }, [mutualStack2]);
 
   useEffect(() => {
     const uniqueMutual1Guas = new Set<string>();
@@ -96,6 +107,29 @@ export default function MutualGuaTree({
     }
   }
 
+  const saveAsPng = async (refKey: string, fileName: string) => {
+    if (mutualRefs[refKey].current) {
+      try {
+        const element = mutualRefs[refKey].current;
+        if (element) {
+          const pngDataUrl = await toPng(element);
+          const downloadLink = document.createElement('a');
+          downloadLink.href = pngDataUrl;
+          downloadLink.download = fileName;
+          document.body.appendChild(downloadLink);
+          downloadLink.click();
+          document.body.removeChild(downloadLink);
+        }
+      } catch (error) {
+        console.error('Error saving image:', error);
+      }
+    }
+  };
+
+  const parseMeaning = (translation : string) => {
+    return translation.split(",")[0].replaceAll("\"", "").replaceAll(".", "");
+  }
+
   return (
     <div className="flex flex-col items-center gap-4">
       <h2 className="font-bold">About Mutual Guas</h2>
@@ -111,7 +145,7 @@ export default function MutualGuaTree({
       <p className="text-center max-w-2xl">
         For example, let's see the mutual gua formed from Hexagram 39 (Jian or "hardship"):
       </p>
-      <div className="flex flex-row text-align-center gap-4 items-center text-lg">
+      <div className="flex flex-row text-align-center gap-4 items-center text-lg" ref={mutualRefs['mutualGuaRef']}>
         <svg width="48" height="72" viewBox="0 0 48 72">
           <line x1="4" y1="6" x2="20" y2="6" stroke="#6b7280" stroke-width="4" />
           <line x1="28" y1="6" x2="44" y2="6" stroke="#6b7280" stroke-width="4" />
@@ -140,6 +174,10 @@ export default function MutualGuaTree({
       <p className="text-center max-w-2xl">
         As shown above, the mutual gua for Hexagram 39 is Hexagram 64 (Wei Ji or "before completion").
       </p>
+      <button onClick={() => saveAsPng('mutualGuaRef', 'mutual_gua_example.png')} 
+          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+        Save Mutual Gua Example as PNG
+      </button>
       <hr className="w-full border-t border-gray-200" />
       <h2 className="font-bold">Tree of Mutual Guas</h2>
       <p className="text-center max-w-2xl">
@@ -152,7 +190,10 @@ export default function MutualGuaTree({
       <div className="flex flex-col text-center gap-4">
         {Array.from(mutualStack2).map(keyMutual2 => (
           <div key={'mutual2-'+keyMutual2+"-parent"}>
-            <div className="flex flex-row gap-4 items-center rounded-xl border border-gray-200 bg-white shadow-md p-4">
+            <div 
+              ref={mutualRefs[keyMutual2]}
+              className="flex flex-row gap-4 items-center rounded-xl border border-gray-200 bg-white shadow-md p-4"
+            >
               <div key={'mutual2-'+keyMutual2+"-child-container"} className="flex flex-col gap-4">
                 {Array.from(mutualStack1).map(keyMutual1 => {
                   if (hexagramDetails[keyMutual1].mutual_gua === keyMutual2) {
@@ -163,11 +204,13 @@ export default function MutualGuaTree({
                             return (
                               <>
                               <div key={'child'+key} className="p-2 border rounded bg-neutral-50"
+                                      style={{ width: '130px' }}
                                       onMouseEnter={() => setHoveredHexagram(key.toString())}
                                       onMouseLeave={() => setHoveredHexagram(null)}
                                   >
-                                  <div className="text-2xl">{hexagramDetails[key.toString()].hexagram}</div>
+                                  <div className="text-6xl">{hexagramDetails[key.toString()].hexagram}</div>
                                   <div className="text-sm text-gray-600">{key}</div>
+                                  <div className="text-xs text-gray-600">{parseMeaning(hexagramDetails[key.toString()].translation)}</div>
                               </div>
                               </>
                             );
@@ -175,11 +218,13 @@ export default function MutualGuaTree({
                           return null;
                         })}
                         <div key={'mutual-'+keyMutual1} className="flex flex-col p-2 border border-amber-500 rounded bg-amber-400"
+                                style={{ width: '130px' }}
                                 onMouseEnter={() => setHoveredHexagram(keyMutual1)}
                                 onMouseLeave={() => setHoveredHexagram(null)}
                             >
-                            <div className="text-2xl text-amber-950">{hexagramDetails[keyMutual1].hexagram}</div>
+                            <div className="text-6xl text-amber-950">{hexagramDetails[keyMutual1].hexagram}</div>
                             <div className="text-sm text-amber-800">{keyMutual1}</div>
+                            <div className="text-xs text-amber-800">{parseMeaning(hexagramDetails[keyMutual1].translation)}</div>
                         </div>
                       </div>
                     );
@@ -188,17 +233,25 @@ export default function MutualGuaTree({
                 })}
               </div>
               <div 
-                className="flex flex-col p-2 border border-amber-800 rounded h-fit bg-amber-700"
+                className="flex flex-col p-2 border border-amber-800 rounded h-fit bg-amber-700 width[80px]"
+                style={{ width: '130px' }}
                 onMouseEnter={() => setHoveredHexagram(keyMutual2)}
                 onMouseLeave={() => setHoveredHexagram(null)}
               >
-                <div className="text-2xl text-amber-100">{hexagramDetails[keyMutual2].hexagram}</div>
+                <div className="text-6xl text-amber-100">{hexagramDetails[keyMutual2].hexagram}</div>
                 <div className="text-sm text-amber-200">{keyMutual2}</div>
+                <div className="text-xs text-amber-200">{parseMeaning(hexagramDetails[keyMutual2].translation)}</div>
               </div>
               <div className="flex flex-col rounded h-fit">
                 {mutualRecurrence(keyMutual2)}
               </div>
             </div>
+            <button 
+              onClick={() => saveAsPng(keyMutual2, `mutual_gua_${keyMutual2}.png`)}
+              className="mt-2 mb-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+            >
+              Save Gua {keyMutual2} Group as PNG
+            </button>
           </div>
         ))}
       </div>
