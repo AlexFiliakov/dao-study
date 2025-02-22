@@ -98,6 +98,49 @@ export default function MutualGuaTree({
 
   return (
     <div className="flex flex-col items-center gap-4">
+      <h2 className="font-bold">About Mutual Guas</h2>
+      <p className="text-center max-w-2xl">
+        A mutual gua is formed by the mutual intersections of the second, third, fourth, and fifth lines. 
+        The ancient sages considered these four lines to be the heart of any six-line gua. 
+        A mutual gua is formed by two trigrams. 
+        The second, third, and fourth lines of the original gua form the lower, or inner, mutual gua. 
+        The third, fourth, and fifth lines form the upper, or outer, mutual gua. 
+        Put the lower mutual gua and the upper mutual gua together and a six-line mutual gua is obtained.
+      </p>
+      <h2 className="font-bold">Construction Example</h2>
+      <p className="text-center max-w-2xl">
+        For example, let's see the mutual gua formed from Hexagram 39 (Jian or "hardship"):
+      </p>
+      <div className="flex flex-row text-align-center gap-4 items-center text-lg">
+        <svg width="48" height="72" viewBox="0 0 48 72">
+          <line x1="4" y1="6" x2="20" y2="6" stroke="#6b7280" stroke-width="4" />
+          <line x1="28" y1="6" x2="44" y2="6" stroke="#6b7280" stroke-width="4" />
+          <line x1="4" y1="18" x2="44" y2="18" stroke="#991b1b" stroke-width="4" />
+          <line x1="4" y1="30" x2="20" y2="30" stroke="#6b21a8" stroke-width="4" />
+          <line x1="28" y1="30" x2="44" y2="30" stroke="#6b21a8" stroke-width="4" />
+          <line x1="4" y1="42" x2="44" y2="42" stroke="#d97706" stroke-width="4" />
+          <line x1="4" y1="56" x2="20" y2="56" stroke="#0d9488" stroke-width="4" />
+          <line x1="28" y1="56" x2="44" y2="56" stroke="#0d9488" stroke-width="4" />
+          <line x1="4" y1="68" x2="20" y2="68" stroke="#6b7280" stroke-width="4" />
+          <line x1="28" y1="68" x2="44" y2="68" stroke="#6b7280" stroke-width="4" />
+        </svg>
+        <div>→</div>
+        <svg width="48" height="72" viewBox="0 0 48 72">
+          <line x1="4" y1="6" x2="44" y2="6" stroke="#991b1b" stroke-width="4" />
+          <line x1="4" y1="18" x2="20" y2="18" stroke="#6b21a8" stroke-width="4" />
+          <line x1="28" y1="18" x2="44" y2="18" stroke="#6b21a8" stroke-width="4" />
+          <line x1="4" y1="30" x2="44" y2="30" stroke="#d97706" stroke-width="4" />
+          <line x1="4" y1="42" x2="20" y2="42" stroke="#6b21a8" stroke-width="4" />
+          <line x1="28" y1="42" x2="44" y2="42" stroke="#6b21a8" stroke-width="4" />
+          <line x1="4" y1="56" x2="44" y2="56" stroke="#d97706" stroke-width="4" />
+          <line x1="4" y1="68" x2="20" y2="68" stroke="#0d9488" stroke-width="4" />
+          <line x1="28" y1="68" x2="44" y2="68" stroke="#0d9488" stroke-width="4" />
+        </svg>
+      </div>
+      <p className="text-center max-w-2xl">
+        As shown above, the mutual gua for Hexagram 39 is Hexagram 64 (Wei Ji or "before completion").
+      </p>
+      <hr className="w-full border-t border-gray-200" />
       <h2 className="font-bold">Tree of Mutual Guas</h2>
       <p className="text-center max-w-2xl">
         Each hexagram (white background) is grouped under its mutual gua (amber background).
