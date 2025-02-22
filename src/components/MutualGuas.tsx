@@ -7,7 +7,7 @@ import { HexagramDetails } from '@/types/HexagramTypes';
 // html-to-image
 import { toPng } from 'html-to-image';
 
-export default function MutualGuaTree({ 
+export default function MutualGuas({ 
   hexagramDetails 
 }: { 
   hexagramDetails: Record<string, HexagramDetails> 
@@ -25,6 +25,8 @@ export default function MutualGuaTree({
     mutualStack2.forEach((key) => {
       newRefs[key] = createRef<HTMLDivElement>();
     });
+    newRefs["mutualGuaRef"] = createRef<HTMLDivElement>();
+    newRefs["gua_circle"] = createRef<HTMLDivElement>();
     setMutualRefs(newRefs);
   }, [mutualStack2]);
 
@@ -266,7 +268,7 @@ export default function MutualGuaTree({
         The mutual guas are then connected to their mutual guas, 
         forming a circular structure that demonstrates the recursive nature of the mutual guas.
       </p>
-      <div id="gua-circle-container" className="w-full flex justify-center" ref={mutualRefs["gua_circle"]}>
+      <div id="gua-circle-container" className="w-full flex justify-center bg-white" ref={mutualRefs["gua_circle"]}>
         <div className="relative w-[900px] h-[900px] mx-auto">
           {all_gua_in_mutual_order.map((key, i) => {
             const angle = (2 * Math.PI * (i + 0.5)) / 64 + Math.PI / mutualStack1.size - Math.PI * 3 / 4;
@@ -347,9 +349,8 @@ export default function MutualGuaTree({
           <div className="absolute top-0 left-1/2 w-[1px] h-full bg-gray-300 z-10"></div>
         </div>
       </div>
-      <button 
-        onClick={() => saveAsPng("gua_circle", `mutual_gua_circle.png`)}
-        className="mt-2 mb-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+      <button onClick={() => saveAsPng("gua_circle", "mutual_gua_circle.png")}
+        className="mt-2 mb-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded hidden"
       >
         Save Gua Circle as PNG
       </button>

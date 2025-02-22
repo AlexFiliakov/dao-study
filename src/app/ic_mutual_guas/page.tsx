@@ -2,7 +2,7 @@ import React from 'react';
 import Layout from '@/components/Layout';
 import Image from 'next/image';
 import { getHexagramData } from '@/utils/getHexagramData';
-import MutualGuaTree from '@/components/MutualGuaTree';
+import MutualGuas from '@/components/MutualGuas';
 
 export const metadata = {
   title: 'Yi Jing: Mutual Gua Tree | 道 Dao Study Group',
@@ -32,7 +32,7 @@ export default async function IChingGenerator() {
             <div className="flex flex-row">
               <div className="flex flex-col items-left">
                 <h1 className="text-5xl font-large mb-2 flex justify-between">Yi Jing</h1>
-                <h1 className="text-3xl font-medium mb-2">Mutual Gua Tree</h1>
+                <h1 className="text-3xl font-medium mb-2">Mutual Gua Relationships</h1>
                 <p className="text-teal-100">易经</p>
               </div>
               <div id="terminal-gua" className="flex flex-col items-right ml-auto justify-center">
@@ -43,7 +43,7 @@ export default async function IChingGenerator() {
           </header>
 
           <div className="bg-white mt-8 p-6 rounded-lg shadow-md border-l-4 border-amber-700">
-            <MutualGuaTree hexagramDetails={hexagramDetails} />
+            <MutualGuas hexagramDetails={hexagramDetails} />
           </div>
         </div>
       </main>
