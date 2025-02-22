@@ -19,6 +19,19 @@ export default function MutualGuas({
   const [mutualStack2, setMutualStack2] = useState<Set<string>>(new Set());
   const [hoveredHexagram, setHoveredHexagram] = useState<string | null>(null);
   const [mutualRefs, setMutualRefs] = useState<Record<string, React.RefObject<HTMLDivElement | null>>>({});
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const updateIsMobile = () => {
+        setIsMobile(window.innerWidth < 740);
+      };
+
+      updateIsMobile(); // Set initial value
+      window.addEventListener('resize', updateIsMobile);
+      return () => window.removeEventListener('resize', updateIsMobile);
+    }
+  }, []);
 
   useEffect(() => {
     const newRefs: Record<string, React.RefObject<HTMLDivElement | null>> = {};
@@ -203,30 +216,32 @@ export default function MutualGuas({
                   if (hexagramDetails[keyMutual1].mutual_gua === keyMutual2) {
                     return (
                       <div key={'mutual-'+keyMutual1+"-parent"} className="flex flex-row rounded-lg border border-amber-200 bg-amber-100 shadow-md p-2 gap-4">
-                        {all_gua_keys.map(key => {
-                          if (hexagramDetails[key.toString()].mutual_gua === keyMutual1) {
+                        <div className={`flex ${isMobile ? 'flex-col' : 'flex-row'} gap-4 w-full`}>
+                          {all_gua_keys.map(key => {
+                            if (hexagramDetails[key.toString()].mutual_gua === keyMutual1) {
                             return (
                               <>
-                                <div key={'child'+key} className="p-2 border rounded bg-neutral-50 w-full"
-                                  onMouseEnter={() => setHoveredHexagram(key.toString())}
-                                  onMouseLeave={() => setHoveredHexagram(null)}
-                                >
-                                  <div className="text-6xl">{hexagramDetails[key.toString()].hexagram}</div>
-                                  <div className="text-sm text-gray-600">{key}</div>
-                                  <div className="text-xs text-gray-600">{parseMeaning(hexagramDetails[key.toString()].translation)}</div>
-                                </div>
+                              <div key={'child'+key} className="p-2 border rounded bg-neutral-50 w-full"
+                                onMouseEnter={() => setHoveredHexagram(key.toString())}
+                                onMouseLeave={() => setHoveredHexagram(null)}
+                              >
+                                <div className="text-6xl">{hexagramDetails[key.toString()].hexagram}</div>
+                                <div className="text-sm text-gray-600">{key}</div>
+                                <div className="text-xs text-gray-600">{parseMeaning(hexagramDetails[key.toString()].translation)}</div>
+                              </div>
                               </>
                             );
-                          }
-                          return null;
-                        })}
-                        <div key={'mutual-'+keyMutual1} className="flex flex-col p-2 border border-amber-500 rounded bg-amber-400 w-full"
-                                onMouseEnter={() => setHoveredHexagram(keyMutual1)}
-                                onMouseLeave={() => setHoveredHexagram(null)}
-                            >
-                            <div className="text-6xl text-amber-950">{hexagramDetails[keyMutual1].hexagram}</div>
-                            <div className="text-sm text-amber-800">{keyMutual1}</div>
-                            <div className="text-xs text-amber-800">{parseMeaning(hexagramDetails[keyMutual1].translation)}</div>
+                            }
+                            return null;
+                          })}
+                        </div>
+                        <div key={'mutual-'+keyMutual1} className="flex flex-col p-2 border h-fit border-amber-500 rounded bg-amber-400 w-full max-w-[130px] self-center"
+                          onMouseEnter={() => setHoveredHexagram(keyMutual1)}
+                          onMouseLeave={() => setHoveredHexagram(null)}
+                          >
+                          <div className="text-6xl text-amber-950">{hexagramDetails[keyMutual1].hexagram}</div>
+                          <div className="text-sm text-amber-800">{keyMutual1}</div>
+                          <div className="text-xs text-amber-800">{parseMeaning(hexagramDetails[keyMutual1].translation)}</div>
                         </div>
                       </div>
                     );
@@ -235,7 +250,7 @@ export default function MutualGuas({
                 })}
               </div>
               <div 
-                className="flex flex-col p-2 border border-amber-800 rounded h-fit bg-amber-700 max-w[130px]"
+                className="flex flex-col p-2 border border-amber-800 rounded h-fit bg-amber-700 max-w-[130px]"
                 onMouseEnter={() => setHoveredHexagram(keyMutual2)}
                 onMouseLeave={() => setHoveredHexagram(null)}
               >
@@ -268,8 +283,8 @@ export default function MutualGuas({
       <div id="gua-circle-container" className="w-full flex justify-center bg-white" ref={mutualRefs["gua_circle"]}>
         <div className="relative w-[min(900px,95vw)] h-[min(900px,95vw)] mx-auto origin-center">
           {/* Cross lines */}
-          <div className="absolute top-1/2 left-0 w-full h-[1px] bg-gray-300 z-10 shadow-none"></div>
-          <div className="absolute top-0 left-1/2 w-[1px] h-full bg-gray-300 z-10 shadow-none"></div>
+          <div className={`absolute top-1/2 left-0 w-full h-[1px] bg-gray-300 z-10 shadow-none${isMobile ? ' hidden' : ''}`}></div>
+          <div className={`absolute top-0 left-1/2 w-[1px] h-full bg-gray-300 z-10 shadow-none${isMobile ? ' hidden' : ''}`}></div>
 
           {/* All Hexagrams */}
           {all_gua_in_mutual_order.map((key, i) => {
@@ -291,7 +306,7 @@ export default function MutualGuas({
               >
                 <div id={"gua"+{key}} className="leading-tight">
                   <div className="text-lg leading-none mb-0.5">{hexagramDetails[key].hexagram}</div>
-                  <div className="text-gray-500 leading-none">{key}</div>
+                  <div className={`text-gray-500 leading-none${isMobile ? ' hidden' : ''}`}>{key}</div>
                 </div>
               </div>
             );
