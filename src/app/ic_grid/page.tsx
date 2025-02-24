@@ -32,7 +32,7 @@ export default async function IChingGrid() {
             <div className="flex flex-row">
               <div className="flex flex-col items-left">
                 <h1 className="text-5xl font-large mb-2 flex justify-between">Yi Jing</h1>
-                <h1 className="text-3xl font-medium mb-2">Hexagram Matrix</h1>
+                <h1 className="text-3xl font-medium mb-2">Hexagram Matrices</h1>
                 <p className="text-teal-100">易经</p>
               </div>
               <div id="terminal-gua" className="flex flex-col items-right ml-auto justify-center">
