@@ -277,7 +277,7 @@ export default function CharacterGrid() {
   return (
     <div className="relative w-full h-full flex flex-col justify-center items-center">
       <div className="mb-4 p-6 rounded-lg shadow-lg gap-4 bg-white">
-        <p>
+        <p className="text-gray-700">
           Click on a character to see its context in the Dao De Jing. The color of the character indicates its relationship with the selected character. Ancient character meanings appear below, along with up to 10 sentences where this character appears.
         </p>
       </div>
