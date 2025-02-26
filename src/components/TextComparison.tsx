@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronUp } from 'lucide-react';
 import { Card, CardContent } from './ui/card';
-import HexagramDisplay from '@/components/HexagramDisplay';
+import HexagramDisplayClientWrapper from '@/components/HexagramDisplayClientWrapper';
 import { HexagramDetails } from '@/types/HexagramTypes';
 import Chapter1Notes from '@/components/chapter_meanings_diffs/ch1';
 import Chapter2Notes from '@/components/chapter_meanings_diffs/ch2';
@@ -348,7 +348,11 @@ const TextComparison: React.FC<TextComparisonProps> = ({ hexagramMapping, hexagr
               {chapter.chapterNum + ' (Chapter ' + (index+1) + ')'}
             </h2>
             <div className="mt-4 flex items-center text-gray-700">
-              <HexagramDisplay chapterNumber={(index+1)} hexagramMapping={hexagramMapping} hexagramDetails={hexagramDetails} />
+              <HexagramDisplayClientWrapper
+                chapterNumber={(index+1)} 
+                hexagramMapping={hexagramMapping} 
+                hexagramDetails={hexagramDetails} 
+              />
             </div>
             <hr className="my-4 border-t border-neutral-200" />
             <div className="leading-loose">

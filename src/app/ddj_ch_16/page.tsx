@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import { BookOpen, ArrowBigLeft, TableOfContents, SquarePlay } from 'lucide-react';
 import Layout from '@/components/Layout';
 import TaoistButton from '@/components/TaoistButton';
-import HexagramDisplay from '@/components/HexagramDisplay';
+import HexagramDisplayClientWrapper from '@/components/HexagramDisplayClientWrapper';
 import { getHexagramData } from '@/utils/getHexagramData';
 
 export const metadata = {
@@ -20,7 +20,7 @@ export default async function DDJCh16 () {
         <div className="w-full min-h-screen bg-neutral-50 pt-8 font-serif">
           {/* Header Section */}
           <header className="bg-teal-700 text-neutral-50 p-6 rounded-lg shadow-lg">
-              <h1 className="text-5xl font-large mb-2 flex justify-between">Dao De Jing<span style={{ textAlign:'right'}} className="text-neutral-50/30">复</span></h1>
+              <h1 className="text-5xl font-large mb-2 flex justify-between">Dao De Jing</h1>
               <h1 className="text-3xl font-medium mb-2">The Silk Manuscript Version Chapter 16</h1>
               <p className="text-teal-100">帛本 第十六章</p>
           </header>
@@ -76,16 +76,15 @@ export default async function DDJCh16 () {
               What is Wu (无)? It is your talent, nature, mission.
             </p>
             <br />
-            <p className="text-neutral-600">
+            <p className="text-neutral-600 gap-4">
               What is Wu-Wei (无为)? It is the inherent mind, the natural mind. The essential part that is the core of yourself.
-            </p>
-            <br />
-            <p className="text-neutral-600">
-              <HexagramDisplay 
-                chapterNumber={16} 
-                hexagramMapping={hexagramMapping} 
-                hexagramDetails={hexagramDetails} 
-              />
+              <Suspense fallback={<>Loading content...</>}>
+                <HexagramDisplayClientWrapper 
+                  chapterNumber={16} 
+                  hexagramMapping={hexagramMapping} 
+                  hexagramDetails={hexagramDetails} 
+                />
+              </Suspense>
             </p>
           </div>
 

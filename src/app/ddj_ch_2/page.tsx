@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import { BookOpen, ArrowBigLeft, ArrowBigRight, TableOfContents, SquarePlay } from 'lucide-react';
 import Layout from '@/components/Layout';
 import TaoistButton from '@/components/TaoistButton';
-import HexagramDisplay from '@/components/HexagramDisplay';
+import HexagramDisplayClientWrapper from '@/components/HexagramDisplayClientWrapper';
 import { getHexagramData } from '@/utils/getHexagramData';
 
 export const metadata = {
@@ -20,7 +20,7 @@ export default async function DDJCh2 () {
         <div className="w-full min-h-screen bg-neutral-50 pt-8 font-serif">
             {/* Header Section */}
             <header className="bg-teal-700 text-neutral-50 p-6 rounded-lg shadow-lg">
-            <h1 className="text-5xl font-large mb-2 flex justify-between">Dao De Jing<span style={{ textAlign:'right'}} className="text-neutral-50/30">乾</span></h1>
+            <h1 className="text-5xl font-large mb-2 flex justify-between">Dao De Jing</h1>
                 <h1 className="text-3xl font-medium mb-2">The Silk Manuscript Version Chapter 2</h1>
                 <p className="text-teal-100">帛书版 第二章</p>
             </header>
@@ -75,20 +75,22 @@ export default async function DDJCh2 () {
               <BookOpen className="text-teal-700 mr-3" />
               <h2 className="text-xl text-neutral-800">Additional Notes</h2>
             </div>
-            <p className="text-neutral-600">
-              See the related Taoist parable:&nbsp;
+            <p className="text-neutral-600 gap-4">
+              See the related Taoist parable: 
               <a 
               href="https://en.wikipedia.org/wiki/The_old_man_lost_his_horse"
               rel="noopener noreferrer"
               className="text-red-800 hover:underline"
               >
                 Sai Weng Loses His Horse
-              </a>.<br /><br />
-              <HexagramDisplay 
-                chapterNumber={2} 
-                hexagramMapping={hexagramMapping} 
-                hexagramDetails={hexagramDetails} 
-              />
+              </a>.
+              <Suspense fallback={<>Loading content...</>}>
+                <HexagramDisplayClientWrapper 
+                  chapterNumber={2} 
+                  hexagramMapping={hexagramMapping} 
+                  hexagramDetails={hexagramDetails} 
+                />
+              </Suspense>
             </p>
           </div>
 

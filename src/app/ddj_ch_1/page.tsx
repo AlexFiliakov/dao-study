@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import { BookOpen, ArrowBigLeft, ArrowBigRight, TableOfContents, SquarePlay } from 'lucide-react';
 import Layout from '@/components/Layout';
 import TaoistButton from '@/components/TaoistButton';
 import Link from 'next/link';
-import HexagramDisplay from '@/components/HexagramDisplay';
+import HexagramDisplayClientWrapper from '@/components/HexagramDisplayClientWrapper';
 import { getHexagramData } from '@/utils/getHexagramData';
 
 export const metadata = {
@@ -21,7 +21,7 @@ export default async function DDJCh1() {
         <div className="w-full min-h-screen bg-neutral-50 pt-8 font-serif">
             {/* Header Section */}
             <header className="bg-teal-700 text-neutral-50 p-6 rounded-lg shadow-lg">
-            <h1 className="text-5xl font-large mb-2 flex justify-between">Dao De Jing<span style={{ textAlign:'right'}} className="text-neutral-50/30">屯</span></h1>
+            <h1 className="text-5xl font-large mb-2 flex justify-between">Dao De Jing</h1>
                 <h1 className="text-3xl font-medium mb-2">The Silk Manuscript Version Chapter 1</h1>
                 <p className="text-teal-100">帛书版 第一章</p>
             </header>
@@ -69,15 +69,17 @@ export default async function DDJCh1() {
               <BookOpen className="text-teal-700 mr-3" />
               <h2 className="text-xl text-neutral-800">Additional Notes</h2>
             </div>
-            <p className="text-neutral-600">
+            <p className="text-neutral-600 gap-4">
               恒 is used in the Mawangdui silk manuscript, while 常 is used in the standard text. 
               The story behind is that there was an emperor called 刘恒. 
-              His name couldn’t be spoken of or written down, so every 恒 in a text was changed to another word.<br /><br />
-              <HexagramDisplay 
-                chapterNumber={1} 
-                hexagramMapping={hexagramMapping} 
-                hexagramDetails={hexagramDetails} 
-              />
+              His name couldn’t be spoken of or written down, so every 恒 in a text was changed to another word.
+              <Suspense fallback={<>Loading content...</>}>
+                <HexagramDisplayClientWrapper 
+                  chapterNumber={1} 
+                  hexagramMapping={hexagramMapping} 
+                  hexagramDetails={hexagramDetails} 
+                />
+              </Suspense>
             </p>
           </div>
 
