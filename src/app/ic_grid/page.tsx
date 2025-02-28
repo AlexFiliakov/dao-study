@@ -43,7 +43,7 @@ export default async function IChingGrid() {
           </header>
 
           <div className="bg-white mt-8 p-6 rounded-lg shadow-md border-l-4 border-teal-700">
-            <h2 className="text-xl text-neutral-800 mb-4">Numerical Order</h2>
+            <h2 className="text-xl text-neutral-800 mb-4">King Wen's Sequence</h2>
             <HexagramGridNumeric hexagramDetails={hexagramDetails} />
           </div>
           
