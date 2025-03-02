@@ -68,7 +68,7 @@ export default function HomePage () {
             </p>
           </div>
 
-          <div className="mt-8 bg-white p-6 rounded-lg shadow-md border-l-4 border-amber-700">
+          <div className="mt-8 bg-white p-6 rounded-lg shadow-md border-l-4 border-amber-700 hidden">
             <div className="flex items-center mb-4">
               <CalendarFold className="text-amber-700 mr-3" />
               <h2 className="text-xl text-neutral-800">We usually meet every two weeks.</h2>
