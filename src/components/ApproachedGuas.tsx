@@ -388,7 +388,7 @@ export default function ApproachedGuas({
       >
         <div className="text-center text-6xl">{hexagramDetails[hoveredHexagram]?.hexagram}</div>
         <div className="text-center text-xl">{hoveredHexagram}</div>
-        <div className="text-center mb-2">{hexagramDetails[hoveredHexagram]?.pronunciation}{hoveredHexagram}</div>
+        <div className="text-center mb-2">{hexagramDetails[hoveredHexagram]?.pronunciation}</div>
         <div className="text-center">{hexagramDetails[hoveredHexagram]?.translation}</div>
       </div>
     )}
