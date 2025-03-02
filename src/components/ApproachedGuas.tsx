@@ -383,6 +383,8 @@ export default function ApproachedGuas({
     {hoveredHexagram && (
       <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 mb-2 px-3 py-2 bg-black/80 text-white text-sm rounded-lg whitespace-nowrap z-50"
       key={`tooltip-${hoveredHexagram}`}
+      onMouseEnter={() => setHoveredHexagram(hoveredHexagram)}
+      onMouseLeave={() => setHoveredHexagram(null)}
       >
         <div className="text-center text-6xl">{hexagramDetails[hoveredHexagram]?.hexagram}</div>
         <div className="text-center text-xl">{hoveredHexagram}</div>
