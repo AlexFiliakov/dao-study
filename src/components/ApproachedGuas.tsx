@@ -9,18 +9,18 @@ export default function ApproachedGuas({
   hexagramDetails: Record<string, HexagramDetails> 
 }) {
   const [selectedHexagram, setSelectedHexagram] = useState<string>("1");
+  const [hoveredHexagram, setHoveredHexagram] = useState<string | null>(null);
 
   const drawHexagramGlyph = (hexagramKey: string) => {
     return (
-      <svg width="24" height="24" viewBox="0 0 25 25">
-        {/* Base layer: non-selected characters */}
-        <g className="base-characters">
-          <g
-            // onMouseEnter={() => handleMouseEnter(char)}
-            // onMouseLeave={handleMouseLeave}
-            // onClick={() => handleClick(char)}
-            // className="cursor-pointer"
-          >
+      <div
+        onMouseEnter={() => setHoveredHexagram(hexagramKey)}
+        onMouseLeave={() => setHoveredHexagram(null)}
+        key={`glyph-${hexagramKey}`}
+      >
+        <svg width="24" height="24" viewBox="0 0 25 25">
+          {/* Base layer: non-selected characters */}
+          <g className="base-characters">
             <circle
               cx="12"
               cy="12"
@@ -41,8 +41,8 @@ export default function ApproachedGuas({
               {hexagramDetails[hexagramKey].hexagram}
             </text>
           </g>
-        </g>
-      </svg>
+        </svg>
+      </div>
     );
   };
 
@@ -380,6 +380,16 @@ export default function ApproachedGuas({
         </div>
       </div>
     </div>
+    {hoveredHexagram && (
+      <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 mb-2 px-3 py-2 bg-black/80 text-white text-sm rounded-lg whitespace-nowrap z-50"
+      key={`tooltip-${hoveredHexagram}`}
+      >
+        <div className="text-center text-6xl">{hexagramDetails[hoveredHexagram]?.hexagram}</div>
+        <div className="text-center text-xl">{hoveredHexagram}</div>
+        <div className="text-center mb-2">{hexagramDetails[hoveredHexagram]?.pronunciation}{hoveredHexagram}</div>
+        <div className="text-center">{hexagramDetails[hoveredHexagram]?.translation}</div>
+      </div>
+    )}
     </>
   );
 }
