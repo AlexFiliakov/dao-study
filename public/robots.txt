@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://daoreading.com
+
+# Sitemaps
+Sitemap: https://daoreading.com/sitemap.xml
